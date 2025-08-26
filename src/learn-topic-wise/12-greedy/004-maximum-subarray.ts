@@ -1,5 +1,6 @@
-// https://leetcode.com/problems/maximum-subarray
-// solution - kadane algorithm
+export const url =
+  '[Maximum Subarray](https://leetcode.com/problems/maximum-subarray)';
+
 function maxSubArray(nums: number[]): number {
   let curSum = 0;
   let maxSum = nums[0];

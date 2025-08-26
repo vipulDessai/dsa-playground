@@ -1,3 +1,6 @@
+export const url =
+  '[Longest Subarray with Sum K](https://www.geeksforgeeks.org/problems/longest-sub-array-with-sum-k0809/1)';
+
 // find max length of a subarray whose sum is equals to target
 export function largestSubArrayKSum(nums: number[], target: number): number {
   let max = 0;
@@ -11,15 +14,16 @@ export function largestSubArrayKSum(nums: number[], target: number): number {
 
     if (sumMap.has(prefixSum - target)) {
       max = Math.max(max, i - sumMap.get(prefixSum - target));
-    } else {
-      // in case of finding only 1 largest subarray,
-      // we store the first index where the the current
-      // prefix sum had occurred
-      //
-      // this cant be outside the else part
-      // coz we need first index, having it outside the
-      // the else will give the last index where
-      // the current prefix sum had occurred
+    }
+
+    // in case of finding only 1 largest subarray,
+    // we store the first index where the current
+    // prefix sum was found for the first time
+    //
+    // checking whether the current prefix sum is stored
+    // or not is important otherwise it will override with the
+    // most recent index, and result will the shortest subarray length
+    if (!sumMap.has(prefixSum)) {
       sumMap.set(prefixSum, i);
     }
   }
@@ -27,4 +31,5 @@ export function largestSubArrayKSum(nums: number[], target: number): number {
   return max;
 }
 
-console.log(largestSubArrayKSum([5, 1, 4, 3, -4, -1, 8, 23], 8));
+// console.log(largestSubArrayKSum([5, 1, 4, 3, -4, -1, 8, 23], 8));
+console.log(largestSubArrayKSum([1, -1, 5, -2, 3], 3));
