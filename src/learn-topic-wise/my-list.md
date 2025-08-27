@@ -161,6 +161,7 @@
 - [Arithmetic Slices](https://leetcode.com/problems/arithmetic-slices/description/)
 - [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
   - needs hash as well [refer](./my-list.md#medium---hash)
+- [Max Consecutive Ones I](https://leetcode.com/problems/max-consecutive-ones/), [Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/)
 
 # Binary Search
 
