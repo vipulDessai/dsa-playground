@@ -52,7 +52,6 @@
 
 - https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/
 - https://leetcode.com/problems/maximum-erasure-value/
-- https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together-ii/
 
 ## others
 

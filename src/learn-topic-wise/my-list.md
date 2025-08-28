@@ -155,6 +155,8 @@
 ### fixed length window - Sliding window
 
 - [Permutation in string](https://leetcode.com/problems/permutation-in-string/description/)
+- [Minimum Swaps to Group All 1's Together II](https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together-ii/)
+  - depends on a formula
 
 ### dynamic length window - Sliding window
 
