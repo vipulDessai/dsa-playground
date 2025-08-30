@@ -38,7 +38,7 @@
 
 # Sliding window
 
-## Fixed length sliding wd
+## Fixed length sliding window
 
 - https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/
 - https://leetcode.com/problems/grumpy-bookstore-owner/
@@ -48,7 +48,7 @@
 - https://leetcode.com/problems/k-radius-subarray-averages/
 - https://leetcode.com/problems/number-of-unique-flavors-after-sharing-k-candies/
 
-## variable length sliding wd
+## variable length sliding window
 
 - https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/
 - https://leetcode.com/problems/maximum-erasure-value/
@@ -61,7 +61,7 @@
 
 # Two Pointer / Three Pointers
 
-## Two pointer in 1 Array
+## Two pointer in 1D Array
 
 - https://leetcode.com/problems/sort-transformed-array/
 - https://leetcode.com/problems/boats-to-save-people/
@@ -70,12 +70,12 @@
 - https://leetcode.com/problems/squares-of-a-sorted-array/
 - https://leetcode.com/problems/watering-plants-ii/
 
-## Two pointers in 2 array - Three pointers / Multiple pointers
+## Two pointers in 2D array - Three pointers / Multiple pointers
 
 - https://leetcode.com/problems/merge-sorted-array/
 - https://leetcode.com/problems/is-subsequence/
 
-## Intervals are Given :
+## Intervals are Given
 
 - https://leetcode.com/problems/remove-element/
 - https://leetcode.com/problems/find-the-duplicate-number/
