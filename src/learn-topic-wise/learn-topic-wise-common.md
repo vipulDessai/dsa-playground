@@ -12,8 +12,8 @@
 
 ## Binary search on the range of answer
 
-- https://leetcode.com/problems/split-array-largest-sum/ - VIMP
-- https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/
+- 
+    https://leetcode.com/problems/split-array-largest-sum/ - VIMP
 
 ## variation of Normal Binary Search
 
@@ -51,7 +51,6 @@
 ## variable length sliding window
 
 - https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/
-- https://leetcode.com/problems/maximum-erasure-value/
 
 ## others
 

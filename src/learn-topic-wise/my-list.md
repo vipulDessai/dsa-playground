@@ -164,6 +164,8 @@
 - [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
   - needs hash as well [refer](./my-list.md#medium---hash)
 - [Max Consecutive Ones I](https://leetcode.com/problems/max-consecutive-ones/), [Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/)
+- [Number of Substrings Containing All Three Characters](https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/) - `TODO`
+  - depends on a formula (of combination)
 
 # Binary Search
 
