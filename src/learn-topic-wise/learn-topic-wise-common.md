@@ -12,8 +12,7 @@
 
 ## Binary search on the range of answer
 
-- 
-    https://leetcode.com/problems/split-array-largest-sum/ - VIMP
+- https://leetcode.com/problems/split-array-largest-sum/ - VIMP
 
 ## variation of Normal Binary Search
 
@@ -48,14 +47,9 @@
 - https://leetcode.com/problems/k-radius-subarray-averages/
 - https://leetcode.com/problems/number-of-unique-flavors-after-sharing-k-candies/
 
-## variable length sliding window
-
-- https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/
-
 ## others
 
 - https://leetcode.com/problems/maximum-length-of-repeated-subarray/
-- https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/
 - https://leetcode.com/problems/minimum-difference-between-highest-and-lowest-of-k-scores/
 
 # Two Pointer / Three Pointers

@@ -9,6 +9,7 @@
 
 - [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
   - also is greedy - [refer](./my-list.md#easy---greedy)
+- [Max Consecutive Ones I](https://leetcode.com/problems/max-consecutive-ones/),
 - [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
 - [Move Zeroes](https://leetcode.com/problems/move-zeroes/)
 - [Rotate Array](https://leetcode.com/problems/rotate-array/)
@@ -24,7 +25,6 @@
 - [Array Partition I](https://leetcode.com/problems/array-partition-i/)
 - [Reshape the Matrix](https://leetcode.com/problems/reshape-the-matrix/)
 - [Toeplitz Matrix](https://leetcode.com/problems/toeplitz-matrix/)
-- [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/)
 - [Find Pivot Index](https://leetcode.com/problems/find-pivot-index/)
 
 # Subarray whose sum is k
@@ -156,14 +156,15 @@
 
 - [Permutation in string](https://leetcode.com/problems/permutation-in-string/description/)
 - [Minimum Swaps to Group All 1's Together II](https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together-ii/)
-  - depends on a formula
+  - depends on a formula, but other logic is important to understand
 
 ### dynamic length window - Sliding window
 
 - [Arithmetic Slices](https://leetcode.com/problems/arithmetic-slices/description/)
 - [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
   - needs hash as well [refer](./my-list.md#medium---hash)
-- [Max Consecutive Ones I](https://leetcode.com/problems/max-consecutive-ones/), [Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/)
+- [Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/), [Longest Subarray of 1's After Deleting One Element](https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/description/)
+  - all these are grouped under same strategy
 - [Number of Substrings Containing All Three Characters](https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/) - `TODO`
   - depends on a formula (of combination)
 
