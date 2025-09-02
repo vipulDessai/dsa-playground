@@ -27,7 +27,7 @@
 ## Other
 
 - https://leetcode.com/problems/median-of-two-sorted-arrays/ - VIMP
-- https://leetcode.com/problems/find-peak-element/ - imp
+- https://leetcode.com/problems/find-peak-element/
 - https://leetcode.com/problems/valid-triangle-number/
 - https://leetcode.com/problems/my-calendar-i/
 - https://leetcode.com/problems/missing-element-in-sorted-array/
@@ -39,13 +39,12 @@
 
 ## Fixed length sliding window
 
-- https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/
+- https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/ - HARD
 - https://leetcode.com/problems/grumpy-bookstore-owner/
 - https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/
 - https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/
 - https://leetcode.com/problems/distinct-numbers-in-each-subarray/
 - https://leetcode.com/problems/k-radius-subarray-averages/
-- https://leetcode.com/problems/number-of-unique-flavors-after-sharing-k-candies/
 
 ## others
 
