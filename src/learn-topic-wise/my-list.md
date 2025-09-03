@@ -71,7 +71,7 @@
 - [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
 - [Group Anagrams](https://leetcode.com/problems/group-anagrams/)
 - [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
-  - needs sliding window as well - [refer](./my-list.md#medium---sliding-window)
+  - needs sliding window as well - [refer](./my-list.md#medium-dynamic-length---sliding-window)
 - [Contiguous Array](https://leetcode.com/problems/contiguous-array/)
 - [3Sum](https://leetcode.com/problems/3sum/description/), [4Sum](https://leetcode.com/problems/4sum/description/), [4Sum II](https://leetcode.com/problems/4sum-ii/)
 - [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)
@@ -141,6 +141,11 @@
 
 # Sort
 
+### easy - basic sort
+
+- [Minimum Difference Between Highest and Lowest of K Scores](https://leetcode.com/problems/minimum-difference-between-highest-and-lowest-of-k-scores/)
+  - needs sliding window as well - [refer](./my-list.md#easy-fixed-length---sliding-window)
+
 ## cyclic sort
 
 ### hard - cyclic sort
@@ -150,15 +155,18 @@
 
 # Sliding window
 
-## medium - Sliding window
+## easy fixed length - sliding window
 
-### fixed length window - Sliding window
+- [Minimum Difference Between Highest and Lowest of K Scores](https://leetcode.com/problems/minimum-difference-between-highest-and-lowest-of-k-scores/)
+  - needs sorting as well - [refer](./my-list.md#easy---basic-sort)
+
+## medium fixed length - Sliding window
 
 - [Permutation in string](https://leetcode.com/problems/permutation-in-string/description/)
 - [Minimum Swaps to Group All 1's Together II](https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together-ii/)
   - depends on a formula, but other logic is important to understand
 
-### dynamic length window - Sliding window
+## medium dynamic length - Sliding window
 
 - [Arithmetic Slices](https://leetcode.com/problems/arithmetic-slices/description/)
 - [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)

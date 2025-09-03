@@ -39,8 +39,7 @@
 
 ## Fixed length sliding window
 
-- https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/ - HARD
-- https://leetcode.com/problems/grumpy-bookstore-owner/
+- https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/ - HARD - VIMP
 - https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/
 - https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/
 - https://leetcode.com/problems/distinct-numbers-in-each-subarray/
