@@ -165,6 +165,8 @@
 - [Permutation in string](https://leetcode.com/problems/permutation-in-string/description/)
 - [Minimum Swaps to Group All 1's Together II](https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together-ii/)
   - depends on a formula, but other logic is important to understand
+- [Maximum Points You Can Obtain from Cards](https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/description/)
+  - depends on a trick - i.e. to find the max in the array, you have to subtract the min sum array from total sum
 
 ## medium dynamic length - Sliding window
 
