@@ -153,31 +153,6 @@
 - [First Missing Positive](https://leetcode.com/problems/first-missing-positive)
   - can be solved using hash as well - [refer](./my-list.md#hard---hash)
 
-# Sliding window
-
-## easy fixed length - sliding window
-
-- [Minimum Difference Between Highest and Lowest of K Scores](https://leetcode.com/problems/minimum-difference-between-highest-and-lowest-of-k-scores/)
-  - needs sorting as well - [refer](./my-list.md#easy---basic-sort)
-
-## medium fixed length - Sliding window
-
-- [Permutation in string](https://leetcode.com/problems/permutation-in-string/description/)
-- [Minimum Swaps to Group All 1's Together II](https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together-ii/)
-  - depends on a formula, but other logic is important to understand
-- [Maximum Points You Can Obtain from Cards](https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/description/)
-  - depends on a trick - i.e. to find the max in the array, you have to subtract the min sum array from total sum
-
-## medium dynamic length - Sliding window
-
-- [Arithmetic Slices](https://leetcode.com/problems/arithmetic-slices/description/)
-- [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
-  - needs hash as well [refer](./my-list.md#medium---hash)
-- [Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/), [Longest Subarray of 1's After Deleting One Element](https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/description/)
-  - all these are grouped under same strategy
-- [Number of Substrings Containing All Three Characters](https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/) - `TODO`
-  - depends on a formula (of combination)
-
 # Binary Search
 
 ## easy - Binary Search
@@ -197,6 +172,41 @@
 
 - [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/description/)
 - [Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)
+
+# Sliding window
+
+## easy fixed length - sliding window
+
+- [Minimum Difference Between Highest and Lowest of K Scores](https://leetcode.com/problems/minimum-difference-between-highest-and-lowest-of-k-scores/)
+  - needs sorting as well - [refer](./my-list.md#easy---basic-sort)
+
+## medium fixed length - Sliding window
+
+- [Permutation in string](https://leetcode.com/problems/permutation-in-string/description/)
+- [Minimum Swaps to Group All 1's Together II](https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together-ii/)
+  - depends on a formula, but other logic is important to understand
+- [Maximum Points You Can Obtain from Cards](https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/description/)
+  - depends on a trick - i.e. to find the max in the array, you have to subtract the min sum array from total sum
+- [Maximum Number of Vowels in a Substring of Given Length](https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/) - `TODO`
+- [K Radius Subarray Averages](https://leetcode.com/problems/k-radius-subarray-averages/) - `TODO`
+- [Distinct Numbers in Each Subarray](https://leetcode.com/problems/distinct-numbers-in-each-subarray/) - `TODO` - `Premium`
+- [Find K-Length Substrings With No Repeated Characters](https://leetcode.com/problems/find-k-length-substrings-with-no-repeated-characters/description/) - `TODO` - `Premium`
+- [Number of Unique Flavors After Sharing K Candies](https://leetcode.com/problems/number-of-unique-flavors-after-sharing-k-candies/description/) - `TODO` - `Premium`
+
+## hard fixed length - Sliding window
+
+- [Shortest Subarray with Sum at Least K](https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/description/) - `TODO`
+
+## medium dynamic length - Sliding window
+
+- [Arithmetic Slices](https://leetcode.com/problems/arithmetic-slices/description/)
+- [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
+  - needs hash as well [refer](./my-list.md#medium---hash)
+- [Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/), [Longest Subarray of 1's After Deleting One Element](https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/description/)
+  - all these are grouped under same strategy
+- [Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/description/)
+- [Number of Substrings Containing All Three Characters](https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/) - `TODO`
+  - depends on a formula (of combination)
 
 # Two pointers
 
@@ -266,6 +276,7 @@
   - can be also solved using Inverse Modulo - [refer](./my-list.md#medium---modulo)
 - [3 Sum Multiplicity](https://leetcode.com/problems/3sum-with-multiplicity/)
   - [Two pointers with nCr formula is the correct approach](./my-list.md#medium---two-pointers)
+- [Maximum Length of Repeated Subarray](https://leetcode.com/problems/maximum-length-of-repeated-subarray/) - `TODO`
 
 ## hard - Dynamic Programming
 

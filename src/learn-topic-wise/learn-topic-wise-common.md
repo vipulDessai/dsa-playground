@@ -35,21 +35,6 @@
 - https://leetcode.com/problems/kth-missing-positive-number/
 - https://leetcode.com/problems/range-sum-of-sorted-subarray-sums/ - prefix sum
 
-# Sliding window
-
-## Fixed length sliding window
-
-- https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/ - HARD - VIMP
-- https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/
-- https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/
-- https://leetcode.com/problems/distinct-numbers-in-each-subarray/
-- https://leetcode.com/problems/k-radius-subarray-averages/
-
-## others
-
-- https://leetcode.com/problems/maximum-length-of-repeated-subarray/
-- https://leetcode.com/problems/minimum-difference-between-highest-and-lowest-of-k-scores/
-
 # Two Pointer / Three Pointers
 
 ## Two pointer in 1D Array
