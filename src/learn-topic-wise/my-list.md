@@ -220,7 +220,7 @@
 - [Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
 - [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/description/)
 - [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/)
-- [Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/description/) - `TODO`, - [Sort Array By Parity II](https://leetcode.com/problems/sort-array-by-parity-ii/description/) - `TODO`
+- [Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/description/), - [Sort Array By Parity II](https://leetcode.com/problems/sort-array-by-parity-ii/description/)
 - [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/description/) - `TODO`
 
 ## easy - multiple array - Two pointers
