@@ -33,39 +33,12 @@
 - https://leetcode.com/problems/missing-element-in-sorted-array/
 - https://leetcode.com/problems/fixed-point/
 - https://leetcode.com/problems/kth-missing-positive-number/
-- https://leetcode.com/problems/range-sum-of-sorted-subarray-sums/ - prefix sum
-
-# Two Pointer / Three Pointers
-
-## Two pointer in 1D Array
-
-- https://leetcode.com/problems/sort-transformed-array/
-- https://leetcode.com/problems/boats-to-save-people/
-- https://leetcode.com/problems/sort-array-by-parity/
-- https://leetcode.com/problems/sort-array-by-parity-ii/
-- https://leetcode.com/problems/squares-of-a-sorted-array/
-- https://leetcode.com/problems/watering-plants-ii/
-
-## Two pointers in 2D array - Three pointers / Multiple pointers
-
-- https://leetcode.com/problems/merge-sorted-array/
-- https://leetcode.com/problems/is-subsequence/
-
-## Intervals are Given
-
-- https://leetcode.com/problems/remove-element/
-- https://leetcode.com/problems/find-the-duplicate-number/
-- https://leetcode.com/problems/interval-list-intersections/
-- https://leetcode.com/problems/duplicate-zeros/
-- https://leetcode.com/problems/the-k-strongest-values-in-an-array/
-- https://leetcode.com/problems/minimize-maximum-pair-sum-in-array/
-- https://leetcode.com/problems/rearrange-array-elements-by-sign/
-- https://leetcode.com/problems/partition-array-according-to-given-pivot/
 
 # Prefix Sum
 
 ## Only PrefixSum
 
+- https://leetcode.com/problems/range-sum-of-sorted-subarray-sums/ - prefix sum
 - https://leetcode.com/problems/running-sum-of-1d-array/
 - https://leetcode.com/problems/range-sum-query-immutable/
 - https://leetcode.com/problems/range-addition/
@@ -87,7 +60,3 @@
 
 - https://leetcode.com/problems/subarray-sum-equals-k/
 - https://leetcode.com/problems/subarray-sums-divisible-by-k/
-
-## Others
-
-- https://leetcode.com/problems/product-of-array-except-self/

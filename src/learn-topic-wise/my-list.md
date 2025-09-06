@@ -27,6 +27,10 @@
 - [Toeplitz Matrix](https://leetcode.com/problems/toeplitz-matrix/)
 - [Find Pivot Index](https://leetcode.com/problems/find-pivot-index/)
 
+## medium - Pure array based
+
+- [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) - `TODO`
+
 # Subarray whose sum is k
 
 ## medium - Subarray whose sum is k
@@ -45,7 +49,7 @@
 ## easy - Hash
 
 - [Two Sum](https://leetcode.com/problems/two-sum/)
-  - can be solved using 2 pointers [refer](./my-list.md#easy---two-pointers)
+  - can be solved using 2 pointers [refer](./my-list.md#easy---single-array---two-pointers)
 - [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/), [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/)
 - [Single Number](https://leetcode.com/problems/single-number/)
 - [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/)
@@ -170,8 +174,7 @@
 
 ### variation of normal binary search - Binary Search
 
-- [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/description/)
-- [Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)
+- [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/description/), [Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)
 
 # Sliding window
 
@@ -210,22 +213,21 @@
 
 # Two pointers
 
-## easy - Two pointers
-
-### Single Array - Two pointers
+## easy - Single Array - Two pointers
 
 - [Two sum](https://leetcode.com/problems/two-sum/description/)
   - can be solved using hash [refer](./my-list.md#easy---hash)
 - [Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
 - [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/description/)
+- [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/)
+- [Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/description/) - `TODO`, - [Sort Array By Parity II](https://leetcode.com/problems/sort-array-by-parity-ii/description/) - `TODO`
+- [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/description/) - `TODO`
 
-### multiple array - Two pointers
+## easy - multiple array - Two pointers
 
 - [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) - `TODO`
 
-## medium - Two pointers
-
-### Single Array - Two pointers
+## medium - Single Array - Two pointers
 
 - [Sort colors](https://leetcode.com/problems/sort-colors/)
 - [Container With Most Water](https://leetcode.com/problems/container-with-most-water/)
@@ -233,7 +235,24 @@
 - [3 Sum Multiplicity](https://leetcode.com/problems/3sum-with-multiplicity/)
   - [dynamic programming is a overkill](./my-list.md#medium---dynamic-programming)
 - [Next Permutation](https://leetcode.com/problems/next-permutation)
-- [Fruits into baskets](https://leetcode.com/problems/fruit-into-baskets/description/) - `TODO AI's Map Solution`
+- [Fruits into baskets](https://leetcode.com/problems/fruit-into-baskets/description/) - `TODO` - `AI's Map Solution`
+- [Boats to Save People](https://leetcode.com/problems/boats-to-save-people/description/) - `TODO`
+- [Watering Plants I](https://leetcode.com/problems/watering-plants/description/) - `TODO`, - [Watering Plants II](https://leetcode.com/problems/watering-plants-ii/description/) - `TODO`
+
+## easy - intervals - Two pointers
+
+- [Remove Element](https://leetcode.com/problems/remove-element/description/) - `TODO`
+- [Duplicate Zeros](https://leetcode.com/problems/duplicate-zeros/description/) - `TODO`
+
+## medium - intervals - Two pointers
+
+- [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/description/) - `TODO`
+- [Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/description/) - `TODO`
+- [The k Strongest Values in an Array](https://leetcode.com/problems/the-k-strongest-values-in-an-array/description/) - `TODO`
+- [Minimize Maximum Pair Sum in Array](https://leetcode.com/problems/minimize-maximum-pair-sum-in-array/description/) - `TODO`
+- [Rearrange Array Elements by Sign](https://leetcode.com/problems/rearrange-array-elements-by-sign/description/) - `TODO`
+- [Partition Array According to Given Pivot](https://leetcode.com/problems/partition-array-according-to-given-pivot/description/) - `TODO`
+- [Meeting Scheduler](https://leetcode.com/problems/meeting-scheduler/) - `Premium`
 
 # Prefix sum
 
@@ -275,7 +294,7 @@
 - [Unique Paths](https://leetcode.com/problems/unique-paths/description/) - `TODO`
   - can be also solved using Inverse Modulo - [refer](./my-list.md#medium---modulo)
 - [3 Sum Multiplicity](https://leetcode.com/problems/3sum-with-multiplicity/)
-  - [Two pointers with nCr formula is the correct approach](./my-list.md#medium---two-pointers)
+  - [Two pointers with nCr formula is the correct approach](./my-list.md#medium---single-array---two-pointers)
 - [Maximum Length of Repeated Subarray](https://leetcode.com/problems/maximum-length-of-repeated-subarray/) - `TODO`
 
 ## hard - Dynamic Programming
