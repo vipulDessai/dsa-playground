@@ -145,14 +145,12 @@
 
 # Sort
 
-### easy - basic sort
+## easy - basic sort
 
 - [Minimum Difference Between Highest and Lowest of K Scores](https://leetcode.com/problems/minimum-difference-between-highest-and-lowest-of-k-scores/)
   - needs sliding window as well - [refer](./my-list.md#easy-fixed-length---sliding-window)
 
-## cyclic sort
-
-### hard - cyclic sort
+## hard - cyclic sort
 
 - [First Missing Positive](https://leetcode.com/problems/first-missing-positive)
   - can be solved using hash as well - [refer](./my-list.md#hard---hash)
@@ -220,7 +218,7 @@
 - [Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
 - [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/description/)
 - [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/)
-- [Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/description/), - [Sort Array By Parity II](https://leetcode.com/problems/sort-array-by-parity-ii/description/)
+- [Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/description/), [Sort Array By Parity II](https://leetcode.com/problems/sort-array-by-parity-ii/description/)
 - [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/description/) - `TODO`
 
 ## easy - multiple array - Two pointers
@@ -236,7 +234,8 @@
   - [dynamic programming is a overkill](./my-list.md#medium---dynamic-programming)
 - [Next Permutation](https://leetcode.com/problems/next-permutation)
 - [Fruits into baskets](https://leetcode.com/problems/fruit-into-baskets/description/) - `TODO` - `AI's Map Solution`
-- [Boats to Save People](https://leetcode.com/problems/boats-to-save-people/description/) - `TODO`
+- [Boats to Save People](https://leetcode.com/problems/boats-to-save-people/description/)
+  - tricky and greedy - [refer](./my-list.md#medium---greedy)
 - [Watering Plants I](https://leetcode.com/problems/watering-plants/description/) - `TODO`, - [Watering Plants II](https://leetcode.com/problems/watering-plants-ii/description/) - `TODO`
 
 ## easy - intervals - Two pointers
@@ -308,6 +307,11 @@
 
 - [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
   - also is pure array - [refer](./my-list.md#easy---pure-array-based)
+
+## medium - Greedy
+
+- [Boats to Save People](https://leetcode.com/problems/boats-to-save-people/description/)
+  - needs two pointers as well and greedy - [refer](./my-list.md#medium---single-array---two-pointers)
 
 # Modulo
 
