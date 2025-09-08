@@ -9,6 +9,7 @@
 
 - [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
   - also is greedy - [refer](./my-list.md#easy---greedy)
+- [Watering Plants I](https://leetcode.com/problems/watering-plants/description/)
 - [Max Consecutive Ones I](https://leetcode.com/problems/max-consecutive-ones/),
 - [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
 - [Move Zeroes](https://leetcode.com/problems/move-zeroes/)
@@ -236,7 +237,10 @@
 - [Fruits into baskets](https://leetcode.com/problems/fruit-into-baskets/description/) - `TODO` - `AI's Map Solution`
 - [Boats to Save People](https://leetcode.com/problems/boats-to-save-people/description/)
   - tricky and greedy - [refer](./my-list.md#medium---greedy)
-- [Watering Plants I](https://leetcode.com/problems/watering-plants/description/) - `TODO`, - [Watering Plants II](https://leetcode.com/problems/watering-plants-ii/description/) - `TODO`
+- [Watering Plants II](https://leetcode.com/problems/watering-plants-ii/description/) - `TODO`
+- [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/description/) - `TODO`
+  - can be solved using [linked list](./my-list.md#medium---linked-list)
+  - can be solved using [bit manipulations](./my-list.md#bit)
 
 ## easy - intervals - Two pointers
 
@@ -267,6 +271,8 @@
 
 - [Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/)
   - can be solved using pure linked list - [refer](./my-list.md#medium---hash)
+- [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/description/) - `TODO`
+  - can be solved using [two pointers](./my-list.md#medium---single-array---two-pointers)
 
 # Graph
 
@@ -276,6 +282,11 @@
   - uses hash as well - [refer - hash](./my-list.md#hard---hash), [refer - bitwise](./my-list.md#hard---bitwise)
 
 # Bitwise
+
+## medium - Bitwise
+
+- [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/description/) - `TODO`
+  - can be solved using [two pointers](./my-list.md#medium---single-array---two-pointers)
 
 ## hard - Bitwise
 
