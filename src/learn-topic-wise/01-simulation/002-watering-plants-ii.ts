@@ -11,52 +11,42 @@ function minimumRefill(
   let l = 0,
     r = n - 1,
     res = 0,
-    sumA = 0,
-    sumB = 0;
+    sumA = capacityA,
+    sumB = capacityB;
 
-  while (l <= r) {
-    if (l === r) {
-      const cur = plants[l];
-      if (sumA - capacityA >= sumB - capacityB) {
-        if (sumA + cur > capacityA) {
-          ++res;
-        }
-      } else {
-        if (sumB + cur > capacityB) {
-          ++res;
-        }
-      }
-
-      break;
-    }
-
-    sumA += plants[l];
-    if (sumA > capacityA) {
+  while (l < r) {
+    if (sumA - plants[l] < 0) {
       ++res;
-      sumA = 0;
-    } else {
-      ++l;
+      sumA = capacityA;
     }
 
-    if (l === r) {
-      break;
-    }
+    sumA -= plants[l];
+    ++l;
 
-    sumB += plants[r];
-    if (sumB > capacityB) {
+    if (sumB - plants[r] < 0) {
       ++res;
-      sumB = 0;
-    } else {
-      --r;
+      sumB = capacityB;
+    }
+
+    sumB -= plants[r];
+    --r;
+  }
+
+  // in case the array is of odd length
+  if (l === r) {
+    const curPlant = plants[l];
+    const max = Math.max(sumA, sumB);
+    if (max < curPlant) {
+      ++res;
     }
   }
 
   return res;
 }
 
-var p = [2, 2, 3, 3],
-  cA = 4,
-  cB = 5;
+var p = [2, 1, 1],
+  cA = 2,
+  cB = 2;
 var out = minimumRefill(p, cA, cB);
 
 console.log(out);

@@ -39,8 +39,7 @@
 
 ## medium - Simulation
 
-- [Watering Plants II](https://leetcode.com/problems/watering-plants-ii/description/) - `TODO`
-  - see if this can be solved using two pointers - `TODO`
+- [Watering Plants II](https://leetcode.com/problems/watering-plants-ii/description/)
 
 # Subarray whose sum is k
 
