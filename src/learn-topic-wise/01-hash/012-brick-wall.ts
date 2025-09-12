@@ -1,3 +1,5 @@
+export const url = '[Brick Wall](https://leetcode.com/problems/brick-wall/)';
+
 function leastBricks(wall: number[][]): number {
   const m = new Map<number, number>();
   let max = 0;
@@ -23,3 +25,15 @@ function leastBricks(wall: number[][]): number {
   // `wall.length - max` gives the bricks which are crossed
   return wall.length - max;
 }
+
+var input = [
+  [1, 2, 2, 1],
+  [3, 1, 2],
+  [1, 3, 2],
+  [2, 4],
+  [3, 1, 2],
+  [1, 3, 1, 1],
+];
+var out = leastBricks(input);
+
+console.log(out);
