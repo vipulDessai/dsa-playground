@@ -194,12 +194,13 @@
 ## medium fixed length - Sliding window
 
 - [Permutation in string](https://leetcode.com/problems/permutation-in-string/description/)
+- [Grumpy Bookstore Owner](https://leetcode.com/problems/grumpy-bookstore-owner/description/)
 - [Minimum Swaps to Group All 1's Together II](https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together-ii/)
   - depends on a formula, but other logic is important to understand
 - [Maximum Points You Can Obtain from Cards](https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/description/)
   - depends on a trick - i.e. to find the max in the array, you have to subtract the min sum array from total sum
-- [Maximum Number of Vowels in a Substring of Given Length](https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/) - `TODO`
-- [K Radius Subarray Averages](https://leetcode.com/problems/k-radius-subarray-averages/) - `TODO`
+- [Maximum Number of Vowels in a Substring of Given Length](https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/)
+- [K Radius Subarray Averages](https://leetcode.com/problems/k-radius-subarray-averages/)
 - [Distinct Numbers in Each Subarray](https://leetcode.com/problems/distinct-numbers-in-each-subarray/) - `TODO` - `Premium`
 - [Find K-Length Substrings With No Repeated Characters](https://leetcode.com/problems/find-k-length-substrings-with-no-repeated-characters/description/) - `TODO` - `Premium`
 - [Number of Unique Flavors After Sharing K Candies](https://leetcode.com/problems/number-of-unique-flavors-after-sharing-k-candies/description/) - `TODO` - `Premium`
@@ -216,7 +217,7 @@
 - [Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/), [Longest Subarray of 1's After Deleting One Element](https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/description/)
   - all these are grouped under same strategy
 - [Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/description/)
-- [Number of Substrings Containing All Three Characters](https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/) - `TODO`
+- [Number of Substrings Containing All Three Characters](https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/)
   - depends on a formula (of combination)
 
 # Two pointers
