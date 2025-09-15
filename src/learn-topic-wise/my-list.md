@@ -94,7 +94,6 @@
   - can be solved using pure linked list - [refer](./my-list.md#medium---linked-list)
 - [Design Twitter](https://leetcode.com/problems/design-twitter/)
 - [Encode and Decode TinyURL](https://leetcode.com/problems/encode-and-decode-tinyurl/)
-- [Brick Wall](https://leetcode.com/problems/brick-wall/)
 - [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)
   - falls kind of in DP - [refer](./my-list#medium---dynamic-programming)
 - [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/)
@@ -270,6 +269,7 @@
 
 ## medium - Prefix sum
 
+- [Brick Wall](https://leetcode.com/problems/brick-wall/)
 - [Binary subarrays with sum](https://leetcode.com/problems/binary-subarrays-with-sum/description/)
   - uses kadane algorithm template
   - needs hash map as well - [refer](./my-list.md#medium---hash)
