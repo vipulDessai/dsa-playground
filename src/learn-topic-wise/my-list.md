@@ -229,7 +229,7 @@
 - [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/description/)
 - [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/)
 - [Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/description/), [Sort Array By Parity II](https://leetcode.com/problems/sort-array-by-parity-ii/description/)
-- [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/description/) - `TODO`
+- [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/description/)
 
 ## easy - multiple array - Two pointers
 
