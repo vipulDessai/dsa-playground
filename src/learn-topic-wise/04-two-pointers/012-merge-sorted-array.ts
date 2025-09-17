@@ -68,6 +68,12 @@ function merge_array_manipulation(
     j--;
     k--;
   }
+
+  // why the same is NOT required for i >= 0?
+  // coz, this means the nums2 items have greater then the ones
+  // remaining in the nums1 for i < k, and since they are
+  // already sorted and nums1 is the variable we need to keep the
+  // result, we dont have to do anything
 }
 
 var i1 = [0],
