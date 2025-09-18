@@ -233,7 +233,7 @@
 
 ## easy - multiple array - Two pointers
 
-- [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) - `TODO`
+- [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)
 
 ## medium - Single Array - Two pointers
 

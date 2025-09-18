@@ -54,33 +54,37 @@ function totalFruit_pure_tp(fruits: number[]): number {
 
 // console.log(out);
 
-// TODO - understand the MAP solution as well
 function totalFruit_tp_map(fruits: number[]): number {
-  let left = 0;
-  let maxFruits = 0;
-  const count = new Map<number, number>();
+  const count = new Map(),
+    n = fruits.length;
 
-  for (let right = 0; right < fruits.length; right++) {
-    const fruit = fruits[right];
-    count.set(fruit, (count.get(fruit) || 0) + 1);
+  let l = 0,
+    r = 0,
+    res = 0;
+  while (r < n) {
+    const rF = fruits[r];
+    count.set(rF, (count.get(rF) || 0) + 1);
 
     while (count.size > 2) {
-      const leftFruit = fruits[left];
+      const lF = fruits[l];
+      let lFCount = count.get(lF) || 0;
+      --lFCount;
 
-      // remove 1 from the count of fruit at left
-      count.set(leftFruit, count.get(leftFruit)! - 1);
-
-      if (count.get(leftFruit) === 0) {
-        count.delete(leftFruit);
+      if (lFCount > 0) {
+        count.set(lF, lFCount);
+      } else {
+        count.delete(lF);
       }
 
-      left++;
+      ++l;
     }
 
-    maxFruits = Math.max(maxFruits, right - left + 1);
+    res = Math.max(res, r - l + 1);
+
+    ++r;
   }
 
-  return maxFruits;
+  return res;
 }
 
 var input = [3, 3, 3, 3, 3, 3];
