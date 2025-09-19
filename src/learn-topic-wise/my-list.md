@@ -9,7 +9,7 @@
 
 - [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
   - also is greedy - [refer](./my-list.md#easy---greedy)
-- [Max Consecutive Ones I](https://leetcode.com/problems/max-consecutive-ones/),
+- [Max Consecutive Ones I](https://leetcode.com/problems/max-consecutive-ones/)
 - [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
 - [Move Zeroes](https://leetcode.com/problems/move-zeroes/)
 - [Rotate Array](https://leetcode.com/problems/rotate-array/)
@@ -26,10 +26,6 @@
 - [Reshape the Matrix](https://leetcode.com/problems/reshape-the-matrix/)
 - [Toeplitz Matrix](https://leetcode.com/problems/toeplitz-matrix/)
 - [Find Pivot Index](https://leetcode.com/problems/find-pivot-index/)
-
-## medium - Pure array based
-
-- [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) - `TODO`
 
 # Simulation
 
@@ -271,8 +267,8 @@
 
 - [Brick Wall](https://leetcode.com/problems/brick-wall/)
 - [Binary subarrays with sum](https://leetcode.com/problems/binary-subarrays-with-sum/description/)
-  - uses kadane algorithm template
   - needs hash map as well - [refer](./my-list.md#medium---hash)
+- [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) - `TODO`
 
 # Linked list
 
