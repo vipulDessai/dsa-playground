@@ -21,8 +21,8 @@ function rotate(nums: number[], k: number): void {
   reverse(k % n, n - 1, nums);
 }
 
-var input = [],
-  k = 0;
+var input = [1, 2, 3, 4, 5, 6, 7],
+  k = 3;
 rotate(input, k);
 
 console.log('foo');
