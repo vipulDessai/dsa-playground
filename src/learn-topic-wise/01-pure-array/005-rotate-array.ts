@@ -26,3 +26,34 @@ var input = [1, 2, 3, 4, 5, 6, 7],
 rotate(input, k);
 
 console.log('foo');
+
+// Solution - Cyclic replacement
+function rotate_cyclic_replacement(nums: number[], k: number): void {
+  const n = nums.length;
+  k = k % n;
+  if (k === 0 || n <= 1) return;
+
+  let count = 0,
+    i = 0;
+
+  while (count < n) {
+    let current = i;
+    let prev = nums[i];
+
+    do {
+      const next = (current + k) % n;
+      [nums[next], prev] = [prev, nums[next]];
+
+      current = next;
+      count++;
+    } while (current !== i);
+
+    i++;
+  }
+}
+
+var input = [1, 2, 3, 4, 5, 6, 7],
+  k = 3;
+rotate_cyclic_replacement(input, k);
+
+console.log('foo');
