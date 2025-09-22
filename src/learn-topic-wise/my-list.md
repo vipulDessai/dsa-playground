@@ -12,7 +12,7 @@
 - [Max Consecutive Ones I](https://leetcode.com/problems/max-consecutive-ones/)
 - [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
 - [Move Zeroes](https://leetcode.com/problems/move-zeroes/)
-- [Rotate Array](https://leetcode.com/problems/rotate-array/) - `TODO` - `k % n solution`
+- [Rotate Array](https://leetcode.com/problems/rotate-array/)
 - [Single Number](https://leetcode.com/problems/single-number/)
 - [Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/)
 - [Plus One](https://leetcode.com/problems/plus-one/)
