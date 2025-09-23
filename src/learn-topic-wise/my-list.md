@@ -14,7 +14,7 @@
 - [Move Zeroes](https://leetcode.com/problems/move-zeroes/)
 - [Rotate Array](https://leetcode.com/problems/rotate-array/)
 - [Single Number](https://leetcode.com/problems/single-number/)
-- [Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/)
+- [Intersection of Two Arrays I](https://leetcode.com/problems/intersection-of-two-arrays/), [Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/)
 - [Plus One](https://leetcode.com/problems/plus-one/)
 - [Missing Number](https://leetcode.com/problems/missing-number/)
 - [Third Maximum Number](https://leetcode.com/problems/third-maximum-number/)
