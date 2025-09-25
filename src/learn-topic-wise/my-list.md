@@ -26,6 +26,8 @@
 - [Reshape the Matrix](https://leetcode.com/problems/reshape-the-matrix/)
 - [Toeplitz Matrix](https://leetcode.com/problems/toeplitz-matrix/)
 - [Find Pivot Index](https://leetcode.com/problems/find-pivot-index/)
+- [Set Mismatch](https://leetcode.com/problems/set-mismatch/description/)
+  - find minimum and duplicate or repeated
 
 # Simulation
 
@@ -49,6 +51,7 @@
 ## medium - String
 
 - learn KMP Algorithm for Pattern Searching and find DSA problems for it and other searching patterns - `TODO`
+- all problems from `01-strings/cs` - `TODO`
 
 # Hash
 
@@ -75,6 +78,7 @@
 - [Check If N and Its Double Exist](https://leetcode.com/problems/check-if-n-and-its-double-exist/)
 - [Find Words That Can Be Formed by Characters](https://leetcode.com/problems/find-words-that-can-be-formed-by-characters/)
 - [Subdomain Visit Count](https://leetcode.com/problems/subdomain-visit-count/)
+- [Find Missing and Repeated Values](https://leetcode.com/problems/find-missing-and-repeated-values/description/)
 
 ## medium - Hash
 
@@ -242,9 +246,6 @@
 - [Fruits into baskets](https://leetcode.com/problems/fruit-into-baskets/description/) - `TODO` - `AI's Map Solution`
 - [Boats to Save People](https://leetcode.com/problems/boats-to-save-people/description/)
   - tricky and greedy - [refer](./my-list.md#medium---greedy)
-- [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/description/) - `TODO`
-  - can be solved using [linked list](./my-list.md#medium---linked-list)
-  - can be solved using [bit manipulations](./my-list.md#bit)
 
 ## easy - intervals - Two pointers
 
@@ -254,6 +255,7 @@
 ## medium - intervals - Two pointers
 
 - [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/description/) - `TODO`
+  - can be solved using [linked list](./my-list.md#medium---linked-list)
 - [Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/description/) - `TODO`
 - [The k Strongest Values in an Array](https://leetcode.com/problems/the-k-strongest-values-in-an-array/description/) - `TODO`
 - [Minimize Maximum Pair Sum in Array](https://leetcode.com/problems/minimize-maximum-pair-sum-in-array/description/) - `TODO`
@@ -277,7 +279,7 @@
 - [Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/)
   - can be solved using pure linked list - [refer](./my-list.md#medium---hash)
 - [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/description/) - `TODO`
-  - can be solved using [two pointers](./my-list.md#medium---single-array---two-pointers)
+  - can be solved using [two pointers](./my-list.md#medium---intervals---two-pointers)
 
 # Graph
 
@@ -287,11 +289,6 @@
   - uses hash as well - [refer - hash](./my-list.md#hard---hash), [refer - bitwise](./my-list.md#hard---bitwise)
 
 # Bitwise
-
-## medium - Bitwise
-
-- [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/description/) - `TODO`
-  - can be solved using [two pointers](./my-list.md#medium---single-array---two-pointers)
 
 ## hard - Bitwise
 
