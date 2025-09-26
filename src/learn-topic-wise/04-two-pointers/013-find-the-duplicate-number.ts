@@ -13,6 +13,7 @@ function findDuplicate(nums: number[]): number {
   }
 
   // 2. find the entry point
+  // reset the position, is a must for both s & f
   f = nums[0];
   s = nums[s];
   while (s !== f) {
