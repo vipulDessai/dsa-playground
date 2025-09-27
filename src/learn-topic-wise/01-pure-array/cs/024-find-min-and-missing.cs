@@ -1,6 +1,7 @@
-﻿namespace learning_dsa_csharp._01_strings_arrays_hash._024_find_min_and_missing
+﻿// https://leetcode.com/problems/set-mismatch/description
+
+namespace learning_dsa_csharp._01_strings_arrays_hash._024_find_min_and_missing
 {
-    // https://leetcode.com/problems/set-mismatch/description
     internal class MySoln
     {
         public int[] FindErrorNums(int[] nums)

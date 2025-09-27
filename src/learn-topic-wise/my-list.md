@@ -2,6 +2,7 @@
 
 - [Array](https://leetcode.com/discuss/study-guide/2428868/Array-Problems-classified-into-different-types)
 - [Strivers](https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/)
+- [two pointers](https://leetcode.com/discuss/study-guide/1688903/Solved-all-two-pointers-problems-in-100-days)
 
 # Pure array based
 
@@ -254,7 +255,7 @@
 
 ## medium - intervals - Two pointers
 
-- [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/description/) - `TODO`
+- [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/description/)
   - can be solved using [linked list](./my-list.md#medium---linked-list)
 - [Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/description/) - `TODO`
 - [The k Strongest Values in an Array](https://leetcode.com/problems/the-k-strongest-values-in-an-array/description/) - `TODO`
