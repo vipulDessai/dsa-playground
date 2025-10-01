@@ -257,7 +257,7 @@
 
 - [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/description/)
   - can be solved using [linked list](./my-list.md#medium---linked-list)
-- [Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/description/) - `TODO`
+- [Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/description/)
 - [The k Strongest Values in an Array](https://leetcode.com/problems/the-k-strongest-values-in-an-array/description/) - `TODO`
 - [Minimize Maximum Pair Sum in Array](https://leetcode.com/problems/minimize-maximum-pair-sum-in-array/description/) - `TODO`
 - [Rearrange Array Elements by Sign](https://leetcode.com/problems/rearrange-array-elements-by-sign/description/) - `TODO`
