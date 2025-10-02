@@ -1,7 +1,7 @@
 export const url =
   '[The k Strongest Values in an Array](https://leetcode.com/problems/the-k-strongest-values-in-an-array/description/)';
 
-function getStrongest(arr: number[], k: number): number[] {
+function getStrongest_pure_sorting(arr: number[], k: number): number[] {
   const n = arr.length;
   arr.sort((a, b) => a - b);
 
@@ -27,8 +27,55 @@ function getStrongest(arr: number[], k: number): number[] {
   return res;
 }
 
-var input = [],
-  k = 0;
-var out = getStrongest(input, k);
+var input = [6,7,11,7,6,8],
+  k = 5;
+var out = getStrongest_pure_sorting(input, k);
+
+console.log(out);
+
+function getStrongest_two_pointers(arr: number[], k: number): number[] {
+    arr.sort((a, b) => a - b);
+
+    const n = arr.length;
+
+    const mInd = Math.floor((n - 1) / 2);
+    const m = arr[mInd];
+
+    let l = 0, r = n - 1;
+    const res: number[] = [];
+    while (l <= r) {
+        const lAbs = Math.abs(arr[l] - m);
+        const rAbs = Math.abs(arr[r] - m);
+
+        if(lAbs === rAbs) {
+            if(arr[l] > arr[r]) {
+                res.push(arr[l]);
+                ++l;
+            }
+            else {
+                res.push(arr[r]);
+                --r;
+            }
+        }
+        else if(lAbs > rAbs) {
+            res.push(arr[l]);
+            ++l;
+        }
+        else {
+            res.push(arr[r]);
+            --r;
+        }
+
+        if(res.length === k) {
+            break;
+        }
+    }
+
+    return res;
+};
+
+var input = [6,7,11,7,6,8],
+  k = 5;
+var out = getStrongest_two_pointers(input, k);
 
 console.log(out);
