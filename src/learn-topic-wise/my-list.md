@@ -251,6 +251,7 @@
 ## easy - intervals - Two pointers
 
 - [The k Strongest Values in an Array](https://leetcode.com/problems/the-k-strongest-values-in-an-array/description/)
+- [Minimize Maximum Pair Sum in Array](https://leetcode.com/problems/minimize-maximum-pair-sum-in-array/description/)
 - [Remove Element](https://leetcode.com/problems/remove-element/description/) - `TODO`
 - [Duplicate Zeros](https://leetcode.com/problems/duplicate-zeros/description/) - `TODO`
 
@@ -259,7 +260,6 @@
 - [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/description/)
   - can be solved using [linked list](./my-list.md#medium---linked-list)
 - [Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/description/)
-- [Minimize Maximum Pair Sum in Array](https://leetcode.com/problems/minimize-maximum-pair-sum-in-array/description/) - `TODO`
 - [Rearrange Array Elements by Sign](https://leetcode.com/problems/rearrange-array-elements-by-sign/description/) - `TODO`
 - [Partition Array According to Given Pivot](https://leetcode.com/problems/partition-array-according-to-given-pivot/description/) - `TODO`
 - [Meeting Scheduler](https://leetcode.com/problems/meeting-scheduler/) - `Premium`
