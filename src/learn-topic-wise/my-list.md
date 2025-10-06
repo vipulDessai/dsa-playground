@@ -215,7 +215,7 @@
 - [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
   - needs hash as well [refer](./my-list.md#medium---hash)
 - [Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/), [Longest Subarray of 1's After Deleting One Element](https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/description/)
-  - all these are grouped under same strategy
+  - all these use a same strategy
 - [Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/description/)
 - [Number of Substrings Containing All Three Characters](https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/)
   - depends on a formula (of combination)
@@ -260,7 +260,7 @@
 - [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/description/)
   - can be solved using [linked list](./my-list.md#medium---linked-list)
 - [Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/description/)
-- [Rearrange Array Elements by Sign](https://leetcode.com/problems/rearrange-array-elements-by-sign/description/) - `TODO`
+- [Rearrange Array Elements by Sign](https://leetcode.com/problems/rearrange-array-elements-by-sign/description/)
 - [Partition Array According to Given Pivot](https://leetcode.com/problems/partition-array-according-to-given-pivot/description/) - `TODO`
 - [Meeting Scheduler](https://leetcode.com/problems/meeting-scheduler/) - `Premium`
 
