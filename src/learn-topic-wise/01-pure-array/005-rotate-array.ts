@@ -1,6 +1,8 @@
 export const url =
   '[Rotate Array](https://leetcode.com/problems/rotate-array/description/)';
 
+console.log('revers with mod');
+
 /**
  Do not return anything, modify nums in-place instead.
  */
@@ -25,7 +27,7 @@ var input = [1, 2, 3, 4, 5, 6, 7],
   k = 3;
 rotate(input, k);
 
-console.log('foo');
+console.log('Cyclic replacement');
 
 // Solution - Cyclic replacement
 function rotate_cyclic_replacement(nums: number[], k: number): void {
@@ -37,16 +39,16 @@ function rotate_cyclic_replacement(nums: number[], k: number): void {
     i = 0;
 
   while (count < n) {
-    let current = i;
+    let curI = i;
     let prev = nums[i];
 
     do {
-      const next = (current + k) % n;
+      const next = (curI + k) % n;
       [nums[next], prev] = [prev, nums[next]];
 
-      current = next;
+      curI = next;
       count++;
-    } while (current !== i);
+    } while (curI !== i);
 
     i++;
   }

@@ -14,6 +14,7 @@
 - [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
 - [Move Zeroes](https://leetcode.com/problems/move-zeroes/)
 - [Rotate Array](https://leetcode.com/problems/rotate-array/)
+- [Partition Array According to Given Pivot](https://leetcode.com/problems/partition-array-according-to-given-pivot/description/)
 - [Single Number](https://leetcode.com/problems/single-number/)
 - [Intersection of Two Arrays I](https://leetcode.com/problems/intersection-of-two-arrays/), [Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/)
 - [Plus One](https://leetcode.com/problems/plus-one/)
@@ -261,7 +262,6 @@
   - can be solved using [linked list](./my-list.md#medium---linked-list)
 - [Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/description/)
 - [Rearrange Array Elements by Sign](https://leetcode.com/problems/rearrange-array-elements-by-sign/description/)
-- [Partition Array According to Given Pivot](https://leetcode.com/problems/partition-array-according-to-given-pivot/description/) - `TODO`
 - [Meeting Scheduler](https://leetcode.com/problems/meeting-scheduler/) - `Premium`
 
 # Prefix sum
