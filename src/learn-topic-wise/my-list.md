@@ -152,7 +152,15 @@
 ## medium - Heap
 
 - [Kth Smallest Element in a Sorted Matrix](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/)
-  - can be solved using binary search - [refer](./my-list.md#medium---binary-search)
+  - can be solved using binary search - [refer](./my-list.md#medium---range-based---binary-search)
+
+## medium - misc - heap
+
+- [relative ranks](https://leetcode.com/problems/relative-ranks/) - `TODO`
+- [furthest building you can reach](https://leetcode.com/problems/furthest-building-you-can-reach/) - `TODO`
+- [maximum average pass ratio](https://leetcode.com/problems/maximum-average-pass-ratio/) - `TODO`
+- [remove stones to minimize the total](https://leetcode.com/problems/remove-stones-to-minimize-the-total/) - `TODO`
+- [find median from data stream](https://leetcode.com/problems/find-median-from-data-stream/) - `TODO`
 
 # Sort
 
@@ -172,18 +180,38 @@
 
 - [Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/)
 
-## medium - Binary Search
-
-### Range Based - Binary Search
+## medium - Range Based - Binary Search
 
 - [Minimum Limit of Balls in a Bag](https://leetcode.com/problems/minimum-limit-of-balls-in-a-bag/)
 - [Capacity To Ship Packages Within D Days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days)
 - [Kth Smallest Element in a Sorted Matrix](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/)
   - can be solved using priority queue (heap) - [refer](./my-list.md#medium---heap)
 
-### variation of normal binary search - Binary Search
+## medium - variation of normal binary search - Binary Search
 
 - [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/description/), [Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)
+- [find smallest letter greater than target](https://leetcode.com/problems/find-smallest-letter-greater-than-target/) - `TODO`
+- [find target indices after sorting array](https://leetcode.com/problems/find-target-indices-after-sorting-array/) - `TODO`
+
+## medium - matrix - binary search
+
+- [search a 2d matrix](https://leetcode.com/problems/search-a-2d-matrix/) - `TODO`, [search a 2d matrix ii](https://leetcode.com/problems/search-a-2d-matrix-ii/) - `TODO`
+
+## medium - others - binary search
+
+- [find peak element](https://leetcode.com/problems/find-peak-element/) - `TODO`
+- [valid triangle number](https://leetcode.com/problems/valid-triangle-number/) - `TODO`
+- [missing element in sorted array](https://leetcode.com/problems/missing-element-in-sorted-array/) - `TODO`
+- [fixed point](https://leetcode.com/problems/fixed-point/) - `TODO`
+- [kth missing positive number](https://leetcode.com/problems/kth-missing-positive-number/) - `TODO`
+
+## hard - binary search
+
+- [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) - `TODO`
+
+## hard - binary search
+
+- [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/)
 
 # Sliding window
 
@@ -335,3 +363,9 @@
 
 - [Unique Paths](https://leetcode.com/problems/unique-paths/description/) - `TODO`
   - can be also solved using DP - [refer](./my-list.md#medium---dynamic-programming)
+
+# Segment Tree
+
+## medium - segement tree
+
+- [My Calendar I](https://leetcode.com/problems/my-calendar-i/)
