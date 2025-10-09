@@ -207,11 +207,8 @@
 
 ## hard - binary search
 
-- [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) - `TODO`
-
-## hard - binary search
-
 - [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/)
+- [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) - `TODO`
 
 # Sliding window
 
