@@ -31,6 +31,10 @@
 - [Set Mismatch](https://leetcode.com/problems/set-mismatch/description/)
   - find minimum and duplicate or repeated
 
+## medium - Pure array based
+
+- [search a 2d matrix ii](https://leetcode.com/problems/search-a-2d-matrix-ii/)
+
 # Simulation
 
 ## easy - Simulation
@@ -195,7 +199,7 @@
 
 ## medium - matrix - binary search
 
-- [search a 2d matrix](https://leetcode.com/problems/search-a-2d-matrix/) - `TODO`, [search a 2d matrix ii](https://leetcode.com/problems/search-a-2d-matrix-ii/) - `TODO`
+- [search a 2d matrix](https://leetcode.com/problems/search-a-2d-matrix/)
 
 ## medium - others - binary search
 
