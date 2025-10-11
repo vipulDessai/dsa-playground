@@ -41,7 +41,7 @@ function triangleNumber(nums: number[]): number {
       const k = search(j + 1, t);
 
       // since the ask is find all sides that form trangle
-      // i.e. nums[i] + nums[j] > nums[k]
+      // i.e. nums[i] + nums[j] < nums[k]
       // k is a cutoff point where nums[i] + nums[j] < nums[k]
       // i.e. k and anything above will be invalid triangle
       // i.e. from index j + 1 to k - 1 are valid indices

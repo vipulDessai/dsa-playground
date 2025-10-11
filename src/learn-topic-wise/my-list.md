@@ -203,8 +203,8 @@
 
 ## medium - others - binary search
 
+- [valid triangle number](https://leetcode.com/problems/valid-triangle-number/)
 - [find peak element](https://leetcode.com/problems/find-peak-element/) - `TODO`
-- [valid triangle number](https://leetcode.com/problems/valid-triangle-number/) - `TODO`
 - [missing element in sorted array](https://leetcode.com/problems/missing-element-in-sorted-array/) - `TODO`
 - [fixed point](https://leetcode.com/problems/fixed-point/) - `TODO`
 - [kth missing positive number](https://leetcode.com/problems/kth-missing-positive-number/) - `TODO`
