@@ -1,9 +1,3 @@
-# Reference
-
-- [Array](https://leetcode.com/discuss/study-guide/2428868/Array-Problems-classified-into-different-types)
-- [Strivers](https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/)
-- [two pointers](https://leetcode.com/discuss/study-guide/1688903/Solved-all-two-pointers-problems-in-100-days)
-
 # Pure array based
 
 ## easy - Pure array based
@@ -183,6 +177,9 @@
 ## easy - Binary Search
 
 - [Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/)
+- [kth missing positive number](https://leetcode.com/problems/kth-missing-positive-number/) - `TODO`
+- [find smallest letter greater than target](https://leetcode.com/problems/find-smallest-letter-greater-than-target/) - `TODO`
+- [find target indices after sorting array](https://leetcode.com/problems/find-target-indices-after-sorting-array/) - `TODO`
 
 ## medium - Range Based - Binary Search
 
@@ -194,8 +191,6 @@
 ## medium - variation of normal binary search - Binary Search
 
 - [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/description/), [Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)
-- [find smallest letter greater than target](https://leetcode.com/problems/find-smallest-letter-greater-than-target/) - `TODO`
-- [find target indices after sorting array](https://leetcode.com/problems/find-target-indices-after-sorting-array/) - `TODO`
 
 ## medium - matrix - binary search
 
@@ -204,10 +199,10 @@
 ## medium - others - binary search
 
 - [valid triangle number](https://leetcode.com/problems/valid-triangle-number/)
-- [find peak element](https://leetcode.com/problems/find-peak-element/) - `TODO`
-- [missing element in sorted array](https://leetcode.com/problems/missing-element-in-sorted-array/) - `TODO`
-- [fixed point](https://leetcode.com/problems/fixed-point/) - `TODO`
-- [kth missing positive number](https://leetcode.com/problems/kth-missing-positive-number/) - `TODO`
+- [find peak element](https://leetcode.com/problems/find-peak-element/)
+  - tricky like greedy but not exactly greedy
+- [missing element in sorted array](https://leetcode.com/problems/missing-element-in-sorted-array/) - `TODO` - `Premium`
+- [fixed point](https://leetcode.com/problems/fixed-point/) - `TODO` - `Premium`
 
 ## hard - binary search
 

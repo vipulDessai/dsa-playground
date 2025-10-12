@@ -1,3 +1,9 @@
+# Refer
+
+- [Array](https://leetcode.com/discuss/study-guide/2428868/Array-Problems-classified-into-different-types)
+- [Strivers](https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/)
+- [two pointers](https://leetcode.com/discuss/study-guide/1688903/Solved-all-two-pointers-problems-in-100-days)
+
 # Prefix Sum
 
 ## Only PrefixSum
