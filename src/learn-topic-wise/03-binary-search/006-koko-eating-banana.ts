@@ -1,3 +1,6 @@
+export const url =
+  '[Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas)';
+
 function minEatingSpeed(piles: number[], h: number): number {
   function feasible(capacity: number) {
     let i = 0,
@@ -27,7 +30,8 @@ function minEatingSpeed(piles: number[], h: number): number {
     }
   }
 
-  return l;
+  // returning l or r both will work
+  return r;
 }
 
 minEatingSpeed([3, 6, 7, 11], 8);
