@@ -177,7 +177,6 @@
 ## easy - Binary Search
 
 - [Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/)
-- [kth missing positive number](https://leetcode.com/problems/kth-missing-positive-number/) - `TODO`
 - [find smallest letter greater than target](https://leetcode.com/problems/find-smallest-letter-greater-than-target/) - `TODO`
 - [find target indices after sorting array](https://leetcode.com/problems/find-target-indices-after-sorting-array/) - `TODO`
 
