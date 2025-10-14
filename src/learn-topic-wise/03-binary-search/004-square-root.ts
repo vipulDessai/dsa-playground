@@ -8,7 +8,7 @@ function mySqrt(x: number): number {
   while (l < r) {
     const m = Math.floor(l + (r - l) / 2);
 
-    // in this case we are looking for higher value (max value)
+    // in this case we are looking for higher value (max value or upper bound)
     // i.e. even when we might have found an answer
     // we still look for a higher value
     if (m * m <= x) {

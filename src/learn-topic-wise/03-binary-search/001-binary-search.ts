@@ -1,3 +1,6 @@
+export const url =
+  '[Search Insert Position](https://leetcode.com/problems/search-insert-position/description/)';
+
 function searchInsert(nums: number[], target: number): number {
   let l = 0,
     r = nums.length;
