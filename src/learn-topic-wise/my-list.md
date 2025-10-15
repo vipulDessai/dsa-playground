@@ -178,7 +178,7 @@
 
 - [Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/)
 - [find smallest letter greater than target](https://leetcode.com/problems/find-smallest-letter-greater-than-target/)
-- [find target indices after sorting array](https://leetcode.com/problems/find-target-indices-after-sorting-array/) - `TODO`
+- [find target indices after sorting array](https://leetcode.com/problems/find-target-indices-after-sorting-array/)
 
 ## medium - Range Based - Binary Search
 

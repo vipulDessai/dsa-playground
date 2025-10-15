@@ -2,7 +2,7 @@
 
 # common template
 
-- if a target exists in the array use
+- for straight forward binary search where we search and locate the target or return `-1`, use as below
 
 ```ts
 while (l <= r) {
