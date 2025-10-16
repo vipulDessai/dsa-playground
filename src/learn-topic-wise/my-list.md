@@ -97,7 +97,8 @@
 - [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)
   - falls kind of in DP - [refer](./my-list#medium---dynamic-programming)
 - [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/)
-- [Fruit Into Baskets](https://leetcode.com/problems/fruit-into-baskets/)
+- [Fruits Into Baskets](https://leetcode.com/problems/fruit-into-baskets/)
+  - needs [two pointers](./my-list.md#medium---single-array---two-pointers) as well
 - [Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store/)
 - [Partition Labels](https://leetcode.com/problems/partition-labels/)
 - [Sort Characters By Frequency](https://leetcode.com/problems/sort-characters-by-frequency/)
@@ -276,7 +277,7 @@
 
 - [The k Strongest Values in an Array](https://leetcode.com/problems/the-k-strongest-values-in-an-array/description/)
 - [Minimize Maximum Pair Sum in Array](https://leetcode.com/problems/minimize-maximum-pair-sum-in-array/description/)
-- [Remove Element](https://leetcode.com/problems/remove-element/description/) - `TODO`
+- [Remove Element](https://leetcode.com/problems/remove-element/description/)
 - [Duplicate Zeros](https://leetcode.com/problems/duplicate-zeros/description/) - `TODO`
 
 ## medium - intervals - Two pointers
