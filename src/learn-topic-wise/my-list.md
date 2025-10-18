@@ -117,7 +117,6 @@
 - [First Missing Positive](https://leetcode.com/problems/first-missing-positive)
   - can be solved using cyclic sort - [refer](./my-list.md#hard---cyclic-sort)
 - [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
-- [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)
 - [Word Ladder I](https://leetcode.com/problems/word-ladder/), [Word Ladder II](https://leetcode.com/problems/word-ladder-ii/)
   - word ladder II - failing
     - uses bidirectional BFS, yet it fails at TLE 33
@@ -147,6 +146,7 @@
 - [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/)
 - [Dijktra Algorithm](https://www.geeksforgeeks.org/problems/implementing-dijkstra-set-1-adjacency-matrix/1)
 - [Find Subsequence of Length K With the Largest Sum](https://leetcode.com/problems/find-subsequence-of-length-k-with-the-largest-sum/)
+- [relative ranks](https://leetcode.com/problems/relative-ranks/) - `TODO`
 
 ## medium - Heap
 
@@ -155,11 +155,14 @@
 
 ## medium - misc - heap
 
-- [relative ranks](https://leetcode.com/problems/relative-ranks/) - `TODO`
-- [furthest building you can reach](https://leetcode.com/problems/furthest-building-you-can-reach/) - `TODO`
 - [maximum average pass ratio](https://leetcode.com/problems/maximum-average-pass-ratio/) - `TODO`
 - [remove stones to minimize the total](https://leetcode.com/problems/remove-stones-to-minimize-the-total/) - `TODO`
-- [find median from data stream](https://leetcode.com/problems/find-median-from-data-stream/) - `TODO`
+- [furthest building you can reach](https://leetcode.com/problems/furthest-building-you-can-reach/) - `TODO`
+  - needs greedy also - [refer](./my-list.md#medium---greedy)
+
+## hard
+
+- [find median from data stream](https://leetcode.com/problems/find-median-from-data-stream/)
 
 # Sort
 
@@ -278,7 +281,7 @@
 - [The k Strongest Values in an Array](https://leetcode.com/problems/the-k-strongest-values-in-an-array/description/)
 - [Minimize Maximum Pair Sum in Array](https://leetcode.com/problems/minimize-maximum-pair-sum-in-array/description/)
 - [Remove Element](https://leetcode.com/problems/remove-element/description/)
-- [Duplicate Zeros](https://leetcode.com/problems/duplicate-zeros/description/) - `TODO`
+- [Duplicate Zeros](https://leetcode.com/problems/duplicate-zeros/description/)
 
 ## medium - intervals - Two pointers
 
@@ -350,6 +353,8 @@
 
 - [Boats to Save People](https://leetcode.com/problems/boats-to-save-people/description/)
   - needs two pointers as well and greedy - [refer](./my-list.md#medium---single-array---two-pointers)
+- [furthest building you can reach](https://leetcode.com/problems/furthest-building-you-can-reach/) - `TODO`
+  - needs greedy also - [refer](./my-list.md#medium---greedy)
 
 # Modulo
 
