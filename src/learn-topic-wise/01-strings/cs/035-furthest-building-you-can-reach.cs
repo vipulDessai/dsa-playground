@@ -1,4 +1,6 @@
-﻿namespace learning_dsa_csharp._01_strings_arrays_hash._035_furthest_building_you_can_reach
+﻿// [furthest building you can reach](https://leetcode.com/problems/furthest-building-you-can-reach/) 
+
+namespace learning_dsa_csharp._01_strings_arrays_hash._035_furthest_building_you_can_reach
 {
     internal class MySoln
     {

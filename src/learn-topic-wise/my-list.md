@@ -155,8 +155,8 @@
 
 ## medium - misc - heap
 
-- [maximum average pass ratio](https://leetcode.com/problems/maximum-average-pass-ratio/) - `TODO`
-- [remove stones to minimize the total](https://leetcode.com/problems/remove-stones-to-minimize-the-total/) - `TODO`
+- [maximum average pass ratio](https://leetcode.com/problems/maximum-average-pass-ratio/)
+- [remove stones to minimize the total](https://leetcode.com/problems/remove-stones-to-minimize-the-total/)
 - [furthest building you can reach](https://leetcode.com/problems/furthest-building-you-can-reach/) - `TODO`
   - needs greedy also - [refer](./my-list.md#medium---greedy)
 
