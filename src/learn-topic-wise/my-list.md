@@ -157,7 +157,7 @@
 
 - [maximum average pass ratio](https://leetcode.com/problems/maximum-average-pass-ratio/)
 - [remove stones to minimize the total](https://leetcode.com/problems/remove-stones-to-minimize-the-total/)
-- [furthest building you can reach](https://leetcode.com/problems/furthest-building-you-can-reach/) - `TODO`
+- [furthest building you can reach](https://leetcode.com/problems/furthest-building-you-can-reach/)
   - needs greedy also - [refer](./my-list.md#medium---greedy)
 
 ## hard
