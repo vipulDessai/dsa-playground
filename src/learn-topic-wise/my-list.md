@@ -22,8 +22,6 @@
 - [Reshape the Matrix](https://leetcode.com/problems/reshape-the-matrix/)
 - [Toeplitz Matrix](https://leetcode.com/problems/toeplitz-matrix/)
 - [Find Pivot Index](https://leetcode.com/problems/find-pivot-index/)
-- [Set Mismatch](https://leetcode.com/problems/set-mismatch/description/)
-  - find minimum and duplicate or repeated
 
 ## medium - Pure array based
 
@@ -57,6 +55,9 @@
 
 ## easy - Hash
 
+- [Set Mismatch](https://leetcode.com/problems/set-mismatch/description/)
+  - find minimum and duplicate or repeated
+  - uses bit manipulation xor too - [refer](./my-list.md#easy---bitwise) - `TODO`
 - [Two Sum](https://leetcode.com/problems/two-sum/)
   - can be solved using 2 pointers [refer](./my-list.md#easy---single-array---two-pointers)
 - [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/), [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/)
@@ -146,7 +147,7 @@
 - [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/)
 - [Dijktra Algorithm](https://www.geeksforgeeks.org/problems/implementing-dijkstra-set-1-adjacency-matrix/1)
 - [Find Subsequence of Length K With the Largest Sum](https://leetcode.com/problems/find-subsequence-of-length-k-with-the-largest-sum/)
-- [relative ranks](https://leetcode.com/problems/relative-ranks/) - `TODO`
+- [relative ranks](https://leetcode.com/problems/relative-ranks/)
 
 ## medium - Heap
 
@@ -317,6 +318,12 @@
   - uses hash as well - [refer - hash](./my-list.md#hard---hash), [refer - bitwise](./my-list.md#hard---bitwise)
 
 # Bitwise
+
+## easy - Bitwise
+
+- [Set Mismatch](https://leetcode.com/problems/set-mismatch/description/)
+  - find minimum and duplicate or repeated
+  - uses hash as well - [refer](./my-list.md#easy---hash)
 
 ## hard - Bitwise
 

@@ -41,6 +41,7 @@ The optimized approaches in this article use in-place solutions. Does in-place m
 - Iterative DFS
 - Two Heaps
 - Subsets
+- Subset Sum
 - Combinations
 - Permutations
 - Dijkstra's
