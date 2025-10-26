@@ -55,34 +55,33 @@ var input = [1, 2, 2, 4];
 var out = findErrorNums_sumset_formula(input);
 console.log(out);
 
-// TODO - solve xor bitwise strategy
-// function findErrorNums_xor_hashset(nums: number[]): number[] {
-// int n = nums.Length;
+function findErrorNums_xor_hashset(nums: number[]): number[] {
+  const n = nums.length;
 
-//             int[] count = new int[n];
+  const count = Array(n).fill(0);
 
-//             var answers = new int[] { 0, 0 };
+  let xorSum = 0,
+    dup = 0;
+  for (let i = 0; i < n; i++) {
+    var current = nums[i];
 
-//             int xorSum = 0;
-//             for (int i = 0; i < n; i++)
-//             {
-//                 var current = nums[i];
+    // XOR expected vs actual
+    xorSum ^= (i + 1) ^ current;
 
-//                 xorSum ^= (i + 1) ^ current;
+    count[current - 1]++;
 
-//                 count[current - 1]++;
+    if (count[current - 1] == 2) {
+      dup = current;
+    }
+  }
 
-//                 if (count[current - 1] == 2)
-//                     answers[0] = current;
-//             }
+  // this is kinda same as expectedSum - uniqueSum
+  xorSum ^= dup;
 
-//             xorSum ^= answers[0];
+  // duplicate, missing
+  return [dup, xorSum];
+}
 
-//             answers[1] = xorSum;
-
-//             return answers;
-// };
-
-// var input = [1,2,2,4]
-// var out = findErrorNums_xor_hashset(input);
-// console.log(out);
+var input = [1, 2, 2, 4];
+var out = findErrorNums_xor_hashset(input);
+console.log(out);
