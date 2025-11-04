@@ -12,6 +12,12 @@ function intersection(nums1: number[], nums2: number[]): number[] {
   while (i < nums1.length && j < nums2.length) {
     if (nums1[i] === nums2[j]) {
       res.add(nums1[i]);
+
+      // if res is normal array
+      // if (res[res.length - 1] !== nums1[i]) {
+      //   res.push(nums1[i]);
+      // }
+
       ++i;
       ++j;
     } else {
