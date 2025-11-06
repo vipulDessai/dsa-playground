@@ -5,7 +5,8 @@ function missingNumber(nums: number[]): number {
   const n = nums.length;
 
   let bits = 0;
-  for (let i = 1; i <= n; ++i) {
+  // from 0 -> n, not n - 1
+  for (let i = 0; i <= n; ++i) {
     bits ^= i;
   }
   for (let i = 0; i < n; ++i) {
