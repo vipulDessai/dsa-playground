@@ -5,7 +5,7 @@ function findShortestSubArray_w_maps(nums: number[]): number {
   // why we need multiple maps?
   // coz there could be multiple items with same degree
   // for them we need to compute the smallest length
-  // refer findShortestSubArray_wo_maps
+  // refer findShortestSubArray_wo_maps for finding smallest length without maps
   const countMap = new Map<number, number>();
   const firstIndexMap = new Map<number, number>();
   const lastIndexMap = new Map<number, number>();

@@ -17,7 +17,7 @@
 - [Degree of an Array](https://leetcode.com/problems/degree-of-an-array/)
 - [Maximum Average Subarray I](https://leetcode.com/problems/maximum-average-subarray-i/)
 - [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)
-- [Array Partition I](https://leetcode.com/problems/array-partition-i/)
+- [Array Partition I](https://leetcode.com/problems/array-partition/)
 - [Reshape the Matrix](https://leetcode.com/problems/reshape-the-matrix/)
 - [Toeplitz Matrix](https://leetcode.com/problems/toeplitz-matrix/)
 - [Find Pivot Index](https://leetcode.com/problems/find-pivot-index/)
