@@ -47,18 +47,19 @@ function isToeplitzMatrix(matrix: number[][]): boolean {
 // console.log(out);
 
 function isToeplitzMatrixStream_partial_row_load(matrix: number[][]): boolean {
-  if (matrix.length === 0) return true;
+  if (matrix.length < 2) return true;
 
   let prevRow = matrix[0];
 
-  for (let i = 1; i < matrix.length; i++) {
-    const currRow = matrix[i];
-    for (let j = 1; j < currRow.length; j++) {
-      if (currRow[j] !== prevRow[j - 1]) {
+  for (let i = 1; i < matrix.length; ++i) {
+    const curRow = matrix[i];
+    for (let j = 1; j < matrix[0].length; ++j) {
+      if (curRow[j] !== prevRow[j - 1]) {
         return false;
       }
     }
-    prevRow = currRow;
+
+    prevRow = curRow;
   }
 
   return true;
