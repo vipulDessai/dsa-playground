@@ -1,4 +1,4 @@
-﻿export const url = 'https://leetcode.com/problems/set-mismatch/description';
+﻿export const url = '[Set Mismatch](https://leetcode.com/problems/set-mismatch/description)';
 
 function findErrorNums_hash(nums: number[]): number[] {
   const n = nums.length;
