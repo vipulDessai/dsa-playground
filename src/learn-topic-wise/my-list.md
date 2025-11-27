@@ -286,7 +286,7 @@
 ## medium - intervals - Two pointers
 
 - [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/description/)
-  - can be solved using [linked list](./my-list.md#medium---linked-list)
+  - can be solved using [linked list](./my-list.md#medium---linked-list) which is also [cyclic detection](./my-list.md#easy---cyclic-detection)
 - [Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/description/)
 - [Rearrange Array Elements by Sign](https://leetcode.com/problems/rearrange-array-elements-by-sign/description/)
 - [Meeting Scheduler](https://leetcode.com/problems/meeting-scheduler/) - `Premium`
@@ -370,6 +370,13 @@
 
 - [Unique Paths](https://leetcode.com/problems/unique-paths/description/) - `TODO`
   - can be also solved using DP - [refer](./my-list.md#medium---dynamic-programming)
+
+# cyclic detection
+
+## easy - cyclic detection
+
+- [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/description/) - `TODO`
+  - can be solved using [two pointers](./my-list.md#medium---intervals---two-pointers) and [linked list](./my-list.md#medium---linked-list)
 
 # Segment Tree
 
