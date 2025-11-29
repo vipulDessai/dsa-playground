@@ -377,6 +377,8 @@
 
 - [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/description/) - `TODO`
   - can be solved using [two pointers](./my-list.md#medium---intervals---two-pointers) and [linked list](./my-list.md#medium---linked-list)
+- [Happy Numbers](https://leetcode.com/problems/happy-number/)
+- [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
 
 # Segment Tree
 

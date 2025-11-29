@@ -23,7 +23,7 @@ function isHappy(n: number): boolean {
   return fast === 1;
 }
 
-var input = 19;
+var input = 443;
 var out = isHappy(input);
 
 console.log(out);
