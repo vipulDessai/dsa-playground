@@ -1,3 +1,6 @@
+export const url =
+  '[Valid Anagram](https://leetcode.com/problems/valid-anagram/)';
+
 // for O(s + t), space O(s + t)
 const checkValidAnagram = (s: string, t: string) => {
   if (s.length !== t.length) {
@@ -21,21 +24,3 @@ const checkValidAnagram = (s: string, t: string) => {
 
 checkValidAnagram('foo', 'ofo');
 checkValidAnagram('bar', 'zba');
-
-const sortingCallback = (a: string, b: string) => {
-  const aLower = a.toLowerCase();
-  const bLower = b.toLowerCase();
-
-  return aLower < bLower ? -1 : 1;
-};
-const checkValidAnagramSort = (s: string, t: string) => {
-  const sortedS = [...s];
-  const sortedT = [...t];
-
-  return (
-    sortedS.sort(sortingCallback).join() ===
-    sortedT.sort(sortingCallback).join()
-  );
-};
-
-console.log(checkValidAnagramSort('foo', 'ofo'));

@@ -45,6 +45,11 @@
 
 # String
 
+## easy - String
+
+- [Valid Anagram](https://leetcode.com/problems/valid-anagram/)
+  - can be solved using [hash](./my-list.md#easy---hash)
+
 ## medium - String
 
 - learn KMP Algorithm for Pattern Searching and find DSA problems for it and other searching patterns - `TODO`
@@ -64,6 +69,7 @@
 - [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/)
 - [Happy Number](https://leetcode.com/problems/happy-number/)
 - [Valid Anagram](https://leetcode.com/problems/valid-anagram/)
+  - can be solved using sort [strings](./my-list.md#easy---string)
 - [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/)
 - [Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/)
 - [Jewels and Stones](https://leetcode.com/problems/jewels-and-stones/)
