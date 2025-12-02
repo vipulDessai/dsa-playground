@@ -1,4 +1,5 @@
-export const url = "[Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/description/)"
+export const url =
+  '[Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/description/)';
 
 function longestConsecutive(nums: number[]) {
   const n = nums.length;
