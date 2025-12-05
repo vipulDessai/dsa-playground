@@ -7,6 +7,10 @@ function isHappy(n: number): boolean {
     while (num > 0) {
       let digit = num % 10;
       total += digit * digit;
+
+      // Math floor is very important, otherwise
+      // the cur will always be > 0, i.e. 0.0001 or something
+      // but not 0
       num = Math.floor(num / 10);
     }
     return total;
