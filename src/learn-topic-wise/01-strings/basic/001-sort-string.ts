@@ -1,3 +1,5 @@
+export const url = "common sort string"
+
 function sortString(s: string) {
   const sortFunc = (a: string, b: string) => {
     return a.toLowerCase() < b.toLowerCase() ? -1 : 1;
