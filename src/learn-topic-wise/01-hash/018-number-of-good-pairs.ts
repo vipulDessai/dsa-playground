@@ -1,4 +1,4 @@
-const url =
+export const url =
   '[Number of Good Pairs](https://leetcode.com/problems/number-of-good-pairs/)';
 
 function numIdenticalPairs(nums: number[]): number {
