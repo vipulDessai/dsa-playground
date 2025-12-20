@@ -10,6 +10,8 @@ function longestConsecutive(nums: number[]) {
 
   let rMax = 0;
   for (let i = 0; i < n; ++i) {
+    // if num - 1 is there that means we have
+    // to start from num - 1
     if (!h.has(nums[i] - 1)) {
       let cur = nums[i] + 1;
       while (h.has(cur)) {
