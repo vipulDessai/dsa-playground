@@ -9,16 +9,21 @@ function longestConsecutive(nums: number[]) {
   }
 
   let rMax = 0;
-  for (let i = 0; i < n; ++i) {
+
+  // important to iterate over hash set
+  // coz there might be repeated numbers
+  for (const num of h) {
     // if num - 1 is there that means we have
-    // to start from num - 1
-    if (!h.has(nums[i] - 1)) {
-      let cur = nums[i] + 1;
-      while (h.has(cur)) {
-        cur += 1;
+    // to start from num - 1 and so on,
+    // i.e. start from the smallest number
+    if (!h.has(num - 1)) {
+      let cur = num,
+        streak = 1;
+      while (h.has(++cur)) {
+        ++streak;
       }
 
-      rMax = Math.max(rMax, cur - nums[i]);
+      rMax = Math.max(rMax, streak);
     }
   }
 
