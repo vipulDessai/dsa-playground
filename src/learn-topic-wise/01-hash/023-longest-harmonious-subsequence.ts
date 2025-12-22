@@ -10,7 +10,7 @@ function findLHS(nums: number[]): number {
   let res = 0;
   for (const [k, v] of uMap) {
     if (uMap.has(k + 1)) {
-      res = Math.max(res, uMap.get(k) + uMap.get(k + 1));
+      res = Math.max(res, uMap.get(k)! + uMap.get(k + 1)!);
     }
   }
 
