@@ -53,5 +53,5 @@ function duplicateZeros_pure_2_pointers(arr: number[]): void {
   }
 }
 
-var input = [1, 0, 0, 2, 3, 0, 0, 4];
+var input = [1, 0, 2, 3, 0, 4, 5, 0];
 duplicateZeros_pure_2_pointers(input);
