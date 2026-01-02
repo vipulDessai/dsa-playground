@@ -1,91 +1,82 @@
 // https://www.interviewcake.com/concept/java/dijkstras-algorithm
 // https://www.geeksforgeeks.org/problems/implementing-dijkstra-set-1-adjacency-matrix/1
-class priorityQueue_Dijkstra<T> {
-  private queue: { value: T; priority: number }[];
-  constructor() {
-    this.queue = [];
-  }
+class pQDijkstra {
+  q: { priority: number; value: number }[] = [];
 
-  private parentIndex(i: number) {
+  getParent(i: number) {
     return Math.floor((i - 1) / 2);
   }
 
-  private leftChildIndex(i: number) {
+  getLeftChild(i: number) {
     return i * 2 + 1;
   }
 
-  private rightChildIndex(i: number) {
+  getRightChild(i: number) {
     return i * 2 + 2;
   }
 
-  private swap(i: number, j: number) {
-    [this.queue[i], this.queue[j]] = [this.queue[j], this.queue[i]];
-  }
+  enqueue(value: number, priority: number) {
+    this.q.push({ value, priority });
 
-  private heapifyUp() {
-    let i = this.queue.length - 1;
-    let parentIndex = this.parentIndex(i);
+    const n = this.q.length;
 
-    while (
-      parentIndex >= 0 &&
-      this.queue[parentIndex].priority > this.queue[i].priority
-    ) {
-      this.swap(parentIndex, i);
+    let i = n - 1,
+      pI = this.getParent(i);
 
-      i = parentIndex;
-      parentIndex = this.parentIndex(i);
-    }
-  }
-
-  enqueue(value: T, priority: number) {
-    this.queue.push({ value, priority });
-    this.heapifyUp();
-  }
-
-  private heapifyDown() {
-    const n = this.queue.length;
-
-    let i = 0;
-    let leftChildIndex = this.leftChildIndex(i);
-
-    while (leftChildIndex < n) {
-      let j = leftChildIndex;
-
-      let rightChildIndex = this.rightChildIndex(i);
-      if (
-        rightChildIndex < n &&
-        this.queue[leftChildIndex].priority >
-          this.queue[rightChildIndex].priority
-      ) {
-        j = rightChildIndex;
-      }
-
-      if (this.queue[i].priority > this.queue[j].priority) {
-        this.swap(i, j);
-        i = j;
-        leftChildIndex = this.leftChildIndex(i);
-      } else {
-        break;
-      }
+    while (pI >= 0 && this.q[i].priority < this.q[pI].priority) {
+      [this.q[pI], this.q[i]] = [this.q[i], this.q[pI]];
+      i = pI;
+      pI = this.getParent(i);
     }
   }
 
   dequeue() {
-    const n = this.queue.length;
-    if (n === 0) return null;
+    if (this.q.length === 0) return null;
 
-    if (n === 1) return this.queue.pop()!;
+    if (this.q.length === 1) return this.q.pop()!;
 
-    const out = this.queue[0];
-    this.queue[0] = this.queue.pop()!;
-    this.heapifyDown();
-    return out;
+    const root = this.q[0];
+    this.q[0] = this.q.pop()!;
+
+    let i = 0,
+      j = this.getLeftChild(i);
+
+    const n = this.q.length;
+    while (j < n) {
+      const rI = this.getRightChild(i);
+
+      if (rI < n && this.q[rI].priority < this.q[j].priority) {
+        j = rI;
+      }
+
+      if (this.q[i].priority > this.q[j].priority) {
+        [this.q[j], this.q[i]] = [this.q[i], this.q[j]];
+
+        i = j;
+        j = this.getLeftChild(i);
+      } else {
+        break;
+      }
+    }
+
+    return root;
   }
 
   get length() {
-    return this.queue.length;
+    return this.q.length;
   }
 }
+
+// TEST PQ
+// const pQ = new pQDijkstra();
+// const input = [3, 1, 2];
+// for (let i = 0; i < input.length; ++i) {
+//   const cur = input[i];
+//   pQ.enqueue(cur, cur);
+// }
+// while (pQ.length) {
+//   console.log(pQ.dequeue());
+// }
 
 // here the edges are bidirectional
 export function dijkstra(v: number, edges: number[][], src: number) {
@@ -108,7 +99,7 @@ export function dijkstra(v: number, edges: number[][], src: number) {
   }
 
   function bfs() {
-    const pQ = new priorityQueue_Dijkstra<number>();
+    const pQ = new pQDijkstra();
     pQ.enqueue(src, 0);
     res[src] = 0;
 

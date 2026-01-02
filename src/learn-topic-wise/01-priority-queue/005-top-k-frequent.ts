@@ -1,3 +1,6 @@
+export const url =
+  '[Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)';
+
 function topKFrequent(numsList: number[], k: number): number[] {
   const count = {};
   const freq: number[][] = [];
@@ -28,7 +31,7 @@ function topKFrequent(numsList: number[], k: number): number[] {
   return [];
 }
 
-console.log(topKFrequent([6, 9, 9, 2, 2], 2));
+// console.log(topKFrequent([6, 9, 9, 2, 2], 2));
 
 class PQTopKFrequent {
   private q: { p: number; v: number }[] = [];
@@ -56,8 +59,8 @@ class PQTopKFrequent {
     }
   }
 
-  enqueue(item: number) {
-    this.q.push({ p: item, v: item });
+  enqueue(v: number, p: number) {
+    this.q.push({ v, p });
     this.heapifyUp();
   }
 
@@ -101,6 +104,26 @@ class PQTopKFrequent {
 }
 
 function topKFrequent_pQ(numsList: number[], k: number): number[] {
-  // TODO
-  return [];
+  const uMap = numsList.reduce((acc, cur) => {
+    acc.set(cur, (acc.get(cur) || 0) + 1);
+
+    return acc;
+  }, new Map<number, number>());
+
+  const pQ = new PQTopKFrequent();
+  for (const [k, v] of uMap) {
+    pQ.enqueue(k, v);
+  }
+
+  const res: number[] = [];
+  for (let i = 0; i < k; ++i) {
+    res.push(pQ.dequeue()!);
+  }
+  return res;
 }
+
+var input = [1, 1, 1, 2, 2, 2, 2, 3],
+  k = 2;
+var out = topKFrequent_pQ(input, k);
+
+console.log(out);
