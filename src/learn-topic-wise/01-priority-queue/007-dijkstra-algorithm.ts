@@ -1,6 +1,6 @@
 // https://www.interviewcake.com/concept/java/dijkstras-algorithm
 // https://www.geeksforgeeks.org/problems/implementing-dijkstra-set-1-adjacency-matrix/1
-class pQDijkstra {
+export class pQDijkstra {
   q: { priority: number; value: number }[] = [];
 
   getParent(i: number) {
@@ -142,18 +142,18 @@ export function dijkstra(v: number, edges: number[][], src: number) {
 //   ),
 // );
 
-console.log(
-  dijkstra(
-    4,
-    [
-      [0, 1, 1],
-      [0, 2, 20],
-      [1, 3, 1],
-      [2, 3, 1],
-    ],
-    0,
-  ),
-);
+// console.log(
+//   dijkstra(
+//     4,
+//     [
+//       [0, 1, 1],
+//       [0, 2, 20],
+//       [1, 3, 1],
+//       [2, 3, 1],
+//     ],
+//     0,
+//   ),
+// );
 
 // console.log(
 //   dijkstra(
