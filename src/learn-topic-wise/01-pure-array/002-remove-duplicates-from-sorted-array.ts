@@ -2,21 +2,18 @@ export const url =
   '[Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/)';
 
 function removeDuplicates(nums: number[]): number {
-  let k = 0;
+  const n = nums.length;
 
-  let prev = nums[0];
-  for (let i = 1; i < nums.length; ++i) {
-    const cur = nums[i];
-    if (cur !== prev) {
-      nums[k] = prev;
-      ++k;
-    }
+  let k = 1, prev = nums[0];
+  for(let i = 1; i < n; ++i) {
+      const cur = nums[i];
+      if(cur !== prev) {
+          nums[k] = cur;
+          ++k;
+      }
 
-    prev = cur;
+      prev = cur;
   }
-
-  nums[k] = prev;
-  ++k;
 
   return k;
 }
