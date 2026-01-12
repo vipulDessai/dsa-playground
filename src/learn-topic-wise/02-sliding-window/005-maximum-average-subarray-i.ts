@@ -3,24 +3,22 @@ export const url =
 
 function findMaxAverage(nums: number[], k: number): number {
   const n = nums.length;
-  let l = 0,
-    r = 0;
-
   let sum = 0;
-  while (r < k) {
-    sum += nums[r];
-    ++r;
-  }
-  --r;
 
-  let res = sum / k;
+  for (let i = 0; i < k; ++i) {
+    sum += nums[i];
+  }
+
+  let res = sum / k,
+    r = k;
+
   while (r < n) {
+    sum -= nums[r - k];
+    sum += nums[r];
+
     res = Math.max(res, sum / k);
 
-    sum -= nums[l];
-    ++l;
     ++r;
-    sum += nums[r];
   }
 
   return res;
