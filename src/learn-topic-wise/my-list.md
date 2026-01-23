@@ -25,6 +25,7 @@
 ## medium - Pure array based
 
 - [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/)
+- [Partition Labels](https://leetcode.com/problems/partition-labels/description/)
 
 # Simulation
 
