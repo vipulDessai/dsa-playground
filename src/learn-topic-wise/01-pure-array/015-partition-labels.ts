@@ -21,12 +21,23 @@ function partitionLabels(s: string): number[] {
     o[curI][1] = i;
   }
 
-  for (let i = 0; i < n; ++i) {
-    const tmpSet = new Set(s[i]);
-    let j = i + 1;
-    while (j < n) {}
+  let i = 0;
+  while (i < n) {
+    const _startI = i;
+    let j = i;
+    do {
+        const curI = s.charCodeAt(i) - 97;
+        const [startI, endI] = o[curI];
 
-    res.push(j - i + 1);
+        if(endI > j) {
+            j = endI;
+        }
+
+        ++i;
+    }
+    while (i <= j)
+
+    res.push(i - _startI);
   }
 
   return res;
