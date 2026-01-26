@@ -44,4 +44,7 @@ function search(nums: number[], target: number): boolean {
 
 var nums = [3, 5, 1],
   target = 1;
+
+nums = [2, 5, 6, 0, 0, 1, 2];
+target = 2;
 console.log(search(nums, target));
