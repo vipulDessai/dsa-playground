@@ -1,5 +1,5 @@
 export const url =
-  '[Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)';
+  '[Spiral Matrix I](https://leetcode.com/problems/spiral-matrix/)';
 
 function spiralOrder(matrix: number[][]): number[] {
   const rLen = matrix.length,
@@ -41,10 +41,8 @@ function spiralOrder(matrix: number[][]): number[] {
     ) {
       ++d;
 
-      if (d > 3) d = 0;
-
-      nR = r + directions[d][0];
-      nC = c + directions[d][1];
+      nR = r + directions[d % 4][0];
+      nC = c + directions[d % 4][1];
     }
 
     r += directions[d][0];

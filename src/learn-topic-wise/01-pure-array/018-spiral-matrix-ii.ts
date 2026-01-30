@@ -1,5 +1,5 @@
 export const url =
-  '[Spiral Matrix](https://leetcode.com/problems/spiral-matrix-ii/)';
+  '[Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii/)';
 
 function generateMatrix(n: number): number[][] {
   const matrix: number[][] = Array.from({ length: n }, () => Array(n).fill(0));
