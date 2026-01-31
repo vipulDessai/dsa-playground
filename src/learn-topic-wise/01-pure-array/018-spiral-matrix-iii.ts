@@ -7,37 +7,35 @@ function spiralMatrixIII(
   rStart: number,
   cStart: number,
 ): number[][] {
-  const result: number[][] = [[rStart, cStart]];
-  const total = rows * cols;
+  const res: number[][] = [[rStart, cStart]],
+    t = rows * cols,
+    direction = [
+      [0, 1],
+      [1, 0],
+      [0, -1],
+      [-1, 0],
+    ];
 
-  // Directions: east, south, west, north
-  const directions = [
-    [0, 1],
-    [1, 0],
-    [0, -1],
-    [-1, 0],
-  ];
-  let steps = 1;
-  let dirIndex = 0;
-  let r = rStart,
+  let s = 1,
+    d = 0,
+    r = rStart,
     c = cStart;
+  while (res.length < t) {
+    for (let i = 0; i < 2; ++i) {
+      for (let j = 0; j < s; ++j) {
+        r += direction[d % 4][0];
+        c += direction[d % 4][1];
 
-  while (result.length < total) {
-    for (let i = 0; i < 2; i++) {
-      // two directions before increasing steps
-      const [dr, dc] = directions[dirIndex % 4];
-      for (let j = 0; j < steps; j++) {
-        r += dr;
-        c += dc;
-        if (r >= 0 && r < rows && c >= 0 && c < cols) {
-          result.push([r, c]);
+        if (r < rows && r >= 0 && c < cols && c >= 0) {
+          res.push([r, c]);
         }
       }
-      dirIndex++;
+      ++d;
     }
-    steps++;
+    ++s;
   }
-  return result;
+
+  return res;
 }
 
 var r = 3,
