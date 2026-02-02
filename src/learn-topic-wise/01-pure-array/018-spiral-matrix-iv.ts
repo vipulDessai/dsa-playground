@@ -1,8 +1,8 @@
 export const url =
   '[Spiral Matrix IV](https://leetcode.com/problems/spiral-matrix-iv/description/)';
 
-import { LinkedList } from './000-linked-list-from-array';
-import type { ListNode } from './000-linked-list-from-array';
+import { LinkedList } from '../07-linked-List/000-linked-list-from-array';
+import type { ListNode } from '../07-linked-List/000-linked-list-from-array';
 
 /**
  * Definition for singly-linked list.
@@ -44,6 +44,10 @@ function spiralMatrix(m: number, n: number, head: ListNode | null): number[][] {
     }
     --r;
 
+    // why this check is coz of m and n are different
+    // also at this point it could be that u > b
+    // but l < r, which will overwrite the already
+    // processed row of `u`
     if (u <= b) {
       for (let i = r; i >= l; --i) {
         if (head) {
