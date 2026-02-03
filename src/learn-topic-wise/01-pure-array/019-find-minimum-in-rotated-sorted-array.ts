@@ -1,6 +1,10 @@
 export const url =
   '[Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array)';
 
+// if the array was not rotated then what is the answer
+// nums[0] right?
+// therefore we are trying to find which is the starting
+// number in the nums
 function findMin(nums: number[]): number {
   const n = nums.length;
 
@@ -16,6 +20,7 @@ function findMin(nums: number[]): number {
     }
   }
 
+  // index `r` converges at starting point of the array
   return nums[r];
 }
 
