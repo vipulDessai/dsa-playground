@@ -28,8 +28,6 @@
 - [Partition Labels](https://leetcode.com/problems/partition-labels/description/)
 - [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/), [Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii/description/), [Spiral Matrix III](https://leetcode.com/problems/spiral-matrix-iii/description/), [Spiral Matrix IV](https://leetcode.com/problems/spiral-matrix-iv/description/)
 - [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array) - `TODO`
-- [Jump Game](https://leetcode.com/problems/jump-game) - `TODO`
-- [Jump Game II](https://leetcode.com/problems/jump-game-ii) - `TODO`
 - [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes) - `TODO`
 
 # Simulation
@@ -355,6 +353,8 @@
 - [3 Sum Multiplicity](https://leetcode.com/problems/3sum-with-multiplicity/)
   - [Two pointers with nCr formula is the correct approach](./my-list.md#medium---single-array---two-pointers)
 - [Maximum Length of Repeated Subarray](https://leetcode.com/problems/maximum-length-of-repeated-subarray/) - `TODO`
+- [Jump Game II](https://leetcode.com/problems/jump-game-ii) - `TODO`
+  - greedy is difficult to understand
 
 ## hard - Dynamic Programming
 
@@ -374,6 +374,7 @@
   - needs two pointers as well and greedy - [refer](./my-list.md#medium---single-array---two-pointers)
 - [furthest building you can reach](https://leetcode.com/problems/furthest-building-you-can-reach/) - `TODO`
   - needs greedy also - [refer](./my-list.md#medium---greedy)
+- [Jump Game](https://leetcode.com/problems/jump-game)
 
 # Modulo
 
