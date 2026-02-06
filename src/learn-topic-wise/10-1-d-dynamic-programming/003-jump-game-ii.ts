@@ -21,7 +21,7 @@ var input = [2, 3, 0, 1, 4];
 console.log(jump_greedy_difficult(input));
 
 // TODO
-function jump_dp(nums: number[]): number {
+function jump_dp_bottom_up(nums: number[]): number {
   const n = nums.length;
   const dp = new Array(n).fill(Infinity);
   dp[0] = 0;
@@ -38,4 +38,23 @@ function jump_dp(nums: number[]): number {
 }
 
 var input = [2, 3, 0, 1, 4];
-console.log(jump_dp(input));
+console.log(jump_dp_bottom_up(input));
+
+function jump_dp_top_down_memoise(nums: number[]): number {
+  const n = nums.length;
+  const dp = new Array(n).fill(Infinity);
+  dp[0] = 0;
+
+  for (let i = 1; i < n; i++) {
+    for (let j = 0; j < i; j++) {
+      if (j + nums[j] >= i) {
+        dp[i] = Math.min(dp[i], dp[j] + 1);
+      }
+    }
+  }
+
+  return dp[n - 1];
+}
+
+var input = [2, 3, 0, 1, 4];
+console.log(jump_dp_top_down_memoise(input));
