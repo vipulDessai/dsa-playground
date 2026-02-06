@@ -1,5 +1,6 @@
 export const url = '[Jump Game II](https://leetcode.com/problems/jump-game-ii)';
 
+// START - greedy algorithm is very difficult
 function jump_greedy_difficult(nums: number[]): number {
   let jumps = 0,
     end = 0,
@@ -19,6 +20,40 @@ function jump_greedy_difficult(nums: number[]): number {
 
 var input = [2, 3, 0, 1, 4];
 console.log(jump_greedy_difficult(input));
+// END - greedy algorithm is very difficult
+
+// fails at test case 96/110 due to TLE
+function jump_dp_top_down_memoise(nums: number[]): number {
+  const n = nums.length;
+
+  const dp = Array(n).fill(Infinity);
+  function dfs(i: number, curSteps: number) {
+    if (i >= n - 1) {
+      if (dp[n - 1] > curSteps) {
+        dp[n - 1] = curSteps;
+      }
+
+      return;
+    }
+
+    if (dp[i] > curSteps) {
+      const steps = nums[i];
+
+      for (let j = 0; j < steps; ++j) {
+        dfs(i + j + 1, curSteps + 1);
+      }
+
+      dp[i] = curSteps;
+    }
+  }
+
+  dfs(0, 0);
+
+  return dp[n - 1];
+}
+
+var input = [2, 3, 0, 1, 4];
+console.log(jump_dp_top_down_memoise(input));
 
 // TODO
 function jump_dp_bottom_up(nums: number[]): number {
@@ -39,22 +74,3 @@ function jump_dp_bottom_up(nums: number[]): number {
 
 var input = [2, 3, 0, 1, 4];
 console.log(jump_dp_bottom_up(input));
-
-function jump_dp_top_down_memoise(nums: number[]): number {
-  const n = nums.length;
-  const dp = new Array(n).fill(Infinity);
-  dp[0] = 0;
-
-  for (let i = 1; i < n; i++) {
-    for (let j = 0; j < i; j++) {
-      if (j + nums[j] >= i) {
-        dp[i] = Math.min(dp[i], dp[j] + 1);
-      }
-    }
-  }
-
-  return dp[n - 1];
-}
-
-var input = [2, 3, 0, 1, 4];
-console.log(jump_dp_top_down_memoise(input));
