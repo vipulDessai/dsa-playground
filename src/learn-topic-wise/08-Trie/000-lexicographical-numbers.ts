@@ -1,4 +1,6 @@
-// https://leetcode.com/problems/lexicographical-numbers/
+export const url =
+  '[Lexicographical Numbers](https://leetcode.com/problems/lexicographical-numbers/)';
+
 interface TreeType {
   key: string;
   value: TreeType[];
@@ -50,5 +52,3 @@ function lexicalOrder_my_own(n: number): number[] {
 
 var num = 24;
 console.log(lexicalOrder_my_own(num));
-
-export const trickToCreateJsModule = '';

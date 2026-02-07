@@ -72,5 +72,5 @@ function jump_dp_bottom_up(nums: number[]): number {
   return dp[n - 1];
 }
 
-var input = [2, 3, 0, 1, 4];
+var input = [0, 0, 0];
 console.log(jump_dp_bottom_up(input));

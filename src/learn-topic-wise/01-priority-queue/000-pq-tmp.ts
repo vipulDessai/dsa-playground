@@ -1,44 +1,8 @@
-export const url =
-  '[Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)';
-
-function topKFrequent(numsList: number[], k: number): number[] {
-  const count = {};
-  const freq: number[][] = [];
-  for (let index = 0; index < numsList.length; index++) {
-    freq.push([]);
-  }
-
-  for (let index = 0; index < numsList.length; index++) {
-    const num = numsList[index];
-    count[num] = 1 + (count[num] || 0);
-  }
-
-  Object.entries(count).forEach(([key, value]: [string, unknown]) => {
-    freq[value as number].push(parseInt(key));
-  });
-
-  const topK: number[] = [];
-  for (let index = freq.length - 1; index >= 0; --index) {
-    const groupedNumsArray: number[] = freq[index];
-    for (let j = 0; j < groupedNumsArray.length; j++) {
-      topK.push(groupedNumsArray[j]);
-      if (topK.length === k) {
-        return topK;
-      }
-    }
-  }
-
-  return [];
-}
-
-// console.log(topKFrequent([6, 9, 9, 2, 2], 2));
-
 type pqType = {
   v: number;
   p: number;
 };
 
-// here we need max priority queue
 class PQTopKFrequent {
   q: pqType[] = [];
 
@@ -109,27 +73,22 @@ class PQTopKFrequent {
   }
 }
 
-function topKFrequent_pQ(numsList: number[], k: number): number[] {
-  const uMap = numsList.reduce((acc, cur) => {
+function topKFrequent(nums: number[], k: number): number[] {
+  const freq = nums.reduce((acc, cur) => {
     acc.set(cur, (acc.get(cur) || 0) + 1);
 
     return acc;
   }, new Map<number, number>());
 
   const pQ = new PQTopKFrequent();
-  for (const [k, v] of uMap) {
-    pQ.enqueue(k, v);
+  for (const [_k, _v] of freq) {
+    pQ.enqueue(_k, _v);
   }
 
   const res: number[] = [];
   for (let i = 0; i < k; ++i) {
     res.push(pQ.dequeue()!);
   }
+
   return res;
 }
-
-var input = [1, 1, 1, 2, 2, 2, 2, 3],
-  k = 2;
-var out = topKFrequent_pQ(input, k);
-
-console.log(out);

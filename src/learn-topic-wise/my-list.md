@@ -342,6 +342,16 @@
 - [Shortest Path to Get All Keys](https://leetcode.com/problems/shortest-path-to-get-all-keys/)
   - uses hash as well - [refer - hash](./my-list.md#hard---hash), [refer - graph](./my-list.md#hard---graph)
 
+# Trie
+
+## easy - Trie
+
+- [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/description/)
+
+## medium - Trie
+
+- [Lexicographical Numbers](https://leetcode.com/problems/lexicographical-numbers/)
+
 # Dynamic Programming
 
 ## medium - Dynamic Programming
