@@ -1,4 +1,5 @@
-export const url = '[largest subarray with zero sum kadane algorithm]()';
+export const url =
+  '[largest subarray with zero sum kadane algorithm](https://www.geeksforgeeks.org/dsa/find-the-largest-subarray-with-0-sum/)';
 
 function largestSubArray(nums: number[]): number {
   let max = 0,
