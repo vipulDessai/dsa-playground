@@ -28,7 +28,7 @@
 - [Partition Labels](https://leetcode.com/problems/partition-labels/description/)
 - [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/), [Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii/description/), [Spiral Matrix III](https://leetcode.com/problems/spiral-matrix-iii/description/), [Spiral Matrix IV](https://leetcode.com/problems/spiral-matrix-iv/description/)
 - [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array)
-- [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes) - `TODO`
+- [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes)
 
 # Simulation
 
@@ -49,6 +49,11 @@
 
 # String
 
+## Notes
+
+- learn KMP Algorithm for Pattern Searching and find DSA problems for it and other searching patterns - `TODO`
+- all problems from `01-strings/cs` - `TODO`
+
 ## easy - String
 
 - [Valid Anagram](https://leetcode.com/problems/valid-anagram/)
@@ -56,8 +61,7 @@
 
 ## medium - String
 
-- learn KMP Algorithm for Pattern Searching and find DSA problems for it and other searching patterns - `TODO`
-- all problems from `01-strings/cs` - `TODO`
+- [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/description/)
 
 # Hash
 
