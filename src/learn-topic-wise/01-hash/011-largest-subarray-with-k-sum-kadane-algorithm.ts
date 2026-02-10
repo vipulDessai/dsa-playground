@@ -2,7 +2,7 @@ export const url =
   '[Longest Subarray with Sum K](https://www.geeksforgeeks.org/problems/longest-sub-array-with-sum-k0809/1)';
 
 // find max length of a subarray whose sum is equals to target
-export function largestSubArrayKSum(nums: number[], target: number): number {
+function largestSubArrayKSum(nums: number[], target: number): number {
   let max = 0;
   let prefixSum = 0;
 
