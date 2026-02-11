@@ -24,4 +24,5 @@ function maxProduct(nums: number[]): number {
 
 var input = [2, -5, -2, -4, 3];
 var input = [2, 3, -2, 4];
+var input = [0, 1, 1, 5, -6];
 console.log(maxProduct(input));

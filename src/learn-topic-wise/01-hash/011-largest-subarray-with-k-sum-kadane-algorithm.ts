@@ -3,12 +3,11 @@ export const url =
 
 // find max length of a subarray whose sum is equals to target
 function largestSubArrayKSum(nums: number[], target: number): number {
-  let max = 0;
-  let prefixSum = 0;
-
   const sumMap = new Map();
   sumMap.set(0, -1);
 
+  let max = 0,
+    prefixSum = 0;
   for (let i = 0; i < nums.length; i++) {
     prefixSum += nums[i];
 
