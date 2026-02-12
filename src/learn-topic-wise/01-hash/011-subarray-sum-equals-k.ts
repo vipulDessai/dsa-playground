@@ -28,6 +28,8 @@ function subarraySum(nums: number[], k: number): number {
 
 var nums = [1, 2, 3, -2, -1, -4, 1, 1, 2],
   k = 3;
+// var nums = [1, 1, 1],
+//   k = 2;
 var o = subarraySum(nums, k);
 
 console.log(o);
