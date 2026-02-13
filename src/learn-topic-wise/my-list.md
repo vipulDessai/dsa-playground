@@ -369,6 +369,7 @@
 - [Maximum Length of Repeated Subarray](https://leetcode.com/problems/maximum-length-of-repeated-subarray/) - `TODO`
 - [Jump Game II](https://leetcode.com/problems/jump-game-ii) - `TODO`
   - greedy is difficult to understand
+- [Word Break](https://leetcode.com/problems/word-break/), [Word Break II](https://leetcode.com/problems/word-break-ii/)
 
 ## hard - Dynamic Programming
 
