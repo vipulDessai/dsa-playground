@@ -16,36 +16,31 @@ export function wordBreak_bottom_up(s: string, wordDict: string[]): boolean {
   return dp[s.length];
 }
 
-var inputS = 'leetcode',
-  wDict = ['leet', 'code'];
-console.log(wordBreak_bottom_up(inputS, wDict));
+// var inputS = 'leetcode',
+//   wDict = ['leet', 'code'];
+// console.log(wordBreak_bottom_up(inputS, wDict));
 
 function wordBreak_top_down(s: string, wordDict: string[]): boolean {
-  const wordSet = new Set(wordDict);
-  const memo: Map<number, boolean> = new Map();
+  const dp = new Map<number, boolean>(),
+    wSet = new Set(wordDict);
 
-  function canBreak(start: number): boolean {
-    // If we've reached the end, it's a valid segmentation
-    if (start === s.length) return true;
+  function dfs(i: number) {
+    if (i === s.length) return true;
 
-    // If already computed, return cached result
-    if (memo.has(start)) return memo.get(start)!;
+    if (dp.has(i)) return dp.get(i)!;
 
-    // Try every possible end index from start
-    for (let end = start + 1; end <= s.length; end++) {
-      const prefix = s.substring(start, end);
-      if (wordSet.has(prefix) && canBreak(end)) {
-        memo.set(start, true);
+    for (let j = i + 1; j <= s.length; ++j) {
+      const str = s.substring(i, j);
+      if (wSet.has(str) && dfs(j)) {
+        dp.set(i, true);
         return true;
       }
     }
 
-    // No valid segmentation found
-    memo.set(start, false);
     return false;
   }
 
-  return canBreak(0);
+  return dfs(0);
 }
 
 var inputS = 'leetcode',
