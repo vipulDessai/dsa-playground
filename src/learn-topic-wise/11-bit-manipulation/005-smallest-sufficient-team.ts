@@ -1,3 +1,6 @@
+export const url =
+  '[Smallest Sufficient Team](https://leetcode.com/problems/smallest-sufficient-team/)';
+
 function smallestSufficientTeam(
   req_skills: string[],
   people: string[][],

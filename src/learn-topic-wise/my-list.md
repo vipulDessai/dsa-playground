@@ -358,20 +358,24 @@
 
 # Dynamic Programming
 
-## medium - Dynamic Programming
+## medium - Dynamic Programming - 1D
 
 - [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)
   - needs hash as well - [refer](./my-list#medium---hash)
-- [Unique Paths](https://leetcode.com/problems/unique-paths/description/) - `TODO`
-  - can be also solved using Inverse Modulo - [refer](./my-list.md#medium---modulo)
 - [3 Sum Multiplicity](https://leetcode.com/problems/3sum-with-multiplicity/)
   - [Two pointers with nCr formula is the correct approach](./my-list.md#medium---single-array---two-pointers)
 - [Maximum Length of Repeated Subarray](https://leetcode.com/problems/maximum-length-of-repeated-subarray/) - `TODO`
 - [Jump Game II](https://leetcode.com/problems/jump-game-ii) - `TODO`
   - greedy is difficult to understand
 - [Word Break](https://leetcode.com/problems/word-break/), [Word Break II](https://leetcode.com/problems/word-break-ii/)
+- [Coin Change](https://leetcode.com/problems/coin-change/)
 
-## hard - Dynamic Programming
+## medium - Dynamic Programming - 2D
+
+- [Unique Paths](https://leetcode.com/problems/unique-paths/description/) - `TODO`
+  - can be also solved using Inverse Modulo - [refer](./my-list.md#medium---modulo)
+
+## hard - Dynamic Programming - 1D
 
 - [Smallest Sufficient Team](https://leetcode.com/problems/smallest-sufficient-team/)
   - need bitwise as well - [refer](./my-list.md#hard---bitwise)
