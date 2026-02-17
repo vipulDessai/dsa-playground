@@ -1,3 +1,6 @@
+export const url =
+  '[Different Ways to Add Parentheses](https://leetcode.com/problems/different-ways-to-add-parentheses/description/)';
+
 function diffWaysToCompute(expression: string): number[] {
   let curNum = '';
   const expStrArr: (string | number)[] = [];

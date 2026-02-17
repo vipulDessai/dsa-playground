@@ -42,7 +42,7 @@ namespace learning_dsa_csharp._13_1_d_dynamic_programming._002_coin_change
             return res.Length == 0 ? -1 : res.Length;
         }
 
-        public int CoinChangeBoTopDown(int[] coins, int amount)
+        public int CoinChangeBoBottomUp(int[] coins, int amount)
         {
             var dp = new int[amount + 1];
             for (int i = 0; i < dp.Length; ++i)

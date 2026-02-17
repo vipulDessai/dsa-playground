@@ -367,7 +367,8 @@
 - [Maximum Length of Repeated Subarray](https://leetcode.com/problems/maximum-length-of-repeated-subarray/) - `TODO`
 - [Jump Game II](https://leetcode.com/problems/jump-game-ii) - `TODO`
   - greedy is difficult to understand
-- [Word Break](https://leetcode.com/problems/word-break/), [Word Break II](https://leetcode.com/problems/word-break-ii/)
+- [Word Break](https://leetcode.com/problems/word-break/), [Word Break II](https://leetcode.com/problems/word-break-ii/) - `TODO`
+- [Different Ways to Add Parentheses](https://leetcode.com/problems/different-ways-to-add-parentheses/description/) - `TODO`
 - [Coin Change](https://leetcode.com/problems/coin-change/)
 
 ## medium - Dynamic Programming - 2D
