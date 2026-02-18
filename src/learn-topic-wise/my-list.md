@@ -369,7 +369,7 @@
   - greedy is difficult to understand
 - [Word Break](https://leetcode.com/problems/word-break/), [Word Break II](https://leetcode.com/problems/word-break-ii/) - `TODO`
 - [Different Ways to Add Parentheses](https://leetcode.com/problems/different-ways-to-add-parentheses/description/) - `TODO`
-- [Coin Change](https://leetcode.com/problems/coin-change/)
+- [Coin Change](https://leetcode.com/problems/coin-change/) - `TOOD` - bottom up
 
 ## medium - Dynamic Programming - 2D
 
