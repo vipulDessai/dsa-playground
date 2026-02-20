@@ -1,4 +1,6 @@
-﻿namespace learning_dsa_csharp._13_1_d_dynamic_programming._009_min_time_make_rope_colorful
+﻿// export const url = "[Minimum Time to Make Rope Colorful](https://leetcode.com/problems/minimum-time-to-make-rope-colorful/description/)"
+
+namespace learning_dsa_csharp._13_1_d_dynamic_programming._009_min_time_make_rope_colorful
 {
     internal class Solution
     {
