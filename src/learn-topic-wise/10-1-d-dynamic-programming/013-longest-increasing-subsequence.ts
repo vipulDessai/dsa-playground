@@ -32,10 +32,10 @@ function lengthOfLIS_topDown(nums: number[]): number {
 
 function lengthOfLIS_bottomUp(nums: number[]): number {
   const n = nums.length,
-    dp: number[] = new Array(n).fill(1);
+    dp = Array(n).fill(1);
 
-  for (let i = 1; i < n; i++) {
-    for (let j = 0; j < i; j++) {
+  for (let i = 0; i < n; ++i) {
+    for (let j = 0; j < i; ++j) {
       if (nums[j] < nums[i]) {
         dp[i] = Math.max(dp[i], 1 + dp[j]);
       }
