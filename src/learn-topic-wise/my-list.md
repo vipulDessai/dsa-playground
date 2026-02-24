@@ -365,12 +365,13 @@
 - [3 Sum Multiplicity](https://leetcode.com/problems/3sum-with-multiplicity/)
   - [Two pointers with nCr formula is the correct approach](./my-list.md#medium---single-array---two-pointers)
 - [Maximum Length of Repeated Subarray](https://leetcode.com/problems/maximum-length-of-repeated-subarray/) - `TODO`
-- [Jump Game II](https://leetcode.com/problems/jump-game-ii) - `TODO`
-  - greedy is difficult to understand
 - [Word Break](https://leetcode.com/problems/word-break/), [Word Break II](https://leetcode.com/problems/word-break-ii/) - `TODO`
 - [Different Ways to Add Parentheses](https://leetcode.com/problems/different-ways-to-add-parentheses/description/) - `TODO`
 - [Coin Change](https://leetcode.com/problems/coin-change/)
-- [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/description/) - `TODO` - `bottom up`
+- [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/description/)
+- [Decode Ways](https://leetcode.com/problems/decode-ways/) - `TODO` - Bottom up
+- [Jump Game II](https://leetcode.com/problems/jump-game-ii) - `TODO` - Bottom up
+  - greedy is difficult to understand
 
 ## medium - Dynamic Programming - 2D
 

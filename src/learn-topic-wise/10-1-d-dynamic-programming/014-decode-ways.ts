@@ -1,6 +1,6 @@
 ﻿export const url = '[Decode Ways](https://leetcode.com/problems/decode-ways/)';
 
-function numDecodings(s: string): number {
+function numDecodings_topDown(s: string): number {
   const memo: Map<number, number> = new Map();
 
   function dfs(i: number): number {
@@ -31,5 +31,32 @@ function numDecodings(s: string): number {
   return dfs(0);
 }
 
-var input = '';
-console.log(numDecodings(input));
+var input = '10611';
+console.log(numDecodings_topDown(input));
+
+function numDecodings_bottomUp(s: string): number {
+  const n = s.length;
+  if (n === 0 || s[0] === '0') return 0;
+
+  const dp: number[] = new Array(n + 1).fill(0);
+  dp[0] = 1; // base case: empty string
+  dp[1] = 1; // as s[0] !== '0'
+
+  for (let i = 2; i <= n; i++) {
+    // Single digit
+    if (s[i - 1] !== '0') {
+      dp[i] = dp[i - 1];
+    }
+
+    // Two digits
+    const twoDigit = parseInt(s.substring(i - 2, i));
+    if (twoDigit >= 10 && twoDigit <= 26) {
+      dp[i] += dp[i - 2];
+    }
+  }
+
+  return dp[n];
+}
+
+var input = '10611';
+console.log(numDecodings_bottomUp(input));
