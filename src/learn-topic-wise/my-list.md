@@ -373,15 +373,15 @@
 - [Jump Game II](https://leetcode.com/problems/jump-game-ii) - `TODO` - Bottom up
   - greedy is difficult to understand
 
-## medium - Dynamic Programming - 2D
-
-- [Unique Paths](https://leetcode.com/problems/unique-paths/description/) - `TODO`
-  - can be also solved using Inverse Modulo - [refer](./my-list.md#medium---modulo)
-
 ## hard - Dynamic Programming - 1D
 
 - [Smallest Sufficient Team](https://leetcode.com/problems/smallest-sufficient-team/)
   - need bitwise as well - [refer](./my-list.md#hard---bitwise)
+
+## medium - Dynamic Programming - 2D
+
+- [Unique Paths](https://leetcode.com/problems/unique-paths/description/) - `TODO`
+  - can be also solved using Inverse Modulo - [refer](./my-list.md#medium---modulo)
 
 # Greedy
 

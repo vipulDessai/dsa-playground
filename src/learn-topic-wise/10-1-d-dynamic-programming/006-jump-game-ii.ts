@@ -22,38 +22,29 @@ var input = [2, 3, 0, 1, 4];
 console.log(jump_greedy_difficult(input));
 // END - greedy algorithm is very difficult
 
-// fails at test case 96/110 due to TLE
-function jump_dp_top_down_memoise(nums: number[]): number {
+function jump_dp_topDown(nums: number[]): number {
   const n = nums.length;
 
   const dp = Array(n).fill(Infinity);
-  function dfs(i: number, curSteps: number) {
-    if (i >= n - 1) {
-      if (dp[n - 1] > curSteps) {
-        dp[n - 1] = curSteps;
-      }
+  function dfs(i: number) {
+    if (i >= n - 1) return 0;
 
-      return;
+    if (dp[i] !== Infinity) return dp[i];
+
+    let m = Infinity;
+    for (let j = 1; j <= nums[i]; ++j) {
+      m = Math.min(m, 1 + dfs(i + j));
     }
 
-    if (dp[i] > curSteps) {
-      const steps = nums[i];
-
-      for (let j = 0; j < steps; ++j) {
-        dfs(i + j + 1, curSteps + 1);
-      }
-
-      dp[i] = curSteps;
-    }
+    dp[i] = m;
+    return m;
   }
 
-  dfs(0, 0);
-
-  return dp[n - 1];
+  return dfs(0);
 }
 
 var input = [2, 3, 0, 1, 4];
-console.log(jump_dp_top_down_memoise(input));
+console.log(jump_dp_topDown(input));
 
 // TODO
 function jump_dp_bottom_up(nums: number[]): number {
