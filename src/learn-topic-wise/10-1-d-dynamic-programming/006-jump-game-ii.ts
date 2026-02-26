@@ -46,7 +46,6 @@ function jump_dp_topDown(nums: number[]): number {
 var input = [2, 3, 0, 1, 4];
 console.log(jump_dp_topDown(input));
 
-// TODO
 function jump_dp_bottom_up(nums: number[]): number {
   const n = nums.length;
   const dp = new Array(n).fill(Infinity);
@@ -64,4 +63,5 @@ function jump_dp_bottom_up(nums: number[]): number {
 }
 
 var input = [0, 0, 0];
+var input = [2, 3, 1, 1, 4];
 console.log(jump_dp_bottom_up(input));
