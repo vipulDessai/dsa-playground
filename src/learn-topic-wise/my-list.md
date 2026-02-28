@@ -369,9 +369,10 @@
 - [Different Ways to Add Parentheses](https://leetcode.com/problems/different-ways-to-add-parentheses/description/) - `TODO`
 - [Coin Change](https://leetcode.com/problems/coin-change/)
 - [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/description/)
-- [Decode Ways](https://leetcode.com/problems/decode-ways/) - `TODO` - Bottom up
-- [Jump Game II](https://leetcode.com/problems/jump-game-ii) - `TODO` - Bottom up
+- [Decode Ways](https://leetcode.com/problems/decode-ways/)
+- [Jump Game II](https://leetcode.com/problems/jump-game-ii)
   - greedy is difficult to understand
+- [Number of Dice Rolls With Target Sum](https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/description/) - `TODO` - Bottom Up
 
 ## hard - Dynamic Programming - 1D
 
