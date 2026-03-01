@@ -372,7 +372,7 @@
 - [Decode Ways](https://leetcode.com/problems/decode-ways/)
 - [Jump Game II](https://leetcode.com/problems/jump-game-ii)
   - greedy is difficult to understand
-- [Number of Dice Rolls With Target Sum](https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/description/) - `TODO` - Bottom Up
+- [Number of Dice Rolls With Target Sum](https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/description/)
 
 ## hard - Dynamic Programming - 1D
 

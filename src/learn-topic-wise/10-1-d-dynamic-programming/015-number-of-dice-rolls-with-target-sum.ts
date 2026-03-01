@@ -6,8 +6,8 @@ function numRollsToTarget_dp_topDown(
   k: number,
   target: number,
 ): number {
-  const MOD = 1e9 + 7;
-  const mem = new Map<string, number>();
+  const MOD = 1e9 + 7,
+    mem = new Map<string, number>();
 
   function dfs(d: number, t: number) {
     if (d === 0 && t === 0) return 1;
@@ -28,36 +28,7 @@ function numRollsToTarget_dp_topDown(
   return dfs(n, target);
 }
 
-var n = 1,
+var n = 3,
   k = 6,
-  t = 3;
+  t = 10;
 console.log(numRollsToTarget_dp_topDown(n, k, t));
-
-function numRollsToTarget_dp_bottomUp(
-  n: number,
-  k: number,
-  target: number,
-): number {
-  const MOD = 1e9 + 7;
-  let dp = new Array(target + 1).fill(0);
-  dp[0] = 1;
-
-  for (let i = 1; i <= n; i++) {
-    const next = new Array(target + 1).fill(0);
-    for (let t = 1; t <= target; t++) {
-      for (let face = 1; face <= k; face++) {
-        if (t - face >= 0) {
-          next[t] = (next[t] + dp[t - face]) % MOD;
-        }
-      }
-    }
-    dp = next;
-  }
-
-  return dp[target];
-}
-
-var n = 1,
-  k = 6,
-  t = 3;
-console.log(numRollsToTarget_dp_bottomUp(n, k, t));
