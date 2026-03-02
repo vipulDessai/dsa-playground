@@ -1,3 +1,6 @@
+export const url =
+  '[Subsets](https://leetcode.com/problems/subsets/description/)';
+
 function subsets(nums: number[]): number[][] {
   const res: number[][] = [];
 
