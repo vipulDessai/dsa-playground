@@ -308,6 +308,10 @@
 
 # Prefix sum
 
+## easy - Prefix sum
+
+- [2970. Count the Number of Incremovable Subarrays I](https://leetcode.com/problems/count-the-number-of-incremovable-subarrays-i/description/) - `TODO`
+
 ## medium - Prefix sum
 
 - [Brick Wall](https://leetcode.com/problems/brick-wall/)
@@ -355,6 +359,12 @@
 ## medium - Trie
 
 - [Lexicographical Numbers](https://leetcode.com/problems/lexicographical-numbers/)
+
+# Backtracking
+
+## easy - Backtracking
+
+- [Subsets](https://leetcode.com/problems/subsets/description/)
 
 # Dynamic Programming
 
