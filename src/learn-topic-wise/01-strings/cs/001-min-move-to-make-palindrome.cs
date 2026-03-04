@@ -1,4 +1,6 @@
-﻿namespace learning_dsa_csharp._01_strings_arrays_hash._001_min_move_to_make_palindrome
+﻿// export const url = "[](https://leetcode.com/problems/minimum-number-of-moves-to-make-palindrome/description/)"
+
+namespace learning_dsa_csharp._01_strings_arrays_hash._001_min_move_to_make_palindrome
 {
     internal class Solution
     {
