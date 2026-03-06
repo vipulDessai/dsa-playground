@@ -1,5 +1,5 @@
 ﻿export const url =
-  '[](https://leetcode.com/problems/zigzag-conversion/description/)';
+  '[Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion/description/)';
 
 function convert(s: string, numRows: number): string {
   const sLen = s.length;

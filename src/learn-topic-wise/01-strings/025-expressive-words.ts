@@ -1,49 +1,85 @@
 ﻿export const url =
   '[Expressive Words](https://leetcode.com/problems/expressive-words/description/)';
 
-function expressiveWords(s: string, words: string[]): number {
-  const tMap = new Map<string, number>();
+// faster
+function expressiveWords_twoPointers(s: string, words: string[]): number {
+  const isStretchy = (word: string): boolean => {
+    let i = 0,
+      j = 0;
+    while (i < s.length && j < word.length) {
+      if (s[i] !== word[j]) return false;
 
-  for (const c of s) {
-    tMap.set(c, (tMap.get(c) || 0) + 1);
+      let lenS = 0,
+        lenW = 0;
+      while (i + lenS < s.length && s[i + lenS] === s[i]) lenS++;
+      while (j + lenW < word.length && word[j + lenW] === word[j]) lenW++;
+
+      if (lenS === lenW || (lenS >= 3 && lenW <= lenS)) {
+        i += lenS;
+        j += lenW;
+      } else {
+        return false;
+      }
+    }
+
+    return i === s.length && j === word.length;
+  };
+
+  return words.filter(isStretchy).length;
+}
+
+var s = 'heeellooo',
+  w = ['hello', 'hi', 'helo'];
+// console.log(expressiveWords_twoPointers(s, w));
+
+// slower
+function expressiveWords_precompute(s: string, words: string[]): number {
+  function group(word: string) {
+    const wordMap: [string, number][] = [];
+    let i = 0;
+    while (i < word.length) {
+      let gLen = 0;
+      while (i < word.length && word[i] === word[i + gLen]) {
+        ++gLen;
+      }
+
+      wordMap.push([word[i], gLen]);
+
+      i += gLen;
+    }
+
+    return wordMap;
   }
+
+  const sMap = group(s),
+    sLen = sMap.length;
 
   let res = 0;
   for (const w of words) {
-    const wMap = new Map<string, number>();
+    const curWordMap = group(w);
 
-    for (const c of w) {
-      wMap.set(c, (wMap.get(c) || 0) + 1);
-    }
+    if (curWordMap.length === sLen) {
+      let i = 0;
+      while (i < sLen) {
+        const [sL, sC] = sMap[i];
+        const [wL, wC] = curWordMap[i];
 
-    if (wMap.size === tMap.size) {
-      let valid = true;
-      for (const [k, v] of tMap) {
-        if (v >= 3) {
-          if (wMap.has(k)) {
-            const count = wMap.get(k)!;
-            if (count > v) {
-              valid = false;
-            }
-          } else {
-            valid = false;
-          }
+        if (sL !== wL) break;
+
+        if (sC === wC || (sC >= 3 && wC < sC)) {
+          ++i;
         } else {
-          if (v !== wMap.get(k)) {
-            valid = false;
-          }
+          break;
         }
       }
 
-      if (valid) {
-        ++res;
-      }
+      if (i === sLen) ++res;
     }
   }
 
   return res;
 }
 
-var s = '',
+var s = 'heeellooo',
   w = ['hello', 'hi', 'helo'];
-console.log(expressiveWords(s, w));
+console.log(expressiveWords_precompute(s, w));

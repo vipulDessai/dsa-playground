@@ -62,6 +62,9 @@
 ## medium - String
 
 - [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/description/)
+- [Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion/description/)
+- [Expressive Words](https://leetcode.com/problems/expressive-words/description/)
+  - can be solved using [two pointers](./my-list.md#medium---single-array---two-pointers)
 
 # Hash
 
@@ -290,6 +293,8 @@
 - [Fruits into baskets](https://leetcode.com/problems/fruit-into-baskets/description/) - `TODO` - `AI's Map Solution`
 - [Boats to Save People](https://leetcode.com/problems/boats-to-save-people/description/)
   - tricky and greedy - [refer](./my-list.md#medium---greedy)
+- [Expressive Words](https://leetcode.com/problems/expressive-words/description/)
+  - can be solved using [string arrays also](./my-list.md#medium---string)
 
 ## easy - intervals - Two pointers
 
