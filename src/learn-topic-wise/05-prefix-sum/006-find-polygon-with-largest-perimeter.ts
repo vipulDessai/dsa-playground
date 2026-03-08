@@ -32,8 +32,12 @@ function largestPerimeter_prefixSum(nums: number[]): number {
     prefixSum[i] = prefixSum[i - 1] + nums[i];
   }
 
-  for (let i = nums.length - 1; i >= 2; i--) {
+  // have to start from the end incase of [1, 1, 12, 13, 14]
+  for (let i = nums.length - 1; i > 1; --i) {
+    // from the end find the first sum which is greater than longest side
+    // of the polygon
     if (prefixSum[i - 1] > nums[i]) {
+      // returning the sum of all other sides [0...i-1] + nums[i]
       return prefixSum[i];
     }
   }
