@@ -96,6 +96,7 @@
 - [Find Words That Can Be Formed by Characters](https://leetcode.com/problems/find-words-that-can-be-formed-by-characters/)
 - [Subdomain Visit Count](https://leetcode.com/problems/subdomain-visit-count/)
 - [Find Missing and Repeated Values](https://leetcode.com/problems/find-missing-and-repeated-values/description/)
+- [Convert an Array Into a 2D Array With Conditions](https://leetcode.com/problems/convert-an-array-into-a-2d-array-with-conditions/description/)
 
 ## medium - Hash
 
