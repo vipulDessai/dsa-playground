@@ -58,6 +58,7 @@
 
 - [Valid Anagram](https://leetcode.com/problems/valid-anagram/)
   - can be solved using [hash](./my-list.md#easy---hash)
+- [Number of Laser Beams in a Bank](https://leetcode.com/problems/number-of-laser-beams-in-a-bank/)
 
 ## medium - String
 
