@@ -1,4 +1,6 @@
-﻿namespace learning_dsa_csharp._01_strings_arrays_hash._015_min_no_ops_to_make_array_empty
+﻿// export const url = "[2870. Minimum Number of Operations to Make Array Empty](https://leetcode.com/problems/minimum-number-of-operations-to-make-array-empty/description/)"
+
+namespace learning_dsa_csharp._01_strings_arrays_hash._015_min_no_ops_to_make_array_empty
 {
     internal class Solution
     {
