@@ -39,6 +39,7 @@ function maxLength_branchBacktrack(arr: string[]): number {
             return (maxLen = Math.max(maxLen, currLen));
         }
 
+        // 0 means the string have no common letter
         if ((cur & masks[i]) === 0) {
             curArr.push(masks[i]);
             backtrack(i + 1, cur | masks[i], currLen + lengths[i], curArr);
@@ -54,6 +55,7 @@ function maxLength_branchBacktrack(arr: string[]): number {
 }
 
 var input = ['cha', 'r', 'act', 'ers'];
+var input = ['ab', 'yz'];
 console.log(maxLength_branchBacktrack(input));
 
 function maxLength_complexAiBacktrack(arr: string[]): number {
@@ -93,5 +95,5 @@ function maxLength_complexAiBacktrack(arr: string[]): number {
     return maxLen;
 }
 
-var input = ['un', 'ue'];
+var input = ['un', 'iq', 'ue'];
 console.log(maxLength_complexAiBacktrack(input));
