@@ -403,6 +403,7 @@
 
 -   [Unique Paths](https://leetcode.com/problems/unique-paths/description/) - `TODO`
     -   can be also solved using Inverse Modulo - [refer](./my-list.md#medium---modulo)
+-   [Minimum Falling Path Sum](https://leetcode.com/problems/minimum-falling-path-sum/description/)
 
 # Greedy
 
