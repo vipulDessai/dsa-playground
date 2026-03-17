@@ -60,6 +60,7 @@
 -   [Valid Anagram](https://leetcode.com/problems/valid-anagram/)
     -   can be solved using [hash](./my-list.md#easy---hash)
 -   [Number of Laser Beams in a Bank](https://leetcode.com/problems/number-of-laser-beams-in-a-bank/)
+-   [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/) - `TODO`
 
 ## medium - String
 
@@ -100,6 +101,7 @@
 -   [Find Missing and Repeated Values](https://leetcode.com/problems/find-missing-and-repeated-values/description/)
 -   [Convert an Array Into a 2D Array With Conditions](https://leetcode.com/problems/convert-an-array-into-a-2d-array-with-conditions/description/)
 -   [Find Players With Zero or One Losses](https://leetcode.com/problems/find-players-with-zero-or-one-losses/)
+-   [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) - `TODO`
 
 ## medium - Hash
 
