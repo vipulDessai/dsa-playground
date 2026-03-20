@@ -2,37 +2,41 @@
     '[Insert Interval](https://leetcode.com/problems/insert-interval/description/)';
 
 function insert(intervals: number[][], newInterval: number[]): number[][] {
-    const result: number[][] = [];
+    const n = intervals.length,
+        res: number[][] = [];
+
+    let i = 0;
 
     // Iterate through intervals and add non-overlapping intervals before newInterval
-    let i = 0;
-    while (i < intervals.length && intervals[i][1] < newInterval[0]) {
-        result.push(intervals[i]);
-        i++;
+    while (i < n && intervals[i][1] < newInterval[0]) {
+        res.push(intervals[i]);
+        ++i;
     }
 
     // Merge overlapping intervals
-    while (i < intervals.length && intervals[i][0] <= newInterval[1]) {
-        newInterval[0] = Math.min(newInterval[0], intervals[i][0]);
-        newInterval[1] = Math.max(newInterval[1], intervals[i][1]);
-        i++;
+    let [min, max] = newInterval;
+    while (i < n && intervals[i][1] >= min && intervals[i][0] <= max) {
+        min = Math.min(min, intervals[i][0]);
+        max = Math.max(max, intervals[i][1]);
+        ++i;
     }
-
-    // Add merged newInterval
-    result.push(newInterval);
+    res.push([min, max]);
 
     // Add non-overlapping intervals after newInterval
-    while (i < intervals.length) {
-        result.push(intervals[i]);
-        i++;
+    while (i < n) {
+        res.push(intervals[i]);
+        ++i;
     }
 
-    return result;
+    return res;
 }
 
 var input = [
-        [1, 3],
-        [6, 9],
+        [1, 2],
+        [3, 5],
+        [6, 7],
+        [8, 10],
+        [12, 16],
     ],
-    newIntervals = [2, 5];
+    newIntervals = [2, 8];
 console.log(insert(input, newIntervals));
