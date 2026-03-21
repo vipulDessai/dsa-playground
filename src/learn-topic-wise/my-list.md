@@ -194,6 +194,10 @@
 -   [Minimum Difference Between Highest and Lowest of K Scores](https://leetcode.com/problems/minimum-difference-between-highest-and-lowest-of-k-scores/)
     -   needs sliding window as well - [refer](./my-list.md#easy-fixed-length---sliding-window)
 
+## medium - sort
+
+-   [Minimum Number of Arrows to Burst Balloons](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/)
+
 ## hard - cyclic sort
 
 -   [First Missing Positive](https://leetcode.com/problems/first-missing-positive)
@@ -406,6 +410,10 @@
 -   [Unique Paths](https://leetcode.com/problems/unique-paths/description/) - `TODO`
     -   can be also solved using Inverse Modulo - [refer](./my-list.md#medium---modulo)
 -   [Minimum Falling Path Sum](https://leetcode.com/problems/minimum-falling-path-sum/description/)
+
+## hard - Dynamic Programming - 2D
+
+-   [Burst Balloons](https://leetcode.com/problems/burst-balloons/description/) - `TODO`
 
 # Greedy
 
