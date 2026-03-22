@@ -40,6 +40,7 @@
 ## medium - Simulation
 
 -   [Watering Plants II](https://leetcode.com/problems/watering-plants-ii/description/)
+-   [Reveal Cards In Increasing Order](https://leetcode.com/problems/reveal-cards-in-increasing-order/description/)
 
 # Subarray whose sum is k
 
@@ -202,6 +203,13 @@
 
 -   [First Missing Positive](https://leetcode.com/problems/first-missing-positive)
     -   can be solved using hash as well - [refer](./my-list.md#hard---hash)
+
+# Stack
+
+## medium - Stack
+
+1. https://leetcode.com/problems/largest-rectangle-in-histogram/
+2. https://leetcode.com/problems/maximal-rectangle/
 
 # Binary Search
 
