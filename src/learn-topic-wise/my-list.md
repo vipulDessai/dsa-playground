@@ -69,6 +69,15 @@
 -   [Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion/description/)
 -   [Expressive Words](https://leetcode.com/problems/expressive-words/description/)
     -   can be solved using [two pointers](./my-list.md#medium---single-array---two-pointers)
+-   [Compare Version Numbers](https://leetcode.com/problems/compare-version-numbers/)
+-   [Custom Sort String](https://leetcode.com/problems/custom-sort-string/)
+-   [Count Number of Teams](https://leetcode.com/problems/count-number-of-teams/description/)
+-   [Minimum Cost to Convert String I](https://leetcode.com/problems/minimum-cost-to-convert-string-i/)
+-   [Minimum Time Difference](https://leetcode.com/problems/minimum-time-difference)
+-   [Minimum Number of Steps to Make Two Strings Anagram](https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram/)
+-   [Determine if Two Strings Are Close](https://leetcode.com/problems/determine-if-two-strings-are-close/description/)
+-   [Maximum Length of a Concatenated String with Unique Characters](https://leetcode.com/problems/maximum-length-of-a-concatenated-string-with-unique-characters/description/)
+-   [Sort Characters By Frequency](https://leetcode.com/problems/sort-characters-by-frequency/description/)
 
 # Hash
 
