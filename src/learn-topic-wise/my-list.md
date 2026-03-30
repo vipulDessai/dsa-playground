@@ -171,6 +171,7 @@
 -   [Dijktra Algorithm](https://www.geeksforgeeks.org/problems/implementing-dijkstra-set-1-adjacency-matrix/1)
 -   [Find Subsequence of Length K With the Largest Sum](https://leetcode.com/problems/find-subsequence-of-length-k-with-the-largest-sum/)
 -   [relative ranks](https://leetcode.com/problems/relative-ranks/)
+-   [Network Delay Time](https://leetcode.com/problems/network-delay-time/description/)
 
 ## medium - Heap
 
