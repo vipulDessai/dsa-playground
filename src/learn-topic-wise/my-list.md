@@ -73,6 +73,7 @@
 -   [Custom Sort String](https://leetcode.com/problems/custom-sort-string/)
 -   [Count Number of Teams](https://leetcode.com/problems/count-number-of-teams/description/)
 -   [Minimum Cost to Convert String I](https://leetcode.com/problems/minimum-cost-to-convert-string-i/)
+    -   needs [floyd warshall](./my-list.md#medium---dijktra---shortest-path)
 -   [Minimum Time Difference](https://leetcode.com/problems/minimum-time-difference)
 -   [Minimum Number of Steps to Make Two Strings Anagram](https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram/)
 -   [Determine if Two Strings Are Close](https://leetcode.com/problems/determine-if-two-strings-are-close/description/)
@@ -181,6 +182,7 @@
 -   [Find Subsequence of Length K With the Largest Sum](https://leetcode.com/problems/find-subsequence-of-length-k-with-the-largest-sum/)
 -   [relative ranks](https://leetcode.com/problems/relative-ranks/)
 -   [Network Delay Time](https://leetcode.com/problems/network-delay-time/description/)
+    -   needs [Dijktra](./my-list.md#medium---floyd-warshall---shortest-path)
 
 ## medium - Heap
 
@@ -361,6 +363,17 @@
     -   can be solved using pure linked list - [refer](./my-list.md#medium---hash)
 -   [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/description/) - `TODO`
     -   can be solved using [two pointers](./my-list.md#medium---intervals---two-pointers)
+
+# Shortest path
+
+## medium - Dijktra - Shortest path
+
+-   [Network Delay Time](https://leetcode.com/problems/network-delay-time/description/)
+
+## medium - Floyd warshall - Shortest path
+
+-   [Minimum Cost to Convert String I](https://leetcode.com/problems/minimum-cost-to-convert-string-i/)
+-   [Find the City With the Smallest Number of Neighbors at a Threshold Distance](https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/description/) - `TODO`
 
 # Graph
 
