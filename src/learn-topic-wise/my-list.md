@@ -128,8 +128,6 @@
     -   can be solved using pure linked list - [refer](./my-list.md#medium---linked-list)
 -   [Design Twitter](https://leetcode.com/problems/design-twitter/)
 -   [Encode and Decode TinyURL](https://leetcode.com/problems/encode-and-decode-tinyurl/)
--   [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)
-    -   falls kind of in DP - [refer](./my-list#medium---dynamic-programming)
 -   [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/)
 -   [Fruits Into Baskets](https://leetcode.com/problems/fruit-into-baskets/)
     -   needs [two pointers](./my-list.md#medium---single-array---two-pointers) as well
@@ -307,6 +305,7 @@
 -   [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/)
 -   [Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/description/), [Sort Array By Parity II](https://leetcode.com/problems/sort-array-by-parity-ii/description/)
 -   [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/description/)
+-   [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)
 
 ## easy - multiple array - Two pointers
 
@@ -373,7 +372,7 @@
 ## medium - Floyd warshall - Shortest path
 
 -   [Minimum Cost to Convert String I](https://leetcode.com/problems/minimum-cost-to-convert-string-i/)
--   [Find the City With the Smallest Number of Neighbors at a Threshold Distance](https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/description/) - `TODO`
+-   [Find the City With the Smallest Number of Neighbors at a Threshold Distance](https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/description/)
 
 # Graph
 
@@ -417,8 +416,6 @@
 
 ## medium - Dynamic Programming - 1D
 
--   [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)
-    -   needs hash as well - [refer](./my-list#medium---hash)
 -   [3 Sum Multiplicity](https://leetcode.com/problems/3sum-with-multiplicity/)
     -   [Two pointers with nCr formula is the correct approach](./my-list.md#medium---single-array---two-pointers)
 -   [Maximum Length of Repeated Subarray](https://leetcode.com/problems/maximum-length-of-repeated-subarray/) - `TODO`
