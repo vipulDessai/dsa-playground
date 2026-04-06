@@ -138,7 +138,6 @@
 -   [Design Underground System](https://leetcode.com/problems/design-underground-system/)
 -   [Verifying an Alien Dictionary](https://leetcode.com/problems/verifying-an-alien-dictionary/)
 -   [Find Duplicate Subtrees](https://leetcode.com/problems/find-duplicate-subtrees/)
--   [LRU Cache](https://leetcode.com/problems/lru-cache/)
 -   [Insert Delete GetRandom O(1) - Duplicates allowed](https://leetcode.com/problems/insert-delete-getrandom-o1-duplicates-allowed/)
 -   [Binary subarrays with sum](https://leetcode.com/problems/binary-subarrays-with-sum/description/)
     -   uses kadane algorithm template
