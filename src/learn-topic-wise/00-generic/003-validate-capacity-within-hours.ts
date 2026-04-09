@@ -12,18 +12,18 @@
  */
 
 function validateCapacityPerHour(capacity: number, items: number[], h: number) {
-  let i = 0,
-    j = 0;
-  while (i < h) {
-    i += Math.ceil(items[j] / capacity);
-    ++j;
-  }
+    let i = 0,
+        j = 0;
+    while (i < h) {
+        i += Math.ceil(items[j] / capacity);
+        ++j;
+    }
 
-  if (i <= h && j == items.length) {
-    return true;
-  }
+    if (i <= h && j == items.length) {
+        return true;
+    }
 
-  return false;
+    return false;
 }
 
 console.log(validateCapacityPerHour(17, [30, 11, 23, 4, 20], 5));

@@ -51,11 +51,6 @@
 
 # String
 
-## Notes
-
--   learn KMP Algorithm for Pattern Searching and find DSA problems for it and other searching patterns - `TODO`
--   all problems from `01-strings/cs` - `TODO`
-
 ## easy - String
 
 -   [Valid Anagram](https://leetcode.com/problems/valid-anagram/)
