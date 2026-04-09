@@ -20,32 +20,40 @@ function sortArray(nums: number[]): number[] {
     return nums;
 }
 
-function recursiveInsertionSort(arr: number[]) {
-    const n = arr.length,
-        compareFn = (a: number, b: number) => (a < b ? -1 : a > b ? 1 : 0);
+function compareFn(a: number, b: number) {
+    if (a === b) {
+        return 0;
+    } else if (a > b) {
+        return 1;
+    } else {
+        return -1;
+    }
+}
 
-    function dfs(arr: number[], n: number) {
+function recursiveInsertionSort(arr: number[]) {
+    const n = arr.length;
+
+    function dfs(n: number) {
         // Base case: single element is already sorted
-        if (n <= 1) return arr;
+        if (n <= 1) return;
 
         // Sort first n-1 elements recursively
-        dfs(arr, n - 1);
+        dfs(n - 1);
 
-        // Insert nth element into the sorted subarray
-        const last = arr[n - 1];
+        const l = arr[n - 1];
         let j = n - 2;
-
-        while (j >= 0 && compareFn(arr[j], last) > 0) {
+        while (j >= 0 && compareFn(arr[j], l) > 0) {
+            // shift arr[j] to arr[j + 1]
             arr[j + 1] = arr[j];
+
             j--;
         }
-        arr[j + 1] = last;
-
-        return arr;
+        arr[j + 1] = l;
     }
 
-    dfs(arr, n);
+    dfs(n);
 }
 
 var input = [5, 2, 9, 1, 5, 6];
+var input = [3, 2, 1];
 console.log(sortArray(input));
