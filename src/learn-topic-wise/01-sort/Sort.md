@@ -17,8 +17,6 @@
     -   Method1: Iterative
     -   Method2: Recursive
 -   Selection Sort
-    -   Method1: Standard
-    -   Method2: Standard using inbuilt
 -   Quick Sort
     -   Method1: Standard
     -   Method2: Randomised
