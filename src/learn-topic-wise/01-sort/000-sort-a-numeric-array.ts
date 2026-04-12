@@ -4,10 +4,10 @@ export const url =
 enum SortType {
     'insertionSortRecursive',
     'insertionSortIterative',
-    'quickSortStandard',
+    'quickSortStandardAndRandom',
 }
 
-const sType: SortType = SortType.quickSortStandard;
+const sType: SortType = SortType.quickSortStandardAndRandom;
 
 function sortArray(nums: number[]): number[] {
     switch (sType) {
@@ -17,8 +17,8 @@ function sortArray(nums: number[]): number[] {
         case SortType.insertionSortIterative:
             insertionSortIterative(nums);
             break;
-        case SortType.quickSortStandard:
-            quickSortStandard(nums);
+        case SortType.quickSortStandardAndRandom:
+            quickSortStandardAndRandom(nums);
             break;
 
         default:
@@ -77,15 +77,18 @@ function insertionSortIterative(arr: number[]) {
     }
 }
 
-function quickSortStandard(arr: number[]) {
-    // swap function
-    function swap(i: number, j: number) {
-        let temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-    }
-
+function quickSortStandardAndRandom(arr: number[]) {
     function partition(low: number, high: number) {
+        // random - START
+
+        // Pick a random pivot index between low and high
+        // let randInd = Math.floor(Math.random() * (high - low + 1)) + low;
+
+        // // Swap pivot with the last element, as per the
+        // [arr[randInd], arr[high]] = [arr[high], arr[randInd]];
+
+        // random - END
+
         // choose the pivot
         let pivot = arr[high];
 
@@ -97,15 +100,16 @@ function quickSortStandard(arr: number[]) {
         // elements to the left side. Elements from low to
         // i are smaller after every iteration
         for (let j = low; j < high; ++j) {
-            if (arr[j] < pivot) {
+            if (arr[j] <= pivot) {
                 i++;
-                swap(i, j);
+                [arr[i], arr[j]] = [arr[j], arr[i]];
             }
         }
 
         // move pivot after smaller elements and
         // return its position
-        swap(i + 1, high);
+        // the i + 1 is likely the position of a value > arr[high] or pivot
+        [arr[i + 1], arr[high]] = [arr[high], arr[i + 1]];
         return i + 1;
     }
 
@@ -126,5 +130,5 @@ function quickSortStandard(arr: number[]) {
 }
 
 var input = [5, 2, 9, 1, 5, 6];
-var input = [3, 2, 1];
+var input = [2, 5, 9, 1, 0];
 console.log(sortArray(input));
