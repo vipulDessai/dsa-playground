@@ -5,9 +5,11 @@ enum SortType {
     'insertionSortRecursive',
     'insertionSortIterative',
     'quickSortStandardAndRandom',
+    'selectionSort',
+    'bubbleSort',
 }
 
-const sType: SortType = SortType.quickSortStandardAndRandom;
+const sType: SortType = SortType.bubbleSort;
 
 function sortArray(nums: number[]): number[] {
     switch (sType) {
@@ -19,6 +21,12 @@ function sortArray(nums: number[]): number[] {
             break;
         case SortType.quickSortStandardAndRandom:
             quickSortStandardAndRandom(nums);
+            break;
+        case SortType.selectionSort:
+            selectionSort(nums);
+            break;
+        case SortType.bubbleSort:
+            bubbleSort(nums);
             break;
 
         default:
@@ -127,6 +135,40 @@ function quickSortStandardAndRandom(arr: number[]) {
     }
 
     quickSort(0, arr.length - 1);
+}
+
+function bubbleSort(arr: number[]) {
+    const n = arr.length;
+    for (let i = 0; i < n - 1; ++i) {
+        let swapped = false;
+
+        // with every pass, the largest element gets moved to the end of the array
+        // thats why j < n - i - 1
+        for (let j = 0; j < n - i - 1; ++j) {
+            if (compareFn(arr[j], arr[j + 1]) > 0) {
+                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+
+                swapped = true;
+            }
+        }
+
+        // no swap meaning array is sorted, so STOP!!!
+        if (!swapped) break;
+    }
+}
+
+function selectionSort(arr: number[]) {
+    const n = arr.length;
+    for (let i = 0; i < n; ++i) {
+        let minI = i;
+        for (let j = i + 1; j < n; ++j) {
+            if (compareFn(arr[j], arr[minI]) < 0) {
+                minI = j;
+            }
+        }
+
+        [arr[i], arr[minI]] = [arr[minI], arr[i]];
+    }
 }
 
 var input = [5, 2, 9, 1, 5, 6];
