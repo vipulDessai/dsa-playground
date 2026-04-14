@@ -21,8 +21,8 @@
     -   Method1: Standard
     -   Method2: Randomised
 -   Merge Sort
-    -   Method1: Outplace Merging
-    -   Method2: Inplace Merging
+    -   Method1: Outplace Merging (https://www.geeksforgeeks.org/dsa/merge-sort/)
+    -   Method2: Inplace Merging (https://www.geeksforgeeks.org/dsa/in-place-merge-sort/)
 -   Generalised Radix Sort
     -   Method1: Using MinVal
     -   Method2: Using Partitioning
