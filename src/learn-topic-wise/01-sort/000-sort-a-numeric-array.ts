@@ -7,10 +7,10 @@ enum SortType {
     'quickSortStandardAndRandom',
     'selectionSort',
     'bubbleSort',
-    'mergeSortOutPlace',
+    'mergeSort',
 }
 
-const sType: SortType = SortType.mergeSortOutPlace;
+const sType: SortType = SortType.mergeSort;
 
 function sortArray(nums: number[]): number[] {
     switch (sType) {
@@ -29,8 +29,8 @@ function sortArray(nums: number[]): number[] {
         case SortType.bubbleSort:
             bubbleSort(nums);
             break;
-        case SortType.mergeSortOutPlace:
-            mergeSortOutPlace(nums);
+        case SortType.mergeSort:
+            mergeSort(nums);
             break;
 
         default:
@@ -146,7 +146,7 @@ function bubbleSort(arr: number[]) {
     for (let i = 0; i < n - 1; ++i) {
         let swapped = false;
 
-        // with every pass, the largest element gets moved to the end of the array
+        // with every pass, the largest element gets moved to the right of the array
         // thats why j < n - i - 1
         for (let j = 0; j < n - i - 1; ++j) {
             if (compareFn(arr[j], arr[j + 1]) > 0) {
@@ -175,8 +175,8 @@ function selectionSort(arr: number[]) {
     }
 }
 
-function mergeSortOutPlace(arr: number[]) {
-    function merge(left: number, mid: number, right: number) {
+function mergeSort(arr: number[]) {
+    function mergeOutplace(left: number, mid: number, right: number) {
         const n1 = mid - left + 1;
         const n2 = right - mid;
 
@@ -219,6 +219,39 @@ function mergeSortOutPlace(arr: number[]) {
         }
     }
 
+    function mergeInplace(left: number, mid: number, right: number) {
+        let start = mid + 1;
+
+        // If the direct merge is already sorted
+        if (arr[mid] <= arr[start]) {
+            return;
+        }
+
+        // Two pointers to maintain start
+        // of both arrays to merge
+        while (left <= mid && start <= right) {
+            // If element 1 is in right place
+            if (arr[left] <= arr[start]) {
+                left++;
+            } else {
+                let value = arr[start];
+                let index = start;
+
+                // Shift all the elements right by 1.
+                while (index > left) {
+                    arr[index] = arr[index - 1];
+                    index--;
+                }
+                arr[left] = value;
+
+                // Update all the pointers
+                left++;
+                mid++;
+                start++;
+            }
+        }
+    }
+
     function dfs(left: number, right: number) {
         if (left < right) {
             const mid = Math.floor(left + (right - left) / 2);
@@ -226,7 +259,11 @@ function mergeSortOutPlace(arr: number[]) {
             dfs(left, mid);
             dfs(mid + 1, right);
 
-            merge(left, mid, right);
+            // extra memory
+            // mergeOutplace(left, mid, right);
+
+            // no extra memory
+            mergeInplace(left, mid, right);
         }
     }
 
