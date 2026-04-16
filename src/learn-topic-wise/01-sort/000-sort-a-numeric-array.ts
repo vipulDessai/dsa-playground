@@ -8,9 +8,10 @@ enum SortType {
     'selectionSort',
     'bubbleSort',
     'mergeSort',
+    'radixSort',
 }
 
-const sType: SortType = SortType.mergeSort;
+const sType: SortType = SortType.radixSort;
 
 function sortArray(nums: number[]): number[] {
     switch (sType) {
@@ -31,6 +32,9 @@ function sortArray(nums: number[]): number[] {
             break;
         case SortType.mergeSort:
             mergeSort(nums);
+            break;
+        case SortType.radixSort:
+            radixSort(nums);
             break;
 
         default:
@@ -268,6 +272,65 @@ function mergeSort(arr: number[]) {
     }
 
     dfs(0, arr.length - 1);
+}
+
+// fails for -ve numbers [3, -1]
+function radixSort(arr: number[]) {
+    const n = arr.length;
+    // A function to do counting sort of arr[] according to
+    // the digit represented by exp.
+    function countSort(curArr: number[], exp: number) {
+        let output = new Array(n); // output array
+        let count = Array(10).fill(0);
+
+        // Store count of occurrences in count[]
+        for (let i = 0; i < n; i++) {
+            const digit = Math.floor(curArr[i] / exp) % 10;
+            count[digit]++;
+        }
+
+        // Change count[i] so that count[i] now contains
+        // actual position of this digit in output[]
+        for (let i = 1; i < 10; i++) {
+            count[i] += count[i - 1];
+        }
+
+        // Build the output array
+        for (let i = n - 1; i >= 0; i--) {
+            const digit = Math.floor(curArr[i] / exp) % 10;
+            output[count[digit] - 1] = curArr[i];
+            count[digit]--;
+        }
+
+        return output;
+    }
+
+    // The main function to that sorts arr[] using Radix Sort
+    function radixSort() {
+        let maxNumber = arr[0];
+        for (let i = 1; i < n; i++) {
+            if (arr[i] > maxNumber) maxNumber = arr[i];
+        }
+
+        // Create a shallow copy where the sorted values will be kept
+        let sortedArr = [...arr];
+
+        // Do counting sort for every digit. Note that
+        // instead of passing digit number, exp is passed.
+        // exp is 10^i where i is current digit number
+        for (let exp = 1; Math.floor(maxNumber / exp) > 0; exp *= 10) {
+            // Get the Count sort iteration
+            sortedArr = countSort(sortedArr, exp);
+        }
+
+        return sortedArr;
+    }
+
+    const sortedArr = radixSort();
+
+    for (let i = 0; i < n; ++i) {
+        arr[i] = sortedArr[i];
+    }
 }
 
 var input = [5, 2, 9, 1, 5, 6];
