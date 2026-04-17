@@ -8,10 +8,10 @@ enum SortType {
     'selectionSort',
     'bubbleSort',
     'mergeSort',
-    'radixSort',
+    'radixSortMinVal',
 }
 
-const sType: SortType = SortType.radixSort;
+const sType: SortType = SortType.radixSortMinVal;
 
 function sortArray(nums: number[]): number[] {
     switch (sType) {
@@ -33,8 +33,8 @@ function sortArray(nums: number[]): number[] {
         case SortType.mergeSort:
             mergeSort(nums);
             break;
-        case SortType.radixSort:
-            radixSort(nums);
+        case SortType.radixSortMinVal:
+            radixSortMinVal(nums);
             break;
 
         default:
@@ -274,65 +274,64 @@ function mergeSort(arr: number[]) {
     dfs(0, arr.length - 1);
 }
 
-// fails for -ve numbers [3, -1]
-function radixSort(arr: number[]) {
-    const n = arr.length;
-    // A function to do counting sort of arr[] according to
-    // the digit represented by exp.
-    function countSort(curArr: number[], exp: number) {
-        let output = new Array(n); // output array
-        let count = Array(10).fill(0);
+function radixSortMinVal(arr: number[]) {
+    function countSort(nums: number[], exp: number): number[] {
+        const n = nums.length;
+        const output = new Array(n);
+        const count = Array(10).fill(0);
 
-        // Store count of occurrences in count[]
         for (let i = 0; i < n; i++) {
-            const digit = Math.floor(curArr[i] / exp) % 10;
+            const digit = Math.floor(nums[i] / exp) % 10;
             count[digit]++;
         }
 
-        // Change count[i] so that count[i] now contains
-        // actual position of this digit in output[]
+        // transforms raw digit frequencies into placement indices for the output array
         for (let i = 1; i < 10; i++) {
             count[i] += count[i - 1];
         }
 
-        // Build the output array
         for (let i = n - 1; i >= 0; i--) {
-            const digit = Math.floor(curArr[i] / exp) % 10;
-            output[count[digit] - 1] = curArr[i];
+            const digit = Math.floor(nums[i] / exp) % 10;
+            output[count[digit] - 1] = nums[i];
             count[digit]--;
         }
 
         return output;
     }
 
-    // The main function to that sorts arr[] using Radix Sort
-    function radixSort() {
-        let maxNumber = arr[0];
-        for (let i = 1; i < n; i++) {
-            if (arr[i] > maxNumber) maxNumber = arr[i];
+    function radixSortNonNegative(nums: number[]): number[] {
+        if (nums.length === 0) return nums;
+
+        const max = Math.max(...nums);
+
+        let exp = 1,
+            sorted = [...nums];
+
+        while (Math.floor(max / exp) > 0) {
+            sorted = countSort(sorted, exp);
+            exp *= 10;
         }
-
-        // Create a shallow copy where the sorted values will be kept
-        let sortedArr = [...arr];
-
-        // Do counting sort for every digit. Note that
-        // instead of passing digit number, exp is passed.
-        // exp is 10^i where i is current digit number
-        for (let exp = 1; Math.floor(maxNumber / exp) > 0; exp *= 10) {
-            // Get the Count sort iteration
-            sortedArr = countSort(sortedArr, exp);
-        }
-
-        return sortedArr;
+        return sorted;
     }
 
-    const sortedArr = radixSort();
+    // since classic radix only works for +ve, map the -ve to absolute value
+    const negatives = arr.filter((v) => v < 0).map((v) => -v); // abs values
+    const positives = arr.filter((v) => v >= 0);
 
-    for (let i = 0; i < n; ++i) {
+    // revert the -ve numbers
+    const sortedNegatives = radixSortNonNegative(negatives)
+        .reverse()
+        .map((v) => -v);
+    const sortedPositives = radixSortNonNegative(positives);
+
+    const sortedArr = [...sortedNegatives, ...sortedPositives];
+
+    for (let i = 0; i < arr.length; ++i) {
         arr[i] = sortedArr[i];
     }
 }
 
 var input = [5, 2, 9, 1, 5, 6];
 var input = [2, 5, 9, 1, 0];
+var input = [2, 50, 19, 17, 3];
 console.log(sortArray(input));
