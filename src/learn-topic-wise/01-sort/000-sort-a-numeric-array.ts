@@ -8,10 +8,10 @@ enum SortType {
     'selectionSort',
     'bubbleSort',
     'mergeSort',
-    'radixSortMinVal',
+    'radixSortdigitPlace',
 }
 
-const sType: SortType = SortType.radixSortMinVal;
+const sType: SortType = SortType.radixSortdigitPlace;
 
 function sortArray(nums: number[]): number[] {
     switch (sType) {
@@ -33,8 +33,8 @@ function sortArray(nums: number[]): number[] {
         case SortType.mergeSort:
             mergeSort(nums);
             break;
-        case SortType.radixSortMinVal:
-            radixSortMinVal(nums);
+        case SortType.radixSortdigitPlace:
+            radixSortdigitPlace(nums);
             break;
 
         default:
@@ -274,7 +274,7 @@ function mergeSort(arr: number[]) {
     dfs(0, arr.length - 1);
 }
 
-function radixSortMinVal(arr: number[]) {
+function radixSortdigitPlace(arr: number[]) {
     function countSort(nums: number[], exp: number): number[] {
         const n = nums.length;
         const output = new Array(n);

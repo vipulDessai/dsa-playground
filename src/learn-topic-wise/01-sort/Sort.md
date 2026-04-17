@@ -23,9 +23,8 @@
 -   Merge Sort
     -   Method1: Outplace Merging (https://www.geeksforgeeks.org/dsa/merge-sort/)
     -   Method2: Inplace Merging (https://www.geeksforgeeks.org/dsa/in-place-merge-sort/)
--   Generalised Radix Sort
-    -   Method1: Using MinVal
-    -   Method2: Using Partitioning
--   Generalised Counting Sort
+-   Radix Sort 
+    - based digit place - using counting sort or min value based
+-   Counting Sort
 -   Heap Sort
 -   Bucket Sort
