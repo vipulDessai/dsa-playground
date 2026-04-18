@@ -4,15 +4,16 @@ export const url =
 enum SortType {
     'insertionSortRecursive',
     'insertionSortIterative',
-    'quickSortStandardAndRandom',
     'selectionSort',
     'bubbleSort',
+    'quickSortStandardAndRandom',
     'mergeSort',
     'radixSortdigitPlace',
+    'radixSortPartitioning',
     'countSort',
 }
 
-const sType: SortType = SortType.countSort;
+const sType: SortType = SortType.radixSortPartitioning;
 
 function sortArray(nums: number[]): number[] {
     switch (sType) {
@@ -22,20 +23,23 @@ function sortArray(nums: number[]): number[] {
         case SortType.insertionSortIterative:
             insertionSortIterative(nums);
             break;
-        case SortType.quickSortStandardAndRandom:
-            quickSortStandardAndRandom(nums);
-            break;
         case SortType.selectionSort:
             selectionSort(nums);
             break;
         case SortType.bubbleSort:
             bubbleSort(nums);
             break;
+        case SortType.quickSortStandardAndRandom:
+            quickSortStandardAndRandom(nums);
+            break;
         case SortType.mergeSort:
             mergeSort(nums);
             break;
         case SortType.radixSortdigitPlace:
             radixSortdigitPlace(nums);
+            break;
+        case SortType.radixSortPartitioning:
+            radixSortPartitioning(nums);
             break;
         case SortType.countSort:
             countSort(nums);
@@ -97,6 +101,40 @@ function insertionSortIterative(arr: number[]) {
     }
 }
 
+function bubbleSort(arr: number[]) {
+    const n = arr.length;
+    for (let i = 0; i < n - 1; ++i) {
+        let swapped = false;
+
+        // with every pass, the largest element gets moved to the right of the array
+        // thats why j < n - i - 1
+        for (let j = 0; j < n - i - 1; ++j) {
+            if (compareFn(arr[j], arr[j + 1]) > 0) {
+                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+
+                swapped = true;
+            }
+        }
+
+        // no swap meaning array is sorted, so STOP!!!
+        if (!swapped) break;
+    }
+}
+
+function selectionSort(arr: number[]) {
+    const n = arr.length;
+    for (let i = 0; i < n; ++i) {
+        let minI = i;
+        for (let j = i + 1; j < n; ++j) {
+            if (compareFn(arr[j], arr[minI]) < 0) {
+                minI = j;
+            }
+        }
+
+        [arr[i], arr[minI]] = [arr[minI], arr[i]];
+    }
+}
+
 function quickSortStandardAndRandom(arr: number[]) {
     function partition(low: number, high: number) {
         // random - START
@@ -147,40 +185,6 @@ function quickSortStandardAndRandom(arr: number[]) {
     }
 
     quickSort(0, arr.length - 1);
-}
-
-function bubbleSort(arr: number[]) {
-    const n = arr.length;
-    for (let i = 0; i < n - 1; ++i) {
-        let swapped = false;
-
-        // with every pass, the largest element gets moved to the right of the array
-        // thats why j < n - i - 1
-        for (let j = 0; j < n - i - 1; ++j) {
-            if (compareFn(arr[j], arr[j + 1]) > 0) {
-                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
-
-                swapped = true;
-            }
-        }
-
-        // no swap meaning array is sorted, so STOP!!!
-        if (!swapped) break;
-    }
-}
-
-function selectionSort(arr: number[]) {
-    const n = arr.length;
-    for (let i = 0; i < n; ++i) {
-        let minI = i;
-        for (let j = i + 1; j < n; ++j) {
-            if (compareFn(arr[j], arr[minI]) < 0) {
-                minI = j;
-            }
-        }
-
-        [arr[i], arr[minI]] = [arr[minI], arr[i]];
-    }
 }
 
 function mergeSort(arr: number[]) {
@@ -333,6 +337,81 @@ function radixSortdigitPlace(arr: number[]) {
 
     for (let i = 0; i < arr.length; ++i) {
         arr[i] = sortedArr[i];
+    }
+}
+
+function radixSortPartitioning(nums: number[]) {
+    function getDigit(num: number, factor: number): number {
+        return Math.floor(Math.abs(num) / factor) % 10;
+    }
+
+    function radixCountingSort(
+        factor: number,
+        low: number,
+        high: number,
+        isAscending: boolean,
+    ): void {
+        const size = high - low + 1;
+        const freq = new Array(10).fill(0);
+        const sorted = new Array(size);
+
+        for (let i = low; i <= high; i++) {
+            freq[getDigit(nums[i], factor)]++;
+        }
+
+        if (isAscending) {
+            for (let i = 1; i < 10; i++) freq[i] += freq[i - 1];
+        } else {
+            for (let i = 8; i >= 0; i--) freq[i] += freq[i + 1];
+        }
+
+        for (let i = high; i >= low; i--) {
+            const digit = getDigit(nums[i], factor);
+            sorted[freq[digit] - 1] = nums[i];
+            freq[digit]--;
+        }
+
+        for (let i = 0; i < size; i++) {
+            nums[low + i] = sorted[i];
+        }
+    }
+
+    function radixSortHelper(
+        low: number,
+        high: number,
+        isAscending: boolean,
+    ): void {
+        if (low >= high) return;
+
+        let maxAbs = 0;
+        for (let i = low; i <= high; i++) {
+            maxAbs = Math.max(maxAbs, Math.abs(nums[i]));
+        }
+
+        for (let factor = 1; Math.floor(maxAbs / factor) > 0; factor *= 10) {
+            radixCountingSort(factor, low, high, isAscending);
+        }
+    }
+
+    if (nums.length <= 1) return;
+
+    // Partition: Negatives on left, Positives on right
+    let pivotIdx = 0;
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] < 0) {
+            [nums[i], nums[pivotIdx]] = [nums[pivotIdx], nums[i]];
+            pivotIdx++;
+        }
+    }
+
+    // Sort negative part (descending absolute values: -100, -50, -1)
+    if (pivotIdx > 0) {
+        radixSortHelper(0, pivotIdx - 1, false);
+    }
+
+    // Sort positive part (ascending: 0, 5, 10)
+    if (pivotIdx < nums.length) {
+        radixSortHelper(pivotIdx, nums.length - 1, true);
     }
 }
 
