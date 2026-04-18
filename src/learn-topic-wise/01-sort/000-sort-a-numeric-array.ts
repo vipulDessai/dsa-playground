@@ -9,9 +9,10 @@ enum SortType {
     'bubbleSort',
     'mergeSort',
     'radixSortdigitPlace',
+    'countSort',
 }
 
-const sType: SortType = SortType.radixSortdigitPlace;
+const sType: SortType = SortType.countSort;
 
 function sortArray(nums: number[]): number[] {
     switch (sType) {
@@ -35,6 +36,9 @@ function sortArray(nums: number[]): number[] {
             break;
         case SortType.radixSortdigitPlace:
             radixSortdigitPlace(nums);
+            break;
+        case SortType.countSort:
+            countSort(nums);
             break;
 
         default:
@@ -275,7 +279,7 @@ function mergeSort(arr: number[]) {
 }
 
 function radixSortdigitPlace(arr: number[]) {
-    function countSort(nums: number[], exp: number): number[] {
+    function count(nums: number[], exp: number): number[] {
         const n = nums.length;
         const output = new Array(n);
         const count = Array(10).fill(0);
@@ -299,7 +303,7 @@ function radixSortdigitPlace(arr: number[]) {
         return output;
     }
 
-    function radixSortNonNegative(nums: number[]): number[] {
+    function sort(nums: number[]): number[] {
         if (nums.length === 0) return nums;
 
         const max = Math.max(...nums);
@@ -308,26 +312,58 @@ function radixSortdigitPlace(arr: number[]) {
             sorted = [...nums];
 
         while (Math.floor(max / exp) > 0) {
-            sorted = countSort(sorted, exp);
+            sorted = count(sorted, exp);
             exp *= 10;
         }
         return sorted;
     }
 
     // since classic radix only works for +ve, map the -ve to absolute value
-    const negatives = arr.filter((v) => v < 0).map((v) => -v); // abs values
+    // and apply radix
+    const negatives = arr.filter((v) => v < 0).map((v) => -v);
     const positives = arr.filter((v) => v >= 0);
 
     // revert the -ve numbers
-    const sortedNegatives = radixSortNonNegative(negatives)
+    const sortedNegatives = sort(negatives)
         .reverse()
         .map((v) => -v);
-    const sortedPositives = radixSortNonNegative(positives);
+    const sortedPositives = sort(positives);
 
     const sortedArr = [...sortedNegatives, ...sortedPositives];
 
     for (let i = 0; i < arr.length; ++i) {
         arr[i] = sortedArr[i];
+    }
+}
+
+function countSort(nums: number[]) {
+    const n = nums.length;
+
+    if (n === 0) return [];
+
+    const min = Math.min(...nums);
+    const max = Math.max(...nums);
+
+    const freq = Array(max - min + 1).fill(0);
+
+    for (const num of nums) {
+        ++freq[num - min];
+    }
+
+    for (let i = 1; i < freq.length; ++i) {
+        freq[i] += freq[i - 1];
+    }
+
+    const out = new Array(n);
+    for (let i = n - 1; i >= 0; --i) {
+        const num = nums[i];
+        const ind = freq[num - min];
+        out[ind - 1] = num;
+        --freq[num - min];
+    }
+
+    for (let i = 0; i < n; ++i) {
+        nums[i] = out[i];
     }
 }
 
