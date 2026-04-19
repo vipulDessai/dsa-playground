@@ -340,78 +340,72 @@ function radixSortdigitPlace(arr: number[]) {
     }
 }
 
+// same as radixSortdigitPlace, but using the same nums array, in place manipulation
 function radixSortPartitioning(nums: number[]) {
-    function getDigit(num: number, factor: number): number {
-        return Math.floor(Math.abs(num) / factor) % 10;
-    }
+    function sort(l: number, h: number, s: number, isAsc: boolean) {
+        function count(e: number) {
+            const freq = Array(10).fill(0);
 
-    function radixCountingSort(
-        factor: number,
-        low: number,
-        high: number,
-        isAscending: boolean,
-    ): void {
-        const size = high - low + 1;
-        const freq = new Array(10).fill(0);
-        const sorted = new Array(size);
+            for (let i = l; i <= h; ++i) {
+                const d = Math.floor(Math.abs(nums[i]) / e) % 10;
+                ++freq[d];
+            }
 
-        for (let i = low; i <= high; i++) {
-            freq[getDigit(nums[i], factor)]++;
+            // +ve numbers
+            if (isAsc) {
+                for (let i = 1; i < 10; ++i) {
+                    freq[i] += freq[i - 1];
+                }
+            }
+            // -ve numbers are reversed sorted
+            else {
+                for (let i = 8; i >= 0; --i) {
+                    freq[i] += freq[i + 1];
+                }
+            }
+
+            const out = new Array(s);
+            for (let i = h; i >= l; --i) {
+                const d = Math.floor(Math.abs(nums[i]) / e) % 10;
+                out[freq[d] - 1] = nums[i];
+                --freq[d];
+            }
+
+            for (let i = 0; i < s; ++i) {
+                nums[l + i] = out[i];
+            }
         }
 
-        if (isAscending) {
-            for (let i = 1; i < 10; i++) freq[i] += freq[i - 1];
-        } else {
-            for (let i = 8; i >= 0; i--) freq[i] += freq[i + 1];
+        let m = -Infinity;
+        for (let i = l; i <= h; ++i) {
+            m = Math.max(m, Math.abs(nums[i]));
         }
 
-        for (let i = high; i >= low; i--) {
-            const digit = getDigit(nums[i], factor);
-            sorted[freq[digit] - 1] = nums[i];
-            freq[digit]--;
-        }
-
-        for (let i = 0; i < size; i++) {
-            nums[low + i] = sorted[i];
-        }
-    }
-
-    function radixSortHelper(
-        low: number,
-        high: number,
-        isAscending: boolean,
-    ): void {
-        if (low >= high) return;
-
-        let maxAbs = 0;
-        for (let i = low; i <= high; i++) {
-            maxAbs = Math.max(maxAbs, Math.abs(nums[i]));
-        }
-
-        for (let factor = 1; Math.floor(maxAbs / factor) > 0; factor *= 10) {
-            radixCountingSort(factor, low, high, isAscending);
+        let e = 1;
+        while (Math.floor(m / e) > 0) {
+            count(e);
+            e *= 10;
         }
     }
 
-    if (nums.length <= 1) return;
+    const n = nums.length;
 
-    // Partition: Negatives on left, Positives on right
-    let pivotIdx = 0;
-    for (let i = 0; i < nums.length; i++) {
+    let piInd = 0;
+    for (let i = 0; i < n; ++i) {
         if (nums[i] < 0) {
-            [nums[i], nums[pivotIdx]] = [nums[pivotIdx], nums[i]];
-            pivotIdx++;
+            [nums[i], nums[piInd]] = [nums[piInd], nums[i]];
+            ++piInd;
         }
     }
 
-    // Sort negative part (descending absolute values: -100, -50, -1)
-    if (pivotIdx > 0) {
-        radixSortHelper(0, pivotIdx - 1, false);
+    // -ve exists
+    if (piInd > 0) {
+        sort(0, piInd - 1, piInd, false);
     }
 
-    // Sort positive part (ascending: 0, 5, 10)
-    if (pivotIdx < nums.length) {
-        radixSortHelper(pivotIdx, nums.length - 1, true);
+    // +ve exists
+    if (piInd < n) {
+        sort(piInd, n - 1, n - piInd, true);
     }
 }
 
@@ -448,5 +442,5 @@ function countSort(nums: number[]) {
 
 var input = [5, 2, 9, 1, 5, 6];
 var input = [2, 5, 9, 1, 0];
-var input = [2, 50, 19, 17, 3];
+var input = [2, 50, -1, -17, 3];
 console.log(sortArray(input));
