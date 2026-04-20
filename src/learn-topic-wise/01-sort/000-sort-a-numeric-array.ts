@@ -11,9 +11,10 @@ enum SortType {
     'radixSortdigitPlace',
     'radixSortPartitioning',
     'countSort',
+    'heapSort',
 }
 
-const sType: SortType = SortType.radixSortPartitioning;
+const sType: SortType = SortType.heapSort;
 
 function sortArray(nums: number[]): number[] {
     switch (sType) {
@@ -43,6 +44,9 @@ function sortArray(nums: number[]): number[] {
             break;
         case SortType.countSort:
             countSort(nums);
+            break;
+        case SortType.heapSort:
+            heapSort(nums);
             break;
 
         default:
@@ -437,6 +441,78 @@ function countSort(nums: number[]) {
 
     for (let i = 0; i < n; ++i) {
         nums[i] = out[i];
+    }
+}
+
+function heapSort(arr: number[]) {
+    class PQHeap {
+        q: { v: number; p: number }[] = [];
+        getParent(i: number) {
+            return Math.floor((i - 1) / 2);
+        }
+        getLeftChild(i: number) {
+            return i * 2 + 1;
+        }
+        getRightChild(i: number) {
+            return i * 2 + 2;
+        }
+        enqueue(v: number, p: number) {
+            this.q.push({ v, p });
+
+            const n = this.q.length;
+
+            let i = n - 1,
+                j = this.getParent(i);
+            while (j >= 0 && this.q[i].p < this.q[j].p) {
+                [this.q[i], this.q[j]] = [this.q[j], this.q[i]];
+
+                i = j;
+                j = this.getParent(i);
+            }
+        }
+        dequeue() {
+            if (this.q.length === 0) return null;
+            if (this.q.length === 1) return this.q.pop();
+
+            const out = this.q[0];
+            this.q[0] = this.q.pop()!;
+
+            const n = this.q.length;
+            let i = 0,
+                j = this.getLeftChild(i);
+            while (j < n) {
+                const rI = this.getRightChild(i);
+                if (rI < n && this.q[rI].p < this.q[j].p) {
+                    j = rI;
+                }
+
+                if (this.q[i].p > this.q[j].p) {
+                    [this.q[i], this.q[j]] = [this.q[j], this.q[i]];
+
+                    i = j;
+                    j = this.getLeftChild(i);
+                } else {
+                    break;
+                }
+            }
+
+            return out;
+        }
+        get size() {
+            return this.q.length;
+        }
+    }
+
+    const pQ = new PQHeap();
+
+    for (let i = 0; i < arr.length; ++i) {
+        pQ.enqueue(arr[i], arr[i]);
+    }
+
+    let i = 0;
+    while (pQ.size > 0) {
+        const { v, p } = pQ.dequeue()!;
+        arr[i++] = v;
     }
 }
 

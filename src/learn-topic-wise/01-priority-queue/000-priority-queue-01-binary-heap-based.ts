@@ -210,7 +210,7 @@ export class BinaryHeapPriorityQueue<T> {
    * Returns the number of items in the priority queue.
    * @returns The size of the queue.
    */
-  size(): number {
+  get size(): number {
     return this.heap.length;
   }
 
@@ -249,7 +249,7 @@ maxPriorityQueue.enqueue('Medium Priority Task 1', 2);
 maxPriorityQueue.enqueue('High Priority Task 2', 3);
 maxPriorityQueue.enqueue('Low Priority Task 2', 1);
 
-console.log('Max Priority Queue size:', maxPriorityQueue.size());
+console.log('Max Priority Queue size:', maxPriorityQueue.size);
 console.log('Max Priority Queue is empty:', maxPriorityQueue.isEmpty());
 console.log('Max Priority Queue Peek:', maxPriorityQueue.peek());
 
