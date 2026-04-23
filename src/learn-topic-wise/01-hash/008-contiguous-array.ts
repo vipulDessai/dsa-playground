@@ -1,3 +1,5 @@
+export const url = "[Contiguous Array](https://leetcode.com/problems/contiguous-array)"
+
 function findMaxLength(nums: number[]): number {
   const n = nums.length;
   const map = new Map();
