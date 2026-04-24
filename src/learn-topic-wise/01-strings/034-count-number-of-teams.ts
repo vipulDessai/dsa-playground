@@ -21,6 +21,7 @@ function numTeams(rating: number[]): number {
             else ++rL;
         }
 
+        // formula
         res += lS * rL + lL * rS;
     }
 
