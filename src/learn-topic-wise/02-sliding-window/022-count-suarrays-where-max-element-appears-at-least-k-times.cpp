@@ -3,8 +3,8 @@
 namespace _022_count_suarrays_where_max_element_appears_at_least_k_times {
     class Solution {
     public:
-        long long countSubarrays(vector<int>& nums, int k) {
-        
+        long long countSubarrays() {
+            return 0;
         }
     };
 };
@@ -12,7 +12,6 @@ namespace _022_count_suarrays_where_max_element_appears_at_least_k_times {
 class Execute {
 public:
     static void Main() {
-        // Instantiate classA from _021_foo_bar
         _022_count_suarrays_where_max_element_appears_at_least_k_times::Solution obj;
         obj.countSubarrays();
     }

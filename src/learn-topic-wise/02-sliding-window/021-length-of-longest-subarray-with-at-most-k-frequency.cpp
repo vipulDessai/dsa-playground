@@ -47,7 +47,6 @@ namespace _021_length_of_longest_subarray_with_at_most_k_frequency {
 class Execute {
 public:
     static void Main() {
-        // Instantiate classA from _021_foo_bar
         _021_length_of_longest_subarray_with_at_most_k_frequency::Solution obj;
         obj.maxSubarrayLength();
     }
