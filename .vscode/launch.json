@@ -1,0 +1,32 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "02: Sliding Window (C#)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build: 02-sliding-window (C#)",
+            "program": "${workspaceFolder}/src/learn-topic-wise/02-sliding-window/bin/Debug/net8.0/sliding-window.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "stopAtEntry": true
+        },
+        {
+            "name": "02: Sliding Window (C++)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/learn-topic-wise/02-sliding-window/cpp-build/main.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}/src/learn-topic-wise/02-sliding-window/cpp-build/",
+            "preLaunchTask": "build: 02-sliding-window (C++)",
+            "stopAtEntry": true,
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "gdb"
+        },
+    ]
+}

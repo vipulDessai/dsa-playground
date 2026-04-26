@@ -9,3 +9,10 @@ package-lock.json
 
 # build
 build
+
+# C#
+bin
+obj
+
+# C++
+cpp-build
