@@ -1,6 +1,9 @@
 // [Length of Longest Subarray With at Most K Frequency](https://leetcode.com/problems/length-of-longest-subarray-with-at-most-k-frequency/description/)
 
 #include <iostream>
+#include <vector>
+
+using namespace std;
 
 namespace _021_length_of_longest_subarray_with_at_most_k_frequency {
     class Solution {
@@ -48,7 +51,11 @@ class Execute {
 public:
     static void Main() {
         _021_length_of_longest_subarray_with_at_most_k_frequency::Solution obj;
-        obj.maxSubarrayLength();
+
+        vector<int> input = {};
+        int k = 0;
+        
+        cout << obj.maxSubarrayLength(input, k);
     }
 };
 

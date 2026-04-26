@@ -1,6 +1,6 @@
 ﻿// url = [Find the Longest Semi-Repetitive Substring](https://leetcode.com/problems/find-the-longest-semi-repetitive-substring/)
 
-namespace learning_dsa_csharp._03_sliding_window._019_find_longest_semi_repetitive_substring
+namespace learning_dsa._03_sliding_window._019_find_longest_semi_repetitive_substring
 {
     interface ILongestSemiRepetitive
     {

@@ -1,6 +1,6 @@
 ﻿// [Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/)
 
-namespace learning_dsa_csharp._03_sliding_window._020_subarray_product_less_than_k
+namespace learning_dsa._03_sliding_window._020_subarray_product_less_than_k
 {
     internal class MySoln
     {

@@ -6,12 +6,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
-    <StartupObject>learning_dsa_csharp._03_sliding_window._019_find_longest_semi_repetitive_substring.Execute</StartupObject>
+    <!-- Disable automatic inclusion of all .cs files -->
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- Exclude everything under ./cs -->
-    <Compile Remove="cs/**/*.cs" />
+    <Compile Include="./019-find-longest-semi-repetitive-substring.cs" />
   </ItemGroup>
 
 </Project>

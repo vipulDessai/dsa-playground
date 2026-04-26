@@ -14,8 +14,8 @@ ts-node typescript-file.ts
 
 ## C#
 
-- go to `src/learn-topic-wise/<any dsa topic>.<topic>.csproj`
-- add the `Execute` class name under `<StartupObject>`
+- go to `src/learn-topic-wise/<any dsa topic>.csproj`
+- change file name of `<Compile Include="./<file name>.cs" />`
 
 ## C++
 
@@ -30,7 +30,7 @@ ts-node typescript-file.ts
 ### Configure Entry Point
 
 - open `CMakeLists.txt`
-- replace `add_executable(main <file name>.cpp)`
+- change `add_executable(main <file name>.cpp)`
 
 
 # Time complexity
