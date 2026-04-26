@@ -49,7 +49,7 @@ namespace _023_defuse_th_bomb
                 {
                     sum -= code[i];
                     sum += code[(i + (n + k)) % n];
-                    res.push_back(sum);
+                    res.insert(res.begin(), sum);
                 }
                 return res;
             }
