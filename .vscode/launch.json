@@ -5,28 +5,40 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "02: Sliding Window (TS)",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/src/learn-topic-wise/02-sliding-window/",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "start"
+            ],
+            "console": "integratedTerminal",
+        },
+        {
             "name": "02: Sliding Window (C#)",
             "type": "coreclr",
             "request": "launch",
+            "cwd": "${workspaceFolder}/src/learn-topic-wise/02-sliding-window/bin/Debug/net8.0/",
             "preLaunchTask": "build: 02-sliding-window (C#)",
             "program": "${workspaceFolder}/src/learn-topic-wise/02-sliding-window/bin/Debug/net8.0/sliding-window.dll",
             "args": [],
-            "cwd": "${workspaceFolder}",
             "console": "integratedTerminal",
-            "stopAtEntry": true
+            "stopAtEntry": true,
+            "externalConsole": false,
         },
         {
             "name": "02: Sliding Window (C++)",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/src/learn-topic-wise/02-sliding-window/cpp-build/main.exe",
-            "args": [],
             "cwd": "${workspaceFolder}/src/learn-topic-wise/02-sliding-window/cpp-build/",
             "preLaunchTask": "build: 02-sliding-window (C++)",
+            "program": "${workspaceFolder}/src/learn-topic-wise/02-sliding-window/cpp-build/main.exe",
+            "args": [],
             "stopAtEntry": true,
             "externalConsole": false,
             "MIMode": "gdb",
-            "miDebuggerPath": "gdb"
+            "miDebuggerPath": "gdb",
         },
     ]
 }

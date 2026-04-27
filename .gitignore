@@ -16,3 +16,6 @@ obj
 
 # C++
 cpp-build
+
+# vs
+.vs

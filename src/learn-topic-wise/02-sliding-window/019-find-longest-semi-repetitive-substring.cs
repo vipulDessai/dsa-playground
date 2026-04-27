@@ -1,18 +1,10 @@
-﻿// url = [Find the Longest Semi-Repetitive Substring](https://leetcode.com/problems/find-the-longest-semi-repetitive-substring/)
+﻿// [Find the Longest Semi-Repetitive Substring](https://leetcode.com/problems/find-the-longest-semi-repetitive-substring/)
 
 namespace learning_dsa._03_sliding_window._019_find_longest_semi_repetitive_substring
 {
     interface ILongestSemiRepetitive
     {
         int LongestSemiRepetitiveSubstring(string s);
-    }
-
-    internal class MySoln: ILongestSemiRepetitive
-    {
-        public int LongestSemiRepetitiveSubstring(string s)
-        {
-            return 0;
-        }
     }
 
     // https://leetcode.com/problems/find-the-longest-semi-repetitive-substring/solutions/3622843/java-sliding-window-approach-easy-to-understand
@@ -48,11 +40,10 @@ namespace learning_dsa._03_sliding_window._019_find_longest_semi_repetitive_subs
     {
         public static void Main(String[] args)
         {
-            ILongestSemiRepetitive soln = new MySoln();
-            var res = soln.LongestSemiRepetitiveSubstring("00110");
-
-            soln = new OthersSoln();
-            res = soln.LongestSemiRepetitiveSubstring("00110");
+            ILongestSemiRepetitive soln = new OthersSoln();
+            var input = "00101022";
+            input = "52233";
+            var res = soln.LongestSemiRepetitiveSubstring(input);
 
             Console.WriteLine(res);
         }

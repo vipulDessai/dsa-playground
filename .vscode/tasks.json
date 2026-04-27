@@ -3,8 +3,8 @@
 	"tasks": [
 		{
 			"label": "build: 02-sliding-window (C#)",
-			"command": "dotnet",
 			"type": "process",
+			"command": "dotnet",
 			"args": [
 				"build",
 				"${workspaceFolder}/src/learn-topic-wise/02-sliding-window/sliding-window.csproj",
