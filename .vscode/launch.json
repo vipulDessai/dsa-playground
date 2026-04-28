@@ -5,15 +5,21 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "01: Pure Array (Py)",
+            "type": "debugpy",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/src/learn-topic-wise/01-pure-array/",
+            "program": "pyproject.py",
+            "console": "integratedTerminal"
+        },
+        {
             "name": "02: Sliding Window (TS)",
             "type": "node",
             "request": "launch",
             "cwd": "${workspaceFolder}/src/learn-topic-wise/02-sliding-window/",
             "runtimeExecutable": "npm",
-            "runtimeArgs": [
-                "start"
-            ],
-            "console": "integratedTerminal",
+            "runtimeArgs": ["start"],
+            "console": "integratedTerminal"
         },
         {
             "name": "02: Sliding Window (C#)",
@@ -25,7 +31,7 @@
             "args": [],
             "console": "integratedTerminal",
             "stopAtEntry": true,
-            "externalConsole": false,
+            "externalConsole": false
         },
         {
             "name": "02: Sliding Window (C++)",
@@ -38,7 +44,7 @@
             "stopAtEntry": true,
             "externalConsole": false,
             "MIMode": "gdb",
-            "miDebuggerPath": "gdb",
-        },
+            "miDebuggerPath": "gdb"
+        }
     ]
 }
