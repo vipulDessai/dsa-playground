@@ -4,4 +4,4 @@ version = "0.1.0"
 dependencies = ["requests"]
 
 [tool.my_py_app]
-entry = "./025-largest-local-values-in-a-matrix.py"
+entry = "./easy/002-largest-local-values-in-a-matrix.py"

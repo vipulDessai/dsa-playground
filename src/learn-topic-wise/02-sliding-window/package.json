@@ -1,5 +1,5 @@
 {
     "scripts": {
-        "start": "ts-node ./018-max-sum-of-distinct-subarrays-with-length-k.ts"
+        "start": "ts-node ./easy/001-max-sum-of-distinct-subarrays-with-length-k.ts"
     }
 }
