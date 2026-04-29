@@ -1,4 +1,5 @@
-﻿// https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/description/
+﻿// [Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit](https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/description/)
+
 namespace learning_dsa_csharp._03_sliding_window._011_longest_continuous_subarray_with_absolute_diff_less_than_or_equal_to_limit
 {
     internal class MySoln

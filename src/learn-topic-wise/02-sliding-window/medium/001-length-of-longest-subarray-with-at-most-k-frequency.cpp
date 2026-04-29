@@ -4,11 +4,10 @@
 #include <vector>
 #include <limits>
 #include <unordered_map>
-#include <algorithm>
 
 using namespace std;
 
-namespace _021_length_of_longest_subarray_with_at_most_k_frequency
+namespace _001_length_of_longest_subarray_with_at_most_k_frequency
 {
     class Solution
     {
@@ -19,17 +18,19 @@ namespace _021_length_of_longest_subarray_with_at_most_k_frequency
             int l = 0,
                 r = 0;
             int res = numeric_limits<int>::min();
-            
+
             while (r < nums.size())
             {
                 int cur = nums[r];
                 ++freq[cur];
 
-                while(freq[cur] > k)
+                while (freq[cur] > k)
                 {
                     --freq[nums[l]];
                     ++l;
                 }
+
+                res = max(res, r - l + 1);
 
                 ++r;
             }
@@ -44,10 +45,10 @@ class Execute
 public:
     static void Main()
     {
-        _021_length_of_longest_subarray_with_at_most_k_frequency::Solution obj;
+        _001_length_of_longest_subarray_with_at_most_k_frequency::Solution obj;
 
-        vector<int> input = {};
-        int k = 0;
+        vector<int> input = {1, 3, 2, 3, 3};
+        int k = 2;
 
         cout << obj.maxSubarrayLength(input, k);
     }

@@ -287,6 +287,8 @@
 -   [Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/description/)
 -   [Number of Substrings Containing All Three Characters](https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/)
     -   depends on a formula (of combination)
+-   [Count Number of Nice Subarrays](https://leetcode.com/problems/count-number-of-nice-subarrays/) - `TODO`
+-   [Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit](https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/description/) - `TODO`
 
 # Two pointers
 

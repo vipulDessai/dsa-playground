@@ -11,34 +11,34 @@
  */
 
 function solution(array) {
-  const unsortedSet = new Set();
-  for (let i = 0; i < array.length; i++) {
-    if (!unsortedSet.has(array[i]) && array[i] > 0) {
-      unsortedSet.add(array[i]);
+    const unsortedSet = new Set();
+    for (let i = 0; i < array.length; i++) {
+        if (!unsortedSet.has(array[i]) && array[i] > 0) {
+            unsortedSet.add(array[i]);
+        }
     }
-  }
 
-  if (unsortedSet.size === 0) return 1;
+    if (unsortedSet.size === 0) return 1;
 
-  const sortedArray = [...unsortedSet].sort((a, b) => a - b);
+    const sortedArray = [...unsortedSet].sort((a, b) => a - b);
 
-  if (sortedArray[0] === 1) {
-    sortedArray.push(sortedArray[sortedArray.length - 1] + 2);
+    if (sortedArray[0] === 1) {
+        sortedArray.push(sortedArray[sortedArray.length - 1] + 2);
 
-    for (let i = 0; i < sortedArray.length - 1; i++) {
-      // skip
-      if (sortedArray[i] < 0) {
-        continue;
-      }
+        for (let i = 0; i < sortedArray.length - 1; i++) {
+            // skip
+            if (sortedArray[i] < 0) {
+                continue;
+            }
 
-      const subtractionResult = sortedArray[i + 1] - sortedArray[i];
-      if (subtractionResult > 1) {
-        return sortedArray[i] + 1;
-      }
+            const subtractionResult = sortedArray[i + 1] - sortedArray[i];
+            if (subtractionResult > 1) {
+                return sortedArray[i] + 1;
+            }
+        }
+    } else {
+        return 1;
     }
-  } else {
-    return 1;
-  }
 }
 
 // const res = solution([-1, -3]);
