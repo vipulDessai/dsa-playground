@@ -9,12 +9,6 @@ namespace _004_count_number_of_nice_subarrays
 {
     class Solution
     {
-    public:
-        int numberOfSubarrays(vector<int> &nums, int k)
-        {
-            return atMost(nums, k) - atMost(nums, k - 1);
-        }
-
     private:
         int atMost(vector<int> &nums, int K)
         {
@@ -37,6 +31,13 @@ namespace _004_count_number_of_nice_subarrays
                 res += (right - left + 1);
             }
             return res;
+        }
+
+    public:
+        int numberOfSubarrays(vector<int> &nums, int k)
+        {
+            // formula
+            return atMost(nums, k) - atMost(nums, k - 1);
         }
     };
 };
