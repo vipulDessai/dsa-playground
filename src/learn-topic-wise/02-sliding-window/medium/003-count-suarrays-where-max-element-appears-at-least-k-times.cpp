@@ -31,6 +31,9 @@ namespace _003_count_suarrays_where_max_element_appears_at_least_k_times
                         --c;
 
                     ++l;
+
+                    // formula, if inside
+                    // res += (n - r);
                 }
 
                 // formula
