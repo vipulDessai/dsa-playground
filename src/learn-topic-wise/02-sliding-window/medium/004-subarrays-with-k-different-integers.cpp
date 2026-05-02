@@ -14,6 +14,7 @@ namespace _004_subarrays_with_k_different_integers
         int subarraysWithKDistinct(vector<int> &nums, int k)
         {
             // formula
+            // when target is exactly == answer needed, i.e. not less or more
             return helper(nums, k) - helper(nums, k - 1);
         }
 

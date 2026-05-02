@@ -28,4 +28,6 @@ function numSubarrayProductLessThanK(nums: number[], k: number): number {
 
 var nums = [10, 5, 2, 6],
     k = 100;
+var nums = [10, 5],
+    k = 100;
 console.log(numSubarrayProductLessThanK(nums, k));

@@ -37,6 +37,7 @@ namespace _004_count_number_of_nice_subarrays
         int numberOfSubarrays(vector<int> &nums, int k)
         {
             // formula
+            // when target is exactly == answer needed, i.e. not less or more
             return atMost(nums, k) - atMost(nums, k - 1);
         }
     };

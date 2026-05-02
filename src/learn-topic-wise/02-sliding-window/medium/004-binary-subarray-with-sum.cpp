@@ -21,8 +21,9 @@ namespace _004_binary_subarray_with_sum
                 sum += nums[r];
                 while (sum > s)
                 {
-                    s -= nums[l++];
+                    sum -= nums[l++];
                 }
+
                 res += (r - l + 1);
 
                 ++r;
@@ -33,7 +34,8 @@ namespace _004_binary_subarray_with_sum
     public:
         int numSubarraysWithSum(vector<int> &nums, int goal)
         {
-            // formula
+            // formula 
+            // when target is exactly == answer needed, i.e. not less or more
             return atMost(nums, goal) - atMost(nums, goal - 1);
         }
     };
