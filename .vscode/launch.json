@@ -45,6 +45,18 @@
             "externalConsole": false,
             "MIMode": "gdb",
             "miDebuggerPath": "gdb"
+        },
+        {
+            "name": "03: Binary Search (C#)",
+            "type": "coreclr",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/src/learn-topic-wise/03-binary-search/bin/Debug/net8.0/",
+            "preLaunchTask": "build: 03-binary-search (C#)",
+            "program": "${workspaceFolder}/src/learn-topic-wise/03-binary-search/bin/Debug/net8.0/binary-search.dll",
+            "args": [],
+            "console": "integratedTerminal",
+            "stopAtEntry": true,
+            "externalConsole": false
         }
     ]
 }

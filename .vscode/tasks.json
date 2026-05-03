@@ -1,50 +1,64 @@
 {
-	"version": "2.0.0",
-	"tasks": [
-		{
-			"label": "build: 02-sliding-window (C#)",
-			"type": "process",
-			"command": "dotnet",
-			"args": [
-				"build",
-				"${workspaceFolder}/src/learn-topic-wise/02-sliding-window/sliding-window.csproj",
-				"/property:GenerateFullPaths=true",
-				"/consoleloggerparameters:NoSummary"
-			],
-			"problemMatcher": "$msCompile",
-			"group": {
-				"kind": "build",
-				"isDefault": true
-			}
-		},
-		{
-			"label": "Configure: 02-sliding-window (C++)",
-			"type": "shell",
-			"command": "cmake",
-			"args": [
-				"-S",
-				"${workspaceFolder}/src/learn-topic-wise/02-sliding-window/",
-				"-B",
-				"${workspaceFolder}/src/learn-topic-wise/02-sliding-window/cpp-build/",
-				"-G",
-				"MinGW Makefiles"
-			]
-		},
-		{
-			"label": "build: 02-sliding-window (C++)",
-			"type": "shell",
-			"command": "cmake",
-			"args": [
-				"--build",
-				"${workspaceFolder}/src/learn-topic-wise/02-sliding-window/cpp-build/"
-			],
-			"dependsOn": [
-				"Configure: 02-sliding-window (C++)"
-			],
-			"group": {
-				"kind": "build",
-				"isDefault": true
-			}
-		}
-	]
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build: 02-sliding-window (C#)",
+            "type": "process",
+            "command": "dotnet",
+            "args": [
+                "build",
+                "${workspaceFolder}/src/learn-topic-wise/02-sliding-window/sliding-window.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Configure: 02-sliding-window (C++)",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "-S",
+                "${workspaceFolder}/src/learn-topic-wise/02-sliding-window/",
+                "-B",
+                "${workspaceFolder}/src/learn-topic-wise/02-sliding-window/cpp-build/",
+                "-G",
+                "MinGW Makefiles"
+            ]
+        },
+        {
+            "label": "build: 02-sliding-window (C++)",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "${workspaceFolder}/src/learn-topic-wise/02-sliding-window/cpp-build/"
+            ],
+            "dependsOn": ["Configure: 02-sliding-window (C++)"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "build: 03-binary-search (C#)",
+            "type": "process",
+            "command": "dotnet",
+            "args": [
+                "build",
+                "${workspaceFolder}/src/learn-topic-wise/03-binary-search/binary-search.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
 }
