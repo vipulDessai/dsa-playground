@@ -57,6 +57,14 @@
             "console": "integratedTerminal",
             "stopAtEntry": true,
             "externalConsole": false
-        }
+        },
+        {
+            "name": "03: Binary Search (Py)",
+            "type": "debugpy",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/src/learn-topic-wise/03-binary-search/",
+            "program": "pyproject.py",
+            "console": "integratedTerminal"
+        },
     ]
 }
