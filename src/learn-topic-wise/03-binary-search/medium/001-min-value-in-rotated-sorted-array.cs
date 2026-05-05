@@ -40,7 +40,7 @@ namespace learning_dsa_csharp._05_binary_Search._002_min_value_in_rotated_sorted
         {
             IMinValueInRotatedSortedArray s = new Solution();
 
-            var input = new int[]{3, 4, 5, 1, 2};
+            var input = new int[] { 3, 4, 5, 1, 2 };
             Console.WriteLine(s.FindMin(input));
 
         }

@@ -2,16 +2,26 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "format: 02-sliding-window (C#)",
+            "type": "process",
+            "command": "dotnet",
+            "args": [
+                "format",
+                "${workspaceFolder}\\src\\learn-topic-wise\\02-sliding-window\\sliding-window.csproj",
+            ],
+        },
+        {
             "label": "build: 02-sliding-window (C#)",
             "type": "process",
             "command": "dotnet",
             "args": [
                 "build",
-                "${workspaceFolder}/src/learn-topic-wise/02-sliding-window/sliding-window.csproj",
+                "${workspaceFolder}\\src\\learn-topic-wise\\02-sliding-window\\sliding-window.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
             "problemMatcher": "$msCompile",
+            "dependsOn": ["format: 02-sliding-window (C#)"],
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -45,16 +55,53 @@
             }
         },
         {
+            "label": "format: 03-binary-search (C#)",
+            "type": "process",
+            "command": "dotnet",
+            "args": [
+                "format",
+                "${workspaceFolder}\\src\\learn-topic-wise\\03-binary-search\\binary-search.csproj",
+            ],
+        },
+        {
             "label": "build: 03-binary-search (C#)",
             "type": "process",
             "command": "dotnet",
             "args": [
                 "build",
-                "${workspaceFolder}/src/learn-topic-wise/03-binary-search/binary-search.csproj",
+                "${workspaceFolder}\\src\\learn-topic-wise\\03-binary-search\\binary-search.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
             "problemMatcher": "$msCompile",
+            "dependsOn": ["format: 03-binary-search (C#)"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Configure: 03-binary-search (C++)",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "-S",
+                "${workspaceFolder}/src/learn-topic-wise/03-binary-search/",
+                "-B",
+                "${workspaceFolder}/src/learn-topic-wise/03-binary-search/cpp-build/",
+                "-G",
+                "MinGW Makefiles"
+            ]
+        },
+        {
+            "label": "build: 03-binary-search (C++)",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "${workspaceFolder}/src/learn-topic-wise/03-binary-search/cpp-build/"
+            ],
+            "dependsOn": ["Configure: 03-binary-search (C++)"],
             "group": {
                 "kind": "build",
                 "isDefault": true

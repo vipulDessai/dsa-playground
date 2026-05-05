@@ -11,7 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="./medium/003-find-longest-semi-repetitive-substring.cs" />
+    <Compile Include="./medium/002-find-longest-semi-repetitive-substring.cs" />
   </ItemGroup>
 
 </Project>

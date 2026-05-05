@@ -8,7 +8,7 @@ namespace learning_dsa._03_sliding_window._019_find_longest_semi_repetitive_subs
     }
 
     // https://leetcode.com/problems/find-the-longest-semi-repetitive-substring/solutions/3622843/java-sliding-window-approach-easy-to-understand
-    internal class OthersSoln: ILongestSemiRepetitive
+    internal class OthersSoln : ILongestSemiRepetitive
     {
         public int LongestSemiRepetitiveSubstring(string s)
         {

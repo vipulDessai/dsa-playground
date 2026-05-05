@@ -25,9 +25,9 @@
             "name": "02: Sliding Window (C#)",
             "type": "coreclr",
             "request": "launch",
-            "cwd": "${workspaceFolder}/src/learn-topic-wise/02-sliding-window/bin/Debug/net8.0/",
+            "cwd": "${workspaceFolder}/src/learn-topic-wise/02-sliding-window",
             "preLaunchTask": "build: 02-sliding-window (C#)",
-            "program": "${workspaceFolder}/src/learn-topic-wise/02-sliding-window/bin/Debug/net8.0/sliding-window.dll",
+            "program": "/bin/Debug/net8.0/sliding-window.dll",
             "args": [],
             "console": "integratedTerminal",
             "stopAtEntry": true,
@@ -50,9 +50,9 @@
             "name": "03: Binary Search (C#)",
             "type": "coreclr",
             "request": "launch",
-            "cwd": "${workspaceFolder}/src/learn-topic-wise/03-binary-search/bin/Debug/net8.0/",
+            "cwd": "${workspaceFolder}/src/learn-topic-wise/03-binary-search",
             "preLaunchTask": "build: 03-binary-search (C#)",
-            "program": "${workspaceFolder}/src/learn-topic-wise/03-binary-search/bin/Debug/net8.0/binary-search.dll",
+            "program": "/bin/Debug/net8.0/binary-search.dll",
             "args": [],
             "console": "integratedTerminal",
             "stopAtEntry": true,
@@ -66,5 +66,18 @@
             "program": "pyproject.py",
             "console": "integratedTerminal"
         },
+        {
+            "name": "03: Binary Search (C++)",
+            "type": "cppdbg",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/src/learn-topic-wise/03-binary-search/cpp-build/",
+            "preLaunchTask": "build: 03-binary-search (C++)",
+            "program": "${workspaceFolder}/src/learn-topic-wise/03-binary-search/cpp-build/main.exe",
+            "args": [],
+            "stopAtEntry": true,
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "gdb"
+        }
     ]
 }
