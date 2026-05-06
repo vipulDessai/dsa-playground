@@ -24,6 +24,7 @@ ts-node typescript-file.ts
     -   press Enter
     -   press Y
 -   run `pacman -S mingw-w64-ucrt-x86_64-clang-tools-extra`
+    -   press Y
 -   add `C:\msys64\ucrt64\bin` to `User varaible -> PATH` in `enviornment variables`
 
 ### Configure Entry Point
