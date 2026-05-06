@@ -1,0 +1,38 @@
+# Setup
+
+## TypeScript
+
+```ts
+npm install -g ts-node typescript '@types/node'
+
+tsc --init
+
+ts-node typescript-file.ts
+```
+
+## C#
+
+-   go to `src/learn-topic-wise/<any dsa topic>.csproj`
+-   change file name of `<Compile Include="./<file name>.cs" />`
+
+## C++
+
+-   install `cmake`
+-   install `MSYS2` - [Refer Here Important](https://code.visualstudio.com/docs/cpp/config-mingw#_prerequisites)
+-   run MSYS2 which opens the shell
+-   run `pacman -S --needed base-devel mingw-w64-ucrt-x86_64-toolchain`
+    -   press Enter
+    -   press Y
+-   run `pacman -S mingw-w64-ucrt-x86_64-clang-tools-extra`
+-   add `C:\msys64\ucrt64\bin` to `User varaible PATH` in `enviornment variables`
+
+### Configure Entry Point
+
+-   open `CMakeLists.txt`
+-   change `add_executable(main <file name>.cpp)`
+
+## python
+
+-   install pyenv
+    -   [pyenv win docs](https://github.com/pyenv-win/pyenv-win)
+        -   run in the download folder as it downloads a file - `Invoke-WebRequest -UseBasicParsing -Uri "https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/pyenv-win/install-pyenv-win.ps1" -OutFile "./install-pyenv-win.ps1"; &"./install-pyenv-win.ps1"`

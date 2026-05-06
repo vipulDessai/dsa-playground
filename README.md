@@ -8,38 +8,6 @@ play with Data structures and Algorithms
     -   https://black.readthedocs.io/en/stable/getting_started.html
     -   better to install with `pipx` `poetry` and maintaining it with `pyproject.toml`
 
-# Setup
-
-## TypeScript
-
-```ts
-npm install -g ts-node typescript '@types/node'
-
-tsc --init
-
-ts-node typescript-file.ts
-```
-
-## C#
-
--   go to `src/learn-topic-wise/<any dsa topic>.csproj`
--   change file name of `<Compile Include="./<file name>.cs" />`
-
-## C++
-
--   install `cmake`
--   install `MSYS2` - [Refer Here Important](https://code.visualstudio.com/docs/cpp/config-mingw#_prerequisites)
--   run MSYS2 which opens the shell
--   run `pacman -S --needed base-devel mingw-w64-ucrt-x86_64-toolchain`
-    -   press Enter
-    -   press Y
--   add `C:\msys64\ucrt64\bin` to `User varaible PATH` in `enviornment variables`
-
-### Configure Entry Point
-
--   open `CMakeLists.txt`
--   change `add_executable(main <file name>.cpp)`
-
 # Time complexity
 
 -   log n (log <sub><sub>2</sub></sub> n)

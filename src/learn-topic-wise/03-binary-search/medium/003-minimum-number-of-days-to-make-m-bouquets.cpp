@@ -1,80 +1,63 @@
-﻿// [Minimum Number of Days to Make m Bouquets](https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets)
+﻿// [Minimum Number of Days to Make m
+// Bouquets](https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets)
 
+#include <algorithm>
 #include <iostream>
 #include <vector>
-#include <algorithm>
 
 using namespace std;
 
-namespace _003_minimum_number_of_days_to_make_m_bouquets
-{
-    class Solution
-    {
-    private:
-        bool isFeasible(vector<int> &bloomDay, int d, int m, int k)
-        {
-            int n = bloomDay.size();
-            int curM = 0, curK = 1, i = 0;
+namespace _003_minimum_number_of_days_to_make_m_bouquets {
+class Solution {
+   private:
+    bool isFeasible(vector<int>& bloomDay, int d, int m, int k) {
+        int n = bloomDay.size();
+        int curM = 0, curK = 1, i = 0;
 
-            while (curM < m && i < n)
-            {
-                if (bloomDay[i] <= d)
-                {
-                    if (curK == k)
-                    {
-                        ++curM;
-                        curK = 0;
-                    }
-
-                    ++curK;
-                }
-                else
-                {
-                    curK = 1;
+        while (curM < m && i < n) {
+            if (bloomDay[i] <= d) {
+                if (curK == k) {
+                    ++curM;
+                    curK = 0;
                 }
 
-                ++i;
+                ++curK;
+            } else {
+                curK = 1;
             }
 
-            if (curM == m)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
+            ++i;
+        }
+
+        if (curM == m) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+   public:
+    int minDays(vector<int>& bloomDay, int m, int k) {
+        int r = *max_element(bloomDay.begin(), bloomDay.end());
+        int l = *min_element(bloomDay.begin(), bloomDay.end());
+
+        while (l < r) {
+            int mid = l + (r - l) / 2;
+            if (isFeasible(bloomDay, mid, m, k)) {
+                r = mid;
+            } else {
+                l = mid + 1;
             }
         }
 
-    public:
-        int minDays(vector<int> &bloomDay, int m, int k)
-        {
-            int r = *max_element(bloomDay.begin(), bloomDay.end());
-            int l = *min_element(bloomDay.begin(), bloomDay.end());
+        return l < r ? l : -1;
+    }
+};
+}  // namespace _003_minimum_number_of_days_to_make_m_bouquets
 
-            while (l < r)
-            {
-                int mid = l + (r - l) / 2;
-                if (isFeasible(bloomDay, mid, m, k))
-                {
-                    r = mid;
-                }
-                else
-                {
-                    l = mid + 1;
-                }
-            }
-
-            return l < r ? l : -1;
-        }
-    };
-}
-
-class Execute
-{
-public:
-    static void Main()
-    {
+class Execute {
+   public:
+    static void Main() {
         _003_minimum_number_of_days_to_make_m_bouquets::Solution obj;
         vector<int> input;
         int m, k;
@@ -91,8 +74,7 @@ public:
     };
 };
 
-int main()
-{
+int main() {
     Execute::Main();
     return 0;
 }
