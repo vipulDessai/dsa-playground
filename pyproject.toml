@@ -1,5 +1,5 @@
 [project]
-name = "dsa-playground-ts"
+name = "dsa-playground"
 version = "0.1.0"
 description = "DSA"
 authors = [

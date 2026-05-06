@@ -28,7 +28,7 @@ The optimized approaches in this article use in-place solutions. Does in-place m
 
 # basic list
 
-<img src="ref/dsa-list.png">
+<img src="./images/dsa-list.png">
 
 # advanced DSA
 
