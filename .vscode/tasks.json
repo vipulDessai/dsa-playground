@@ -2,6 +2,54 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "watch .ts .md etc",
+            "type": "shell",
+            "command": "npm",
+            "args": ["run", "prettier:watch"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "isBackground": true,
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "watch .cpp",
+            "type": "shell",
+            "command": "npm",
+            "args": ["run", "clang-format:watch"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "isBackground": true,
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "watch .py",
+            "type": "shell",
+            "command": "npm",
+            "args": ["run", "black:watch"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "isBackground": true,
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            },
+            "problemMatcher": []
+        },
+        {
             "label": "format: 02-sliding-window (C#)",
             "type": "process",
             "command": "dotnet",
