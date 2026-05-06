@@ -24,7 +24,7 @@ ts-node typescript-file.ts
     -   press Enter
     -   press Y
 -   run `pacman -S mingw-w64-ucrt-x86_64-clang-tools-extra`
--   add `C:\msys64\ucrt64\bin` to `User varaible PATH` in `enviornment variables`
+-   add `C:\msys64\ucrt64\bin` to `User varaible -> PATH` in `enviornment variables`
 
 ### Configure Entry Point
 
@@ -33,6 +33,19 @@ ts-node typescript-file.ts
 
 ## python
 
--   install pyenv
-    -   [pyenv win docs](https://github.com/pyenv-win/pyenv-win)
-        -   run in the download folder as it downloads a file - `Invoke-WebRequest -UseBasicParsing -Uri "https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/pyenv-win/install-pyenv-win.ps1" -OutFile "./install-pyenv-win.ps1"; &"./install-pyenv-win.ps1"`
+- global terminal
+    -   install pyenv
+        -   [pyenv win docs](https://github.com/pyenv-win/pyenv-win)
+            -   run in the download folder as it downloads a file - `Invoke-WebRequest -UseBasicParsing -Uri "https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/pyenv-win/install-pyenv-win.ps1" -OutFile "./install-pyenv-win.ps1"; &"./install-pyenv-win.ps1"`
+    -   install and set global python version
+    -   install `pipx` for the global python version
+        -   `python -m pip install --user pipx`
+    - add pipx to `User varaible PATH` in `enviornment variables`
+        - `C:\Users\<user-name>\AppData\Roaming\Python\Python310\Scripts`
+    - install `poetry`
+        - `pipx install poetry`
+- inside the repository
+    - run `poetry install`
+
+**Note:**
+virtual env location - C:\Users\<user-name>\AppData\Local\pypoetry\Cache\virtualenvs

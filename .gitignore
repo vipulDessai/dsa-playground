@@ -3,6 +3,7 @@ node_modules
 
 # lock
 package-lock.json
+poetry.lock
 
 # ENV
 .env
