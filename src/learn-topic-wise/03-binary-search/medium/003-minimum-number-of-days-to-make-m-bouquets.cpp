@@ -18,6 +18,11 @@ class Solution {
             if (bloomDay[i] <= d) {
                 if (curK == k) {
                     ++curM;
+
+                    if (curM == m) {
+                        return true;
+                    }
+
                     curK = 0;
                 }
 
@@ -29,17 +34,16 @@ class Solution {
             ++i;
         }
 
-        if (curM == m) {
-            return true;
-        } else {
-            return false;
-        }
+        return false;
     }
 
    public:
     int minDays(vector<int>& bloomDay, int m, int k) {
-        int r = *max_element(bloomDay.begin(), bloomDay.end());
+        if ((long long)m * k > bloomDay.size())
+            return -1;
+
         int l = *min_element(bloomDay.begin(), bloomDay.end());
+        int r = *max_element(bloomDay.begin(), bloomDay.end());
 
         while (l < r) {
             int mid = l + (r - l) / 2;
@@ -50,7 +54,14 @@ class Solution {
             }
         }
 
-        return l < r ? l : -1;
+        // not required if above we check m * k < bloomDay.size()
+        // if (isFeasible(bloomDay, l, m, k)) {
+        //     return l;
+        // } else {
+        //     return -1;
+        // }
+
+        return l;
     }
 };
 }  // namespace _003_minimum_number_of_days_to_make_m_bouquets
