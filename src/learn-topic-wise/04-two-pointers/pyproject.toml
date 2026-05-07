@@ -1,0 +1,7 @@
+[project]
+name = "my_py_app"
+version = "0.1.0"
+dependencies = ["requests"]
+
+[tool.my_py_app]
+entry = "./medium/001-bag-of-tokens.py"

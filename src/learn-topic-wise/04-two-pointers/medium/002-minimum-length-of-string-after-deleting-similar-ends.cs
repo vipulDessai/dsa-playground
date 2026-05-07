@@ -1,4 +1,5 @@
 ﻿// https://leetcode.com/problems/minimum-length-of-string-after-deleting-similar-ends/description/
+
 namespace learning_dsa_csharp._02_two_pointers._005_minimum_length_of_string_after_deleting_similar_ends
 {
     internal class MySoln

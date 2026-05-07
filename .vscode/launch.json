@@ -78,6 +78,26 @@
             "externalConsole": false,
             "MIMode": "gdb",
             "miDebuggerPath": "gdb"
+        },
+        {
+            "name": "04: Two Pointers (Py)",
+            "type": "debugpy",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/src/learn-topic-wise/04-two-pointers/",
+            "program": "pyproject.py",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "04: Two Pointers (C#)",
+            "type": "coreclr",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/src/learn-topic-wise/04-two-pointers",
+            "preLaunchTask": "build: 04-two-pointers (C#)",
+            "program": "/bin/Debug/net8.0/two-pointers.dll",
+            "args": [],
+            "console": "integratedTerminal",
+            "stopAtEntry": true,
+            "externalConsole": false
         }
     ]
 }

@@ -154,6 +154,32 @@
                 "kind": "build",
                 "isDefault": true
             }
+        },
+        {
+            "label": "format: 04-two-pointers (C#)",
+            "type": "process",
+            "command": "dotnet",
+            "args": [
+                "format",
+                "${workspaceFolder}\\src\\learn-topic-wise\\04-two-pointers\\two-pointers.csproj"
+            ]
+        },
+        {
+            "label": "build: 04-two-pointers (C#)",
+            "type": "process",
+            "command": "dotnet",
+            "args": [
+                "build",
+                "${workspaceFolder}\\src\\learn-topic-wise\\04-two-pointers\\two-pointers.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile",
+            "dependsOn": ["format: 04-two-pointers (C#)"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }

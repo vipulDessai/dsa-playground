@@ -1,6 +1,10 @@
 ﻿namespace learning_dsa_csharp._02_two_pointers._006_minimum_common_value
 {
-    internal class MySoln
+    interface ISolution
+    {
+        int GetCommon(int[] nums1, int[] nums2);
+    }
+    internal class MySoln : ISolution
     {
         public int GetCommon(int[] nums1, int[] nums2)
         {
@@ -27,6 +31,19 @@
             }
 
             return -1;
+        }
+    }
+
+    internal class Execute
+    {
+        public static void Main(string[] args)
+        {
+            ISolution s = new MySoln();
+
+            var input1 = new int[] { 3, 4, 5, 1, 2 };
+            var input2 = new int[] { 3, 4, 5, 1, 2 };
+            Console.WriteLine(s.GetCommon(input1, input2));
+
         }
     }
 }
