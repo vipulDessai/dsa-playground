@@ -1,0 +1,5 @@
+{
+    "scripts": {
+        "start": "ts-node ./medium/003-rotate-array.ts"
+    }
+}

@@ -5,6 +5,15 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "01: Pure Array (TS)",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/src/learn-topic-wise/01-pure-array/",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": ["start"],
+            "console": "integratedTerminal"
+        },
+        {
             "name": "01: Pure Array (Py)",
             "type": "debugpy",
             "request": "launch",
