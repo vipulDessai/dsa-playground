@@ -2,63 +2,37 @@
 
 namespace learning_dsa_csharp._04_stack._001_monotonic_stack_next_greater_element
 {
-    interface IMonotonicStackApproach
+    public class Solution
     {
-        public (int[], int[]) NextGraeterElem(int[] heights);
-    }
-    internal class Solution : IMonotonicStackApproach
-    {
-        public (int[], int[]) NextGraeterElem(int[] heights)
+        public int[] NextGreaterElement(int[] nums1, int[] nums2)
         {
-            int n = heights.Length;
-
-            int[] r = new int[n];
-            Stack<int> s = new Stack<int>();
-
-            // from right to left
+            int n = nums2.Length;
+            Stack<int> st = new Stack<int>();
+            Dictionary<int, int> dp = new();
             for (int i = n - 1; i >= 0; --i)
             {
-                while (s.Count > 0 && heights[s.Peek()] < heights[i])
-                {
-                    s.Pop();
-                }
+                var cur = nums2[i];
+                while (st.Count > 0 && nums2[st.Peek()] < cur)
+                    st.Pop();
 
-                if (s.Count == 0)
-                {
-                    r[i] = -1;
-                }
+                if (st.Count == 0)
+                    dp[cur] = -1;
                 else
                 {
-                    r[i] = s.Peek();
+                    dp[cur] = nums2[st.Peek()];
                 }
 
-                s.Push(i);
+                st.Push(i);
             }
 
-            s.Clear();
-            int[] l = new int[n];
-
-            // from left to right
-            for (int i = 0; i < n; ++i)
+            int m = nums1.Length;
+            int[] res = new int[m];
+            for (int i = 0; i < m; ++i)
             {
-                while (s.Count > 0 && heights[s.Peek()] < heights[i])
-                {
-                    s.Pop();
-                }
-
-                if (s.Count == 0)
-                {
-                    l[i] = -1;
-                }
-                else
-                {
-                    l[i] = s.Peek();
-                }
-
-                s.Push(i);
+                res[i] = dp[nums1[i]];
             }
 
-            return (r, l);
+            return res;
         }
     }
 
@@ -66,14 +40,12 @@ namespace learning_dsa_csharp._04_stack._001_monotonic_stack_next_greater_elemen
     {
         public static void Main(string[] args)
         {
-            IMonotonicStackApproach s = new Solution();
+            Solution s = new Solution();
 
-            var input = new int[] { 3, 4, 5, 1, 2 };
+            var input1 = new int[] { 4, 1, 2 };
+            var input2 = new int[] { 1, 3, 4, 2 };
 
-            var (out1, out2) = s.NextGraeterElem(input);
-
-            Console.WriteLine("Out 1: " + string.Join(", ", out1));
-            Console.WriteLine("Out 2: " + string.Join(", ", out2));
+            Console.WriteLine(string.Join(", ", s.NextGreaterElement(input1, input2)));
         }
     }
 }
