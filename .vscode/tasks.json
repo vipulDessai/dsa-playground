@@ -180,6 +180,32 @@
                 "kind": "build",
                 "isDefault": true
             }
+        },
+        {
+            "label": "format: 06-stack (C#)",
+            "type": "process",
+            "command": "dotnet",
+            "args": [
+                "format",
+                "${workspaceFolder}\\src\\learn-topic-wise\\06-stack\\stack.csproj"
+            ]
+        },
+        {
+            "label": "build: 06-stack (C#)",
+            "type": "process",
+            "command": "dotnet",
+            "args": [
+                "build",
+                "${workspaceFolder}\\src\\learn-topic-wise\\06-stack\\stack.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile",
+            "dependsOn": ["format: 06-stack (C#)"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }

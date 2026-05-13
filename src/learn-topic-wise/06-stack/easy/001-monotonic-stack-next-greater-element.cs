@@ -1,6 +1,12 @@
-﻿namespace learning_dsa_csharp._04_stack._001_monotonic_stack_next_greater_element
+﻿// [Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/)
+
+namespace learning_dsa_csharp._04_stack._001_monotonic_stack_next_greater_element
 {
-    internal class MonotonicStackApproach
+    interface IMonotonicStackApproach
+    {
+        public (int[], int[]) NextGraeterElem(int[] heights);
+    }
+    internal class Solution : IMonotonicStackApproach
     {
         public (int[], int[]) NextGraeterElem(int[] heights)
         {
@@ -56,38 +62,18 @@
         }
     }
 
-    // https://leetcode.com/problems/next-greater-element-i/
-    public class MySolnNextGreaterElement
+    internal class Execute
     {
-        public int[] NextGreaterElement(int[] nums1, int[] nums2)
+        public static void Main(string[] args)
         {
-            int n = nums2.Length;
-            Stack<int> st = new Stack<int>();
-            Dictionary<int, int> dp = new();
-            for (int i = n - 1; i >= 0; --i)
-            {
-                var cur = nums2[i];
-                while (st.Count > 0 && nums2[st.Peek()] < cur)
-                    st.Pop();
+            IMonotonicStackApproach s = new Solution();
 
-                if (st.Count == 0)
-                    dp[cur] = -1;
-                else
-                {
-                    dp[cur] = nums2[st.Peek()];
-                }
+            var input = new int[] { 3, 4, 5, 1, 2 };
 
-                st.Push(i);
-            }
+            var (out1, out2) = s.NextGraeterElem(input);
 
-            int m = nums1.Length;
-            int[] res = new int[m];
-            for (int i = 0; i < m; ++i)
-            {
-                res[i] = dp[nums1[i]];
-            }
-
-            return res;
+            Console.WriteLine("Out 1: " + string.Join(", ", out1));
+            Console.WriteLine("Out 2: " + string.Join(", ", out2));
         }
     }
 }

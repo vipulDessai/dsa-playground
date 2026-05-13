@@ -107,6 +107,18 @@
             "console": "integratedTerminal",
             "stopAtEntry": true,
             "externalConsole": false
+        },
+        {
+            "name": "06: Stack (C#)",
+            "type": "coreclr",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/src/learn-topic-wise/06-stack",
+            "preLaunchTask": "build: 06-stack (C#)",
+            "program": "/bin/Debug/net8.0/stack.dll",
+            "args": [],
+            "console": "integratedTerminal",
+            "stopAtEntry": true,
+            "externalConsole": false
         }
     ]
 }
