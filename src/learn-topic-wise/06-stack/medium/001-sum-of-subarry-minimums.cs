@@ -1,7 +1,12 @@
-﻿// https://leetcode.com/problems/longest-consecutive-sequence/description/
+﻿// https://leetcode.com/problems/sum-of-subarray-minimums/description/
 namespace learning_dsa_csharp._04_stack._002_sum_of_subarry_minimums
 {
-    internal class MySolnBruteForce
+    interface Solution
+    {
+        public int SumSubarrayMins(int[] arr);
+    }
+
+    internal class MySolnBruteForce : Solution
     {
         // TLE 79/87
         public int SumSubarrayMins(int[] arr)
@@ -27,7 +32,7 @@ namespace learning_dsa_csharp._04_stack._002_sum_of_subarry_minimums
     }
 
     // using monotonic stack approach
-    internal class StackSolutionO_N
+    internal class StackSolutionO_N : Solution
     {
         public int SumSubarrayMins(int[] arr)
         {
@@ -76,10 +81,21 @@ namespace learning_dsa_csharp._04_stack._002_sum_of_subarry_minimums
             {
                 // since sum is of type long, better to have all variables in
                 // the formula as long
-                sum += ((i - l[i]) * (r[i] - i) % MOD * (long)arr[i]) % MOD;
+                sum += ((i - l[i]) * (r[i] - i) * (long)arr[i]) % MOD;
                 sum %= MOD;
             }
             return (int)sum;
+        }
+    }
+
+    internal class Execute
+    {
+        public static void Main(string[] args)
+        {
+            Solution s = new StackSolutionO_N();
+
+            var input = new int[] { 3, 1, 2, 4 };
+            Console.WriteLine(s.SumSubarrayMins(input));
         }
     }
 }

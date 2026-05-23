@@ -11,7 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="./easy/001-monotonic-stack-next-greater-element.cs" />
+    <Compile Include="./medium/001-sum-of-subarry-minimums.cs" />
   </ItemGroup>
 
 </Project>
