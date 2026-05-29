@@ -54,6 +54,8 @@ function minimumPushes_formula(word: string): number {
     let total = 0;
     for (let i = 0; i < counts.length; i++) {
         const tier = Math.floor(i / 8) + 1; // push cost
+
+        // formula
         total += counts[i] * tier;
     }
     return total;

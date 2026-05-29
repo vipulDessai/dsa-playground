@@ -41,8 +41,8 @@ namespace learning_dsa_csharp._04_stack._002_sum_of_subarry_minimums
             Stack<int> s = new Stack<int>();
             int[] l = new int[n];
             int[] r = new int[n];
-            Array.Fill(l, -1);
-            Array.Fill(r, n);
+            Array.Fill(l, -1);  // smallest element to the left
+            Array.Fill(r, n);   // smallest element to the right
 
             for (int i = 0; i < n; ++i)
             {
@@ -79,8 +79,13 @@ namespace learning_dsa_csharp._04_stack._002_sum_of_subarry_minimums
             long sum = 0;
             for (int i = 0; i < n; ++i)
             {
+                // formula 
                 // since sum is of type long, better to have all variables in
                 // the formula as long
+                // (i - l[i]) * (r[i] - i) gives the number of subarrays where the
+                // arr[i] is the minimum
+                // so once we have the count ssimply multiplying the arr[i] gives the sum
+                // as the ask is to sum the minimum of all subarrays
                 sum += ((i - l[i]) * (r[i] - i) * (long)arr[i]) % MOD;
                 sum %= MOD;
             }
@@ -95,6 +100,7 @@ namespace learning_dsa_csharp._04_stack._002_sum_of_subarry_minimums
             Solution s = new StackSolutionO_N();
 
             var input = new int[] { 3, 1, 2, 4 };
+            input = new int[] { 3, 3 };
             Console.WriteLine(s.SumSubarrayMins(input));
         }
     }

@@ -42,6 +42,7 @@ function findErrorNums_sumset_formula(nums: number[]): number[] {
         s.add(num);
     }
 
+    // formula 
     // sum of all nums item without the duplicate
     let uniqueSum = 0;
     for (const item of s) {
@@ -76,6 +77,7 @@ function findErrorNums_xor_hashset(nums: number[]): number[] {
         }
     }
 
+    // formula 
     // this is kinda same as expectedSum - uniqueSum
     xorSum ^= dup;
 
