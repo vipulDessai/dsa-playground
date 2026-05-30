@@ -46,7 +46,7 @@ namespace learning_dsa_csharp._04_stack._002_sum_of_subarry_minimums
 
             for (int i = 0; i < n; ++i)
             {
-                while (s.Count > 0 && arr[s.Peek()] >= arr[i])
+                while (s.Count > 0 &&  arr[i] <= arr[s.Peek()])
                 {
                     s.Pop();
                 }
@@ -62,7 +62,7 @@ namespace learning_dsa_csharp._04_stack._002_sum_of_subarry_minimums
             s.Clear();
             for (int i = n - 1; i >= 0; --i)
             {
-                while (s.Count > 0 && arr[s.Peek()] > arr[i])
+                while (s.Count > 0 && arr[i] < arr[s.Peek()])
                 {
                     s.Pop();
                 }

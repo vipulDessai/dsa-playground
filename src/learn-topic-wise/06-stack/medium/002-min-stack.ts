@@ -1,3 +1,5 @@
+export const url = "[Min Stack](https://leetcode.com/problems/min-stack/description/)"
+
 class MinStack {
   stack: number[];
   minStack: number[];

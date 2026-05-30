@@ -68,14 +68,6 @@
             "externalConsole": false
         },
         {
-            "name": "03: Binary Search (Py)",
-            "type": "debugpy",
-            "request": "launch",
-            "cwd": "${workspaceFolder}/src/learn-topic-wise/03-binary-search/",
-            "program": "pyproject.py",
-            "console": "integratedTerminal"
-        },
-        {
             "name": "03: Binary Search (C++)",
             "type": "cppdbg",
             "request": "launch",
@@ -89,10 +81,10 @@
             "miDebuggerPath": "gdb"
         },
         {
-            "name": "04: Two Pointers (Py)",
+            "name": "03: Binary Search (Py)",
             "type": "debugpy",
             "request": "launch",
-            "cwd": "${workspaceFolder}/src/learn-topic-wise/04-two-pointers/",
+            "cwd": "${workspaceFolder}/src/learn-topic-wise/03-binary-search/",
             "program": "pyproject.py",
             "console": "integratedTerminal"
         },
@@ -109,16 +101,54 @@
             "externalConsole": false
         },
         {
+            "name": "04: Two Pointers (Py)",
+            "type": "debugpy",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/src/learn-topic-wise/04-two-pointers/",
+            "program": "pyproject.py",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "06: Stack (TS)",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/src/learn-topic-wise/06-stack/",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": ["start"],
+            "console": "integratedTerminal"
+        },
+        {
             "name": "06: Stack (C#)",
             "type": "coreclr",
             "request": "launch",
-            "cwd": "${workspaceFolder}/src/learn-topic-wise/06-stack",
+            "cwd": "${workspaceFolder}/src/learn-topic-wise/06-stack/",
             "preLaunchTask": "build: 06-stack (C#)",
             "program": "/bin/Debug/net8.0/stack.dll",
             "args": [],
             "console": "integratedTerminal",
             "stopAtEntry": true,
             "externalConsole": false
-        }
+        },
+        {
+            "name": "06: Stack (C++)",
+            "type": "cppdbg",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/src/learn-topic-wise/06-stack/cpp-build/",
+            "preLaunchTask": "build: 06-stack (C++)",
+            "program": "${workspaceFolder}/src/learn-topic-wise/06-stack/cpp-build/main.exe",
+            "args": [],
+            "stopAtEntry": true,
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "gdb"
+        },
+        {
+            "name": "06: Stack (Py)",
+            "type": "debugpy",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/src/learn-topic-wise/06-stack/",
+            "program": "pyproject.py",
+            "console": "integratedTerminal"
+        },
     ]
 }

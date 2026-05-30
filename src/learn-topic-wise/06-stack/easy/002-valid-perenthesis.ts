@@ -1,3 +1,5 @@
+export const url = "[Valid Parentheses](https://leetcode.com/problems/valid-parentheses/description/)"
+
 function isValid(s: string): boolean {
   const closeToOpen = new Map<string, string>();
   closeToOpen.set(')', '(');

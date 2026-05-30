@@ -206,6 +206,33 @@
                 "kind": "build",
                 "isDefault": true
             }
-        }
+        },
+        {
+            "label": "Configure: 06-stack (C++)",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "-S",
+                "${workspaceFolder}/src/learn-topic-wise/06-stack/",
+                "-B",
+                "${workspaceFolder}/src/learn-topic-wise/06-stack/cpp-build/",
+                "-G",
+                "MinGW Makefiles"
+            ]
+        },
+        {
+            "label": "build: 06-stack (C++)",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "${workspaceFolder}/src/learn-topic-wise/06-stack/cpp-build/"
+            ],
+            "dependsOn": ["Configure: 06-stack (C++)"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
     ]
 }
