@@ -150,5 +150,30 @@
             "program": "pyproject.py",
             "console": "integratedTerminal"
         },
+        {
+            "name": "07: Linked List (C#)",
+            "type": "coreclr",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/src/learn-topic-wise/07-linked-List/",
+            "preLaunchTask": "build: 07-linked-List (C#)",
+            "program": "/bin/Debug/net8.0/linked-list.dll",
+            "args": [],
+            "console": "integratedTerminal",
+            "stopAtEntry": true,
+            "externalConsole": false
+        },
+        {
+            "name": "07: Linked List (C++)",
+            "type": "cppdbg",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/src/learn-topic-wise/07-linked-List/cpp-build/",
+            "preLaunchTask": "build: 07-linked-List (C++)",
+            "program": "${workspaceFolder}/src/learn-topic-wise/07-linked-List/cpp-build/main.exe",
+            "args": [],
+            "stopAtEntry": true,
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "gdb"
+        },
     ]
 }

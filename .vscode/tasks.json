@@ -234,5 +234,58 @@
                 "isDefault": true
             }
         },
+        {
+            "label": "format: 07-linked-List (C#)",
+            "type": "process",
+            "command": "dotnet",
+            "args": [
+                "format",
+                "${workspaceFolder}\\src\\learn-topic-wise\\07-linked-List\\linked-list.csproj"
+            ]
+        },
+        {
+            "label": "build: 07-linked-List (C#)",
+            "type": "process",
+            "command": "dotnet",
+            "args": [
+                "build",
+                "${workspaceFolder}\\src\\learn-topic-wise\\07-linked-List\\linked-list.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile",
+            "dependsOn": ["format: 07-linked-List (C#)"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Configure: 07-linked-List (C++)",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "-S",
+                "${workspaceFolder}/src/learn-topic-wise/07-linked-List/",
+                "-B",
+                "${workspaceFolder}/src/learn-topic-wise/07-linked-List/cpp-build/",
+                "-G",
+                "MinGW Makefiles"
+            ]
+        },
+        {
+            "label": "build: 07-linked-List (C++)",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "${workspaceFolder}/src/learn-topic-wise/07-linked-List/cpp-build/"
+            ],
+            "dependsOn": ["Configure: 07-linked-List (C++)"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
     ]
 }
