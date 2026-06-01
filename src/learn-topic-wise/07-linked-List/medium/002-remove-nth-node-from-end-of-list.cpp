@@ -16,17 +16,16 @@ class Solution {
         int len = 0;
 
         ListNode* t = head;
-        while(t != nullptr) {
-            t = t -> next;
+        while (t != nullptr) {
+            t = t->next;
             ++len;
         }
 
         int remInd = len - n;
 
-        if(remInd == 0) {
+        if (remInd == 0) {
             head = head->next;
-        }
-        else {
+        } else {
             t = head;
             while (remInd > 1) {
                 t = t->next;
