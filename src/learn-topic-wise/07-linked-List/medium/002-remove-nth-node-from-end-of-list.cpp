@@ -1,40 +1,40 @@
-﻿#include <iostream>
+﻿// [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/)
+
+#include <iostream>
 #include <vector>
 
 #include "generate-linked-list.h"
 
 using namespace std;
-
-struct ListNode {
-    int val;
-    ListNode* next;
-    ListNode() : val(0), next(nullptr) {}
-    ListNode(int x) : val(x), next(nullptr) {}
-    ListNode(int x, ListNode* next) : val(x), next(next) {}
-};
+using namespace utils;
 
 namespace _003_remove_nth_node_from_end_of_list {
 
 class Solution {
    public:
     ListNode* removeNthFromEnd(ListNode* head, int n) {
-        // ListNode t = new ListNode(0);
-        // t.next = head;
+        int len = 0;
 
-        // ListNode l = t;
-        // ListNode r = head;
+        ListNode* t = head;
+        while(t != nullptr) {
+            t = t -> next;
+            ++len;
+        }
 
-        // while (n > 0 && r != null) {
-        //     r = r.next;
-        //     n--;
-        // }
+        int remInd = len - n;
 
-        // while (r != null) {
-        //     r = r.next;
-        //     l = l.next;
-        // }
+        if(remInd == 0) {
+            head = head->next;
+        }
+        else {
+            t = head;
+            while (remInd > 1) {
+                t = t->next;
+                --remInd;
+            }
 
-        // l.next = l.next.next;
+            t->next = t->next->next;
+        }
 
         return head;
     }
@@ -44,9 +44,17 @@ class Solution {
 class Execute {
    public:
     static void Main() {
-        _003_remove_nth_node_from_end_of_list::Solution obj;
+        vector<int> input = {1, 2, 3, 4, 5};
+        ListNode* inputList = LinkedListGenerator::Generate(input);
 
-        printHello();
+        _003_remove_nth_node_from_end_of_list::Solution s;
+        int n = 2;
+        auto out = s.removeNthFromEnd(inputList, n);
+
+        while (out != nullptr) {
+            cout << out->val << endl;
+            out = out->next;
+        }
     }
 };
 
