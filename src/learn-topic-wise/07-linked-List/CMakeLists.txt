@@ -13,7 +13,7 @@ add_library(generate-linked-list
 target_include_directories(generate-linked-list PUBLIC ./utils)
 
 # Add executables for each file with its own main
-add_executable(main ./medium/002-remove-nth-node-from-end-of-list.cpp)
+add_executable(main ./medium/004-add-two-numbers.cpp)
 
 # Link the executable to the library
 target_link_libraries(main PRIVATE generate-linked-list)
