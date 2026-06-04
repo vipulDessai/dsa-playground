@@ -11,8 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="./utils/generate-linked-list.cs" />
-    <Compile Include="./medium/005-remove-zero-sum-consecutive-nodes-from-linked-list.cs" />
+    <Compile Include="./easy/007-count-pony-express-riders.cs" />
   </ItemGroup>
 
 </Project>

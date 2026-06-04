@@ -50,6 +50,32 @@
             "problemMatcher": []
         },
         {
+            "label": "format: 01-pure-array (C#)",
+            "type": "process",
+            "command": "dotnet",
+            "args": [
+                "format",
+                "${workspaceFolder}\\src\\learn-topic-wise\\01-pure-array\\pure-array.csproj"
+            ]
+        },
+        {
+            "label": "build: 01-pure-array (C#)",
+            "type": "process",
+            "command": "dotnet",
+            "args": [
+                "build",
+                "${workspaceFolder}\\src\\learn-topic-wise\\01-pure-array\\pure-array.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile",
+            "dependsOn": ["format: 01-pure-array (C#)"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
             "label": "format: 02-sliding-window (C#)",
             "type": "process",
             "command": "dotnet",

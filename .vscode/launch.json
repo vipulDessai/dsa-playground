@@ -14,6 +14,18 @@
             "console": "integratedTerminal"
         },
         {
+            "name": "01: Pure Array (C#)",
+            "type": "coreclr",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/src/learn-topic-wise/01-pure-array",
+            "preLaunchTask": "build: 01-pure-array (C#)",
+            "program": "/bin/Debug/net8.0/pure-array.dll",
+            "args": [],
+            "console": "integratedTerminal",
+            "stopAtEntry": true,
+            "externalConsole": false
+        },
+        {
             "name": "01: Pure Array (Py)",
             "type": "debugpy",
             "request": "launch",
