@@ -2,109 +2,55 @@
 
 namespace learning_dsa_csharp._06_linked_list._011_remove_zero_sum_consecutive_nodes_from_linked_list
 {
-    internal class Solution
-    {
-        public ListNode RemoveZeroSumSublists(ListNode head)
-        {
-            if (head.next == null && head.val == 0)
-            {
-                return null;
-            }
-
-            Dictionary<int, ListNode> m = new Dictionary<int, ListNode>();
-
-            var i = head;
-            int s = 0;
-            while (i != null)
-            {
-                s += (int)i.val;
-
-                if (s == 0)
-                {
-                    head = i.next;
-                    m = new Dictionary<int, ListNode>();
-                }
-                else
-                {
-                    if (m.ContainsKey(s))
-                    {
-                        var n = m[s];
-                        n.next = i.next;
-
-                        m = new Dictionary<int, ListNode>();
-                        s = 0;
-                        var j = head;
-                        while (j != n.next)
-                        {
-                            s += (int)j.val;
-                            m[s] = j;
-                            j = j.next;
-                        }
-                    }
-                    else
-                    {
-                        m[s] = i;
-                    }
-                }
-
-                i = i.next;
-            }
-
-            if (s == 0)
-            {
-                return null;
-            }
-
-            return head;
-        }
-    }
-
-    public class MySoln
+    public class Solution
     {
         public ListNode RemoveZeroSumSublists(ListNode head)
         {
             var cur = head;
 
-            Dictionary<int, (ListNode, int)> map = new();
-            map[0] = (null, -1);
+            Dictionary<int, ListNode> map = new();
+            map[0] = null;
 
-            int pSum = 0, i = 0, max = int.MinValue;
-            ListNode s = null, e = null;
+            int pSum = 0;
             while (cur != null)
             {
                 pSum += cur.val;
 
                 if (map.ContainsKey(pSum))
                 {
-                    var (lNode, lInd) = map[pSum];
+                    var lNode = map[pSum];
 
-                    if (max < i - lInd)
+                    if (lNode == null)
                     {
-                        max = i - lInd;
-                        s = lNode;
-                        e = cur;
+                        head = cur.next;
+                        map.Clear();
+                        map[0] = null;
+                    }
+                    else
+                    {
+                        lNode.next = cur.next;
+                        map.Clear();
+                        map[0] = null;
+
+                        // re calculate pSum and map
+                        // from beginning to ensure updated list
+                        var j = head;
+                        pSum = 0;
+                        while (j != lNode.next)
+                        {
+                            pSum += j.val;
+                            map[pSum] = j;
+                            j = j.next;
+                        }
                     }
                 }
-
-                if (!map.ContainsKey(pSum))
-                    map[pSum] = (cur, i);
+                else
+                {
+                    if (!map.ContainsKey(pSum))
+                        map[pSum] = cur;
+                }
 
                 cur = cur.next;
-                ++i;
-            }
-
-            if(s == null && e == null)
-            {
-                return head;
-            }
-
-            if (s == null)
-            {
-                head = e.next;
-            }
-            else
-            {
-                s.next = e.next;
             }
 
             return head;
@@ -116,10 +62,12 @@ namespace learning_dsa_csharp._06_linked_list._011_remove_zero_sum_consecutive_n
         public static void Main(string[] args)
         {
             int[] input = [1, 2, -3, 3, 1];
-            input = [2, 2, -3, 3, 1];
+            // input = [2, 2, -3, 3, 1];
+            // input = [2, 1, -1, 3, 1, 4, 1, -1];
+            input = [1, 2, 3, -3, -2];
             ListNode inputList = LinkedListGenerator.Generate(input);
 
-            var output = new MySoln().RemoveZeroSumSublists(inputList);
+            var output = new Solution().RemoveZeroSumSublists(inputList);
 
             while (output != null)
             {
