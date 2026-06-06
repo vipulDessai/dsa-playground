@@ -11,44 +11,6 @@ namespace _012_merge_in_between_linkedlist {
 class Solution {
    public:
     ListNode* mergeInBetween(ListNode* list1, int a, int b, ListNode* list2) {
-        // var l2Tail = list2;
-        //     while (l2Tail.next != null)
-        //     {
-        //         l2Tail = l2Tail.next;
-        //     }
-
-        //     var n = list1;
-        //     ListNode s = null;
-        //     ListNode e = null;
-
-        //     int c = 1;
-        //     while (n != null)
-        //     {
-        //         if (c == a)
-        //         {
-        //             s = n;
-        //         }
-
-        //         if (c == b + 1)
-        //         {
-        //             e = n;
-        //         }
-
-        //         n = n.next;
-        //         ++c;
-        //     }
-
-        //     s.next = list2;
-        //     l2Tail.next = e.next;
-
-        //     return list1;
-    }
-};
-}  // namespace _012_merge_in_between_linkedlist
-
-class MySoln {
-   public:
-    ListNode* mergeInBetween(ListNode* list1, int a, int b, ListNode* list2) {
         ListNode* l2EndNode = list2;
         while (l2EndNode->next != nullptr) {
             l2EndNode = l2EndNode->next;
@@ -80,6 +42,7 @@ class MySoln {
         return list1;
     }
 };
+}  // namespace _012_merge_in_between_linkedlist
 
 class Execute {
    public:
@@ -97,6 +60,8 @@ class Execute {
 
         while (out != nullptr) {
             cout << out->val << endl;
+
+            out = out->next;
         }
     }
 };
