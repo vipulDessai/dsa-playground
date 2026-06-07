@@ -187,5 +187,13 @@
             "MIMode": "gdb",
             "miDebuggerPath": "gdb"
         },
+        {
+            "name": "07: Linked List (Py)",
+            "type": "debugpy",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/src/learn-topic-wise/07-linked-List/",
+            "program": "pyproject.py",
+            "console": "integratedTerminal"
+        },
     ]
 }

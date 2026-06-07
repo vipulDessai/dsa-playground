@@ -1,4 +1,4 @@
-﻿// https://leetcode.com/problems/palindrome-linked-list
+﻿// [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list)
 namespace learning_dsa_csharp._06_linked_list._012_palindrome_linked_list
 {
     internal class MySoln
