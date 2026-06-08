@@ -1,4 +1,4 @@
-import { LinkedList, ListNode } from './000-linked-list-from-array';
+import { LinkedList, ListNode } from './utils/generate-linked-list';
 
 var l1 = new LinkedList([1, 2, 3, 4]);
 var l2 = new LinkedList([1, 2, 3, 4]);

@@ -1,8 +1,8 @@
 export const url =
   '[Spiral Matrix IV](https://leetcode.com/problems/spiral-matrix-iv/description/)';
 
-import { LinkedList } from '../07-linked-List/000-linked-list-from-array';
-import type { ListNode } from '../07-linked-List/000-linked-list-from-array';
+import { LinkedList } from '../07-linked-List/utils/generate-linked-list';
+import type { ListNode } from '../07-linked-List/utils/generate-linked-list';
 
 /**
  * Definition for singly-linked list.

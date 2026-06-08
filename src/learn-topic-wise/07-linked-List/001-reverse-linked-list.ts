@@ -1,4 +1,4 @@
-import { LinkedList, ListNode } from './000-linked-list-from-array';
+import { LinkedList, ListNode } from './utils/generate-linked-list';
 
 var myLinkedList = new LinkedList([1, 2, 3, 4]);
 const reversedList = reverseList(myLinkedList.singlyList);

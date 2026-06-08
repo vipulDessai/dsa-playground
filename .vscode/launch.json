@@ -195,5 +195,17 @@
             "program": "pyproject.py",
             "console": "integratedTerminal"
         },
+        {
+            "name": "08: Graphs I-0 (C#)",
+            "type": "coreclr",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/src/learn-topic-wise/08-l-0-graphs/",
+            "preLaunchTask": "build: 08-l-0-graphs (C#)",
+            "program": "/bin/Debug/net8.0/I-0-graphs.dll",
+            "args": [],
+            "console": "integratedTerminal",
+            "stopAtEntry": true,
+            "externalConsole": false
+        },
     ]
 }

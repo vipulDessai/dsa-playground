@@ -12,7 +12,7 @@
  * }
  */
 
-import { ListNode } from './000-linked-list-from-array';
+import { ListNode } from './utils/generate-linked-list';
 
 function splitListToParts(
   head: ListNode | null,

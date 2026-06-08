@@ -313,5 +313,31 @@
                 "isDefault": true
             }
         },
+        {
+            "label": "format: 08-l-0-graphs (C#)",
+            "type": "process",
+            "command": "dotnet",
+            "args": [
+                "format",
+                "${workspaceFolder}\\src\\learn-topic-wise\\08-l-0-graphs\\I-0-graphs.csproj"
+            ]
+        },
+        {
+            "label": "build: 08-l-0-graphs (C#)",
+            "type": "process",
+            "command": "dotnet",
+            "args": [
+                "build",
+                "${workspaceFolder}\\src\\learn-topic-wise\\08-l-0-graphs\\I-0-graphs.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile",
+            "dependsOn": ["format: 08-l-0-graphs (C#)"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
     ]
 }
