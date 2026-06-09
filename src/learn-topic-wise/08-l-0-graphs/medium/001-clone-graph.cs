@@ -39,12 +39,6 @@ namespace learning_dsa_csharp._11_graphs._001_clone_graph
         }
     }
 
-    public class MySoln {
-        public Node CloneGraph(Node node) {
-            
-        }
-    }
-
     internal class Execute
     {
         public static void Main(string[] args)
