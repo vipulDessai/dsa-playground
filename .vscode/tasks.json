@@ -339,5 +339,32 @@
                 "isDefault": true
             }
         },
+        {
+            "label": "Configure: 08-l-0-graphs (C++)",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "-S",
+                "${workspaceFolder}/src/learn-topic-wise/08-l-0-graphs/",
+                "-B",
+                "${workspaceFolder}/src/learn-topic-wise/08-l-0-graphs/cpp-build/",
+                "-G",
+                "MinGW Makefiles"
+            ]
+        },
+        {
+            "label": "build: 08-l-0-graphs (C++)",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "${workspaceFolder}/src/learn-topic-wise/08-l-0-graphs/cpp-build/"
+            ],
+            "dependsOn": ["Configure: 08-l-0-graphs (C++)"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
     ]
 }

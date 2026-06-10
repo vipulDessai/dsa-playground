@@ -207,5 +207,18 @@
             "stopAtEntry": true,
             "externalConsole": false
         },
+        {
+            "name": "08: Graphs I-0 (C++)",
+            "type": "cppdbg",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/src/learn-topic-wise/08-l-0-graphs/cpp-build/",
+            "preLaunchTask": "build: 08-l-0-graphs (C++)",
+            "program": "${workspaceFolder}/src/learn-topic-wise/08-l-0-graphs/cpp-build/main.exe",
+            "args": [],
+            "stopAtEntry": true,
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "gdb"
+        },
     ]
 }
