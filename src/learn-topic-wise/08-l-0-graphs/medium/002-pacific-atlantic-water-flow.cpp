@@ -35,8 +35,15 @@ class Solution {
     }
 
    private:
-    void dfs(vector<vector<int>>& heights, vector<vector<bool>>& visited,
-             int r, int c) {
+    void dfs(
+        vector<vector<int>>& heights,
+        vector<vector<bool>>& visited,
+        int r,
+        int c) {
+        if (visited[r][c]) {
+            return;
+        }
+
         int m = heights.size(), n = heights[0].size();
         visited[r][c] = true;
 
@@ -72,6 +79,12 @@ class Execute {
             {2, 4, 5, 3, 1},
             {6, 7, 1, 4, 5},
             {5, 1, 1, 2, 4}};
+
+        input = {
+            {1, 2, 3, 4},
+            {3, 5, 4, 1},
+            {5, 1, 7, 2},
+            {4, 1, 1, 3}};
 
         auto output = s.pacificAtlantic(input);
 
