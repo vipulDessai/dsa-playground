@@ -220,5 +220,13 @@
             "MIMode": "gdb",
             "miDebuggerPath": "gdb"
         },
+        {
+            "name": "08: Graphs I-0 (Py)",
+            "type": "debugpy",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/src/learn-topic-wise/08-l-0-graphs/",
+            "program": "pyproject.py",
+            "console": "integratedTerminal"
+        },
     ]
 }

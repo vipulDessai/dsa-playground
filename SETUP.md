@@ -46,8 +46,12 @@ ts-node typescript-file.ts
     -   run `pipx ensurepath`
     -   install `poetry`
         -   `pipx install poetry`
--   inside the repository
-    -   run `poetry install --no-root`
+-   inside the repository (fresh setup)
+    - inside the vscode press Ctrl + Shift + p -> select interpreter
+        - <img src="./images/py-vscode-select-interpretor.png" />
+        - Select 3.10.11
+    - (OPTIONAL) - run `pyenv shell 3.10`
+    - run `poetry install --no-root`
 
 ### Reset VENV
 

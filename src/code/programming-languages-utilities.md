@@ -1,4 +1,4 @@
-# Min / Max integer
+# Min / Max Integer/Float
 
 ## CPP
 
@@ -16,6 +16,9 @@ int MAX_INT = numeric_limit<int>::max();
 ```py
 MIN_INT = -2**31
 MAX_INT = 2**31
+
+MIN_FLOAT = float("-inf")
+MAX_FLOAT = float("inf")
 ```
 
 ## C#
@@ -66,4 +69,12 @@ _m = max(nums) # 10
 ```cs
 int[] nums = {1, 2, 10, 4, 5, 6};
 int _m = nums.Max(); // 10
+```
+
+# Create Array
+
+## Py
+
+```
+distance = [0] * n
 ```
