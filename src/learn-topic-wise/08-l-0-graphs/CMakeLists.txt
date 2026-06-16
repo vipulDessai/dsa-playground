@@ -7,4 +7,4 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g")
 
 # Add executables for each file with its own main
-add_executable(main ./medium/004-rotting-oranges.cpp)
+add_executable(main ./hard/001-alien-dictionary.cpp)
