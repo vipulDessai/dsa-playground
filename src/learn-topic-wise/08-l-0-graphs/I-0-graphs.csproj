@@ -12,7 +12,7 @@
 
   <ItemGroup>
     <Compile Include="./utils/type-node.cs" />
-    <Compile Include="./medium/003-surrounded-regions.cs" />
+    <Compile Include="./easy/001-number-of-islands.cs" />
   </ItemGroup>
 
 </Project>
