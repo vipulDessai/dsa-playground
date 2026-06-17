@@ -78,3 +78,17 @@ int _m = nums.Max(); // 10
 ```
 distance = [0] * n
 ```
+## CPP
+
+```cpp
+array<bool, 2> nei = {{false, false}};
+```
+
+# Destructure
+
+## CPP
+
+```cpp
+array<int, 2> dfs(vector<vector<int>>& land, int r, int c) {}
+auto [x, y] = dfs(land, i, j);
+```

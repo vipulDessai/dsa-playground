@@ -1,6 +1,4 @@
-# Alien Dictionary — LeetCode #269 (Hard) 🔒 Premium
-
-https://leetcode.com/problems/alien-dictionary/
+# [Alien Dictionary — LeetCode #269 (Hard) 🔒 Premium](https://leetcode.com/problems/alien-dictionary/)
 
 ## Problem
 
