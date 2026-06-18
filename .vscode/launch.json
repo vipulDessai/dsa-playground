@@ -65,7 +65,14 @@
             "stopAtEntry": true,
             "externalConsole": false,
             "MIMode": "gdb",
-            "miDebuggerPath": "gdb"
+            "miDebuggerPath": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
         },
         {
             "name": "03: Binary Search (C#)",
@@ -90,7 +97,14 @@
             "stopAtEntry": true,
             "externalConsole": false,
             "MIMode": "gdb",
-            "miDebuggerPath": "gdb"
+            "miDebuggerPath": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
         },
         {
             "name": "03: Binary Search (Py)",
@@ -152,7 +166,14 @@
             "stopAtEntry": true,
             "externalConsole": false,
             "MIMode": "gdb",
-            "miDebuggerPath": "gdb"
+            "miDebuggerPath": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
         },
         {
             "name": "06: Stack (Py)",
@@ -185,7 +206,14 @@
             "stopAtEntry": true,
             "externalConsole": false,
             "MIMode": "gdb",
-            "miDebuggerPath": "gdb"
+            "miDebuggerPath": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
         },
         {
             "name": "07: Linked List (Py)",
@@ -218,7 +246,14 @@
             "stopAtEntry": true,
             "externalConsole": false,
             "MIMode": "gdb",
-            "miDebuggerPath": "gdb"
+            "miDebuggerPath": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
         },
         {
             "name": "08: Graphs I-0 (Py)",
