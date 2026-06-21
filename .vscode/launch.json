@@ -263,5 +263,17 @@
             "program": "pyproject.py",
             "console": "integratedTerminal"
         },
+        {
+            "name": "08: Trees (C#)",
+            "type": "coreclr",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/src/learn-topic-wise/08-trees",
+            "preLaunchTask": "build: 08-trees (C#)",
+            "program": "/bin/Debug/net8.0/trees.dll",
+            "args": [],
+            "console": "integratedTerminal",
+            "stopAtEntry": true,
+            "externalConsole": false
+        },
     ]
 }

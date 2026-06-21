@@ -366,5 +366,31 @@
                 "isDefault": true
             }
         },
+        {
+            "label": "format: 08-trees (C#)",
+            "type": "process",
+            "command": "dotnet",
+            "args": [
+                "format",
+                "${workspaceFolder}\\src\\learn-topic-wise\\08-trees\\trees.csproj"
+            ]
+        },
+        {
+            "label": "build: 08-trees (C#)",
+            "type": "process",
+            "command": "dotnet",
+            "args": [
+                "build",
+                "${workspaceFolder}\\src\\learn-topic-wise\\08-trees\\trees.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile",
+            "dependsOn": ["format: 08-trees (C#)"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
     ]
 }

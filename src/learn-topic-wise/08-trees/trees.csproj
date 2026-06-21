@@ -11,8 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="./utils/type-node.cs" />
-    <Compile Include="./medium/001-clone-graph.cs" />
+    <Compile Include="./medium/001-open-the-lock.cs" />
   </ItemGroup>
 
 </Project>

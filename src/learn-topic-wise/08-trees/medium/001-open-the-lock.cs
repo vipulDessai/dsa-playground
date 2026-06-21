@@ -1,10 +1,11 @@
-﻿// https://leetcode.com/problems/open-the-lock/
+﻿// [Open the Lock](https://leetcode.com/problems/open-the-lock/)
+
 using System.Text;
 
 namespace learning_dsa_csharp._11_graphs._014_open_the_lock
 {
     // https://leetcode.com/problems/open-the-lock/solutions/1250656/short-easy-solution-bfs-traversal-explained-w-commented-code
-    internal class OthersSoln
+    internal class Solution
     {
         public int OpenLock(string[] deadends, string target)
         {
@@ -52,6 +53,10 @@ namespace learning_dsa_csharp._11_graphs._014_open_the_lock
             return -1;
         }
 
+        // For s = "0202", i = 1
+        // Up: digit 2 → 3 → "0302"
+        // Down: digit 2 → 1 → "0102"
+        // Returns ["0302", "0102"].
         private string[] turn(string s, int i)
         {
             StringBuilder sb1 = new StringBuilder(s);
@@ -61,6 +66,18 @@ namespace learning_dsa_csharp._11_graphs._014_open_the_lock
             sb2[i] = (char)('0' + (sb2[i] - '0' - 1 + 10) % 10);
 
             return [sb1.ToString(), sb2.ToString()];
+        }
+    }
+
+    class Execute
+    {
+        public static void Main(string[] args)
+        {
+            Solution s = new();
+
+            string[] input = { "0201", "0101", "0102", "1212", "2002" };
+            string t = "0202";
+            Console.WriteLine(s.OpenLock(input, t));
         }
     }
 }
