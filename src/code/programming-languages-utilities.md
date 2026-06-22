@@ -71,19 +71,6 @@ int[] nums = {1, 2, 10, 4, 5, 6};
 int _m = nums.Max(); // 10
 ```
 
-# Create Array
-
-## Py
-
-```
-distance = [0] * n
-```
-## CPP
-
-```cpp
-array<bool, 2> nei = {{false, false}};
-```
-
 # Destructure
 
 ## CPP
@@ -91,4 +78,40 @@ array<bool, 2> nei = {{false, false}};
 ```cpp
 array<int, 2> dfs(vector<vector<int>>& land, int r, int c) {}
 auto [x, y] = dfs(land, i, j);
+```
+
+## c#
+
+```c#
+
+```
+
+# Initialization
+
+## C#
+
+```cs
+string s = "0202";
+string[] strArr = { s, "0101", "0102", "1212", "2002" };
+
+StringBuilder sb1 = new(s);
+
+HashSet<string> dead = [.. strArr];
+HashSet<string> visited = ["0000"];
+
+Queue<string> q = new();
+q.Enqueue("0000");
+```
+
+## Py
+
+```py
+distance = [0] * n
+```
+
+## CPP
+
+```cpp
+array<bool, 2> nei = {{false, false}};
+array<array<int, 2>, 4> fixedSizeArr = {{{1, 0}, {0, 1}}};
 ```
