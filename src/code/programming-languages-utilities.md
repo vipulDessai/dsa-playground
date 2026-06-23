@@ -78,6 +78,8 @@ int _m = nums.Max(); // 10
 ```cpp
 array<int, 2> dfs(vector<vector<int>>& land, int r, int c) {}
 auto [x, y] = dfs(land, i, j);
+
+vector<vector<int>> edges = {{1,0}, {1,2}, {1,3}};
 ```
 
 ## c#
@@ -114,4 +116,47 @@ distance = [0] * n
 ```cpp
 array<bool, 2> nei = {{false, false}};
 array<array<int, 2>, 4> fixedSizeArr = {{{1, 0}, {0, 1}}};
+```
+
+# Hash Set and Map
+
+## CPP
+
+### Set
+
+```cpp
+#include <unordered_set>
+
+using namespace std;
+
+std::unordered_set<int> s;
+
+s.insert(5);
+s.count(5);            // 0 or 1
+s.contains(5);         // C++20, bool
+s.erase(5);
+s.size();
+
+for (int x : s) { }
+```
+
+### Map
+
+```cpp
+#include <unordered_map>
+
+using namespace std;
+
+unordered_map<int, vector<int>> g;
+
+for (int i = 0; i < edges.size(); ++i) {
+    auto e = edges[i];
+    g[e[0]].push_back(e[1]);
+    g[e[1]].push_back(e[0]);
+}
+
+if (!g.count(key))           // contains in c#
+{
+    // do something
+}
 ```
