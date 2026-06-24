@@ -9,24 +9,19 @@
 using namespace std;
 
 namespace _015_minimum_height_trees {
-class Solution {
-   public:
-    vector<int> findMinHeightTrees(int n, vector<vector<int>>& edges) {
-        return {0};
-    }
-};
 // https://leetcode.com/problems/minimum-height-trees/solutions/1631179/c-python-3-simple-solution-w-explanation-brute-force-2x-dfs-remove-leaves-w-bfs
 class OthersSoln_brute {
    private:
-    unordered_map<int, vector<int>> g;
+    unordered_map<int, vector<int>> adj;
     unordered_set<int> visited;
 
     int dfs(int i) {
         visited.insert(i);
         int c = 0;
-        for (auto adj : g[i]) {
-            if (visited.count(adj) == 0)
-                c = max(c, 1 + dfs(adj));
+        for (auto a : adj[i]) {
+            if (!visited.count(a)) {
+                c = max(c, 1 + dfs(a));
+            }
         }
 
         return c;
@@ -40,13 +35,13 @@ class OthersSoln_brute {
         // form the adjacency list
         for (int i = 0; i < edges.size(); ++i) {
             auto e = edges[i];
-            g[e[0]].push_back(e[1]);
-            g[e[1]].push_back(e[0]);
+            adj[e[0]].push_back(e[1]);
+            adj[e[1]].push_back(e[0]);
         }
 
         vector<int> ans;
         int mH = INT_MAX;
-        for (auto& [key, value] : g) {
+        for (auto& [key, value] : adj) {
             visited.clear();
             int p = dfs(key);
 
@@ -166,15 +161,16 @@ class OthersSoln_brute {
 class Execute {
    public:
     void static Main() {
-        _015_minimum_height_trees::Solution s;
+        _015_minimum_height_trees::OthersSoln_brute s;
 
         int n = 4;
         vector<vector<int>> edges = {{1, 0}, {1, 2}, {1, 3}};
+        edges = {{3,0},{3,1},{3,2},{3,4},{5,4}};
 
         auto output = s.findMinHeightTrees(n, edges);
 
         for (int i = 0; i < output.size(); ++i) {
-            cout << output[i] << endl;
+            cout << output[i] << " ";
         }
     };
 };

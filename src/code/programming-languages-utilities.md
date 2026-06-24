@@ -1,3 +1,16 @@
+# logs
+
+## CPP
+
+```cpp
+cout << var1 << ": " << var2 << endl;
+
+// print array
+for (int v : value) {
+    cout << v << " ";
+}
+```
+
 # Min / Max Integer/Float
 
 ## CPP
@@ -147,16 +160,20 @@ for (int x : s) { }
 
 using namespace std;
 
-unordered_map<int, vector<int>> g;
+unordered_map<int, vector<int>> adjList;
 
 for (int i = 0; i < edges.size(); ++i) {
     auto e = edges[i];
-    g[e[0]].push_back(e[1]);
-    g[e[1]].push_back(e[0]);
+    adjList[e[0]].push_back(e[1]);
+    adjList[e[1]].push_back(e[0]);
 }
 
-if (!g.count(key))           // contains in c#
+if (adjList.count(key))           // contains in c#
 {
-    // do something
+    // adjList contains key
+}
+
+for (auto& [key, value] : adjList) {
+    cout << key << " " << value << endl;
 }
 ```
