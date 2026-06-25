@@ -122,6 +122,8 @@ q.Enqueue("0000");
 
 ```py
 distance = [0] * n
+
+size(distance)
 ```
 
 ## CPP
@@ -129,6 +131,9 @@ distance = [0] * n
 ```cpp
 array<bool, 2> nei = {{false, false}};
 array<array<int, 2>, 4> fixedSizeArr = {{{1, 0}, {0, 1}}};
+
+size(nei); 
+nei.size();
 ```
 
 # Hash Set and Map

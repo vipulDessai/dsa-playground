@@ -33,8 +33,7 @@ class OthersSoln_brute {
             return {0};
 
         // form the adjacency list
-        for (int i = 0; i < edges.size(); ++i) {
-            auto e = edges[i];
+        for (auto e : edges) {
             adj[e[0]].push_back(e[1]);
             adj[e[1]].push_back(e[0]);
         }
@@ -58,56 +57,52 @@ class OthersSoln_brute {
     }
 };
 
-// class OthersSoln_2x_dfs {
-//    public:
-//     // 2x dfs
-//     vector<int> findMinHeightTrees(int n, vector<vector<int>>& edges) {
-//         if (edges.Length == 0)
-//             return [0];
+class OthersSoln_2x_dfs {
+   private:
+    unordered_map<int, vector<int>> adjList;
+    unordered_set<int> visited;
 
-//         Dictionary<int, List<int>> g = new Dictionary<int, List<int>>();
-//         HashSet<int> visited = new HashSet<int>();
+    vector<int> dfs(int i) {
+        vector<int> longestPath;
+        visited.insert(i);
 
-//         for (int i = 0; i < edges.Length; ++i) {
-//             var e = edges[i];
-//             if (!g.ContainsKey(e[0])) {
-//                 g.Add(e[0], []);
-//             }
-//             g[e[0]].Add(e[1]);
+        for (int a : adjList[i]) {
+            if (!visited.count(a)) {
+                vector<int> p = dfs(a);
 
-//             if (!g.ContainsKey(e[1])) {
-//                 g.Add(e[1], []);
-//             }
-//             g[e[1]].Add(e[0]);
-//         }
+                if (p.size() > longestPath.size()) {
+                    longestPath = p;
+                }
+            }
+        }
 
-//         List<int> dfs(int i) {
-//             List<int> lP = [];
-//             visited.Add(i);
+        longestPath.push_back(i);
+        return longestPath;
+    }
 
-//             foreach (var adj in g[i]) {
-//                 if (!visited.Contains(adj)) {
-//                     List<int> p = dfs(adj);
-//                     if (p.Count > lP.Count) {
-//                         lP = p;
-//                     }
-//                 }
-//             }
+   public:
+    // 2x dfs
+    vector<int> findMinHeightTrees(int n, vector<vector<int>>& edges) {
+        if (edges.size() == 0)
+            return {0};
 
-//             visited.Remove(i);
-//             lP.Add(i);
+        for (auto e : edges) {
+            adjList[e[0]].push_back(e[1]);
+            adjList[e[1]].push_back(e[0]);
+        }
 
-//             return lP;
-//         }
+        auto basePath = dfs(0);
+        visited.clear();
+        auto path = dfs(basePath[0]);
 
-//         var baseP = dfs(0);
-//         var res = dfs(baseP[0]);
+        if (path.size() & 1)  // 1 mid-node when path length is odd, otherwise 2
+            return {path[path.size() / 2]};
 
-//         // for handling odd even answer
-//         var r = new HashSet<int>([ res[res.Count / 2], res[(res.Count - 1) / 2] ]);
-//         return r.ToArray();
-//     }
-// };
+        // for handling even answer (2 mid-nodes)
+        return {
+            path[path.size() / 2], path[(path.size() - 1) / 2]};
+    }
+};
 
 // class OthersSoln_remove_leaf_nodes {
 //    public:
@@ -161,11 +156,11 @@ class OthersSoln_brute {
 class Execute {
    public:
     void static Main() {
-        _015_minimum_height_trees::OthersSoln_brute s;
+        _015_minimum_height_trees::OthersSoln_2x_dfs s;
 
         int n = 4;
         vector<vector<int>> edges = {{1, 0}, {1, 2}, {1, 3}};
-        edges = {{3,0},{3,1},{3,2},{3,4},{5,4}};
+        edges = {{3, 0}, {3, 1}, {3, 2}, {3, 4}, {5, 4}};
 
         auto output = s.findMinHeightTrees(n, edges);
 
