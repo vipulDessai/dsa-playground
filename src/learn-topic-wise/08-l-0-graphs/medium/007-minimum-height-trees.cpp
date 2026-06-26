@@ -104,63 +104,56 @@ class OthersSoln_2x_dfs {
     }
 };
 
-// class OthersSoln_remove_leaf_nodes {
-//    public:
-//     vector<int> findMinHeightTrees(int n, vector<vector<int>>& edges) {
-//         if (edges.size() == 0)
-//             return {0};
+class OthersSoln_remove_leaf_nodes {
+   public:
+    vector<int> findMinHeightTrees(int n, vector<vector<int>>& edges) {
+        if (edges.size() == 0)
+            return {0};
 
-//         // form the adjacency list
-//         Dictionary<int, List<int>> g = new Dictionary<int, List<int>>();
-//         for (int i = 0; i < edges.Length; ++i) {
-//             var e = edges[i];
-//             if (!g.ContainsKey(e[0])) {
-//                 g.Add(e[0], []);
-//             }
-//             g[e[0]].Add(e[1]);
+        // form the adjacency list
+        unordered_map<int, vector<int>> adjList;
+        for (int i = 0; i < edges.size(); ++i) {
+            auto e = edges[i];
+            adjList[e[0]].push_back(e[1]);
+            adjList[e[1]].push_back(e[0]);
+        }
 
-//             if (!g.ContainsKey(e[1])) {
-//                 g.Add(e[1], []);
-//             }
-//             g[e[1]].Add(e[0]);
-//         }
+        vector<int> leafs;
+        vector<int> inDeg;
+        for (int i = 0; i < n; ++i) {
+            if (adjList[i].size() == 1)
+                leafs.push_back(i);
 
-//         List<int> leafs = new List<int>();
-//         List<int> inDeg = new List<int>();
-//         for (int i = 0; i < n; ++i) {
-//             if (g[i].Count == 1)
-//                 leafs.Add(i);
+            inDeg.push_back(adjList[i].size());
+        }
 
-//             inDeg.Add(g[i].Count);
-//         }
+        while (n > 2) {
+            vector<int> nL;
+            for (int l : leafs) {
+                for (int adj : adjList[l]) {
+                    if (--inDeg[adj] == 1) {
+                        nL.push_back(adj);
+                    }
+                }
+            }
 
-//         while (n > 2) {
-//             List<int> nL = new List<int>();
-//             foreach (var l in leafs) {
-//                 foreach (var adj in g[l]) {
-//                     if (--inDeg[adj] == 1) {
-//                         nL.Add(adj);
-//                     }
-//                 }
-//             }
+            n -= leafs.size();
+            leafs = nL;
+        }
 
-//             n -= leafs.Count;
-//             leafs = nL.ToList();
-//         }
-
-//         return leafs;
-//     }
-// };
+        return leafs;
+    }
+};
 }  // namespace _015_minimum_height_trees
 
 class Execute {
    public:
     void static Main() {
-        _015_minimum_height_trees::OthersSoln_2x_dfs s;
+        _015_minimum_height_trees::OthersSoln_remove_leaf_nodes s;
 
         int n = 4;
         vector<vector<int>> edges = {{1, 0}, {1, 2}, {1, 3}};
-        edges = {{3, 0}, {3, 1}, {3, 2}, {3, 4}, {5, 4}};
+        // edges = {{3, 0}, {3, 1}, {3, 2}, {3, 4}, {5, 4}};
 
         auto output = s.findMinHeightTrees(n, edges);
 

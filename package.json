@@ -7,7 +7,7 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "pretty": "prettier --write .* ./**/* --ignore-unknown",
         "prettier:watch": "onchange \"./*\" \"./**/*\" -- prettier --write --ignore-unknown {{changed}}",
-        "clang-format:watch": "onchange \"./*.cpp\" \"./**/*.cpp\" -- clang-format -i {{changed}}",
+        "clang-format:watch": "onchange \"./*.cpp\" \"./**/*.cpp\" -e \"bin/**\" -e \"obj/**\" -e \"cpp-build/**\" -e \"node_modules/**\" -- clang-format -i {{changed}}",
         "black:watch": "onchange \"./*.py\" \"./**/*.py\" -- poetry run black {{changed}}"
     },
     "repository": {
