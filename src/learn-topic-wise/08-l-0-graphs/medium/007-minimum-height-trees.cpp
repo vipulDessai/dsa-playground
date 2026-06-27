@@ -153,7 +153,12 @@ class Execute {
 
         int n = 4;
         vector<vector<int>> edges = {{1, 0}, {1, 2}, {1, 3}};
+
+        // n = 6
         // edges = {{3, 0}, {3, 1}, {3, 2}, {3, 4}, {5, 4}};
+
+        n = 7;
+        edges = {{0, 1}, {1, 2}, {1, 3}, {2, 4}, {3, 5}, {4, 6}};
 
         auto output = s.findMinHeightTrees(n, edges);
 
