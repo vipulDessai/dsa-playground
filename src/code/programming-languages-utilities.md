@@ -27,7 +27,7 @@ int MAX_INT = numeric_limit<int>::max();
 ## Py
 
 ```py
-MIN_INT = -2**31
+MIN_INT = -(2**31)
 MAX_INT = 2**31
 
 MIN_FLOAT = float("-inf")

@@ -4,4 +4,4 @@ version = "0.1.0"
 dependencies = ["requests"]
 
 [tool.my_py_app]
-entry = "./medium/005-find-cheapest-flight-price_with_k_stops.py"
+entry = "./medium/008-path-with-max-gold.py"
