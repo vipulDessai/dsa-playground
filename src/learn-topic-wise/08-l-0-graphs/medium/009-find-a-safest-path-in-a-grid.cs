@@ -1,4 +1,4 @@
-﻿// https://leetcode.com/problems/find-the-safest-path-in-a-grid/
+﻿// [Find the Safest Path in a Grid](https://leetcode.com/problems/find-the-safest-path-in-a-grid/)
 namespace learning_dsa_csharp._11_graphs._017_find_a_safest_path_in_a_grid
 {
     internal class OthersSoln
@@ -63,33 +63,30 @@ namespace learning_dsa_csharp._11_graphs._017_find_a_safest_path_in_a_grid
             }
 
             // Binary search for maximum safeness factor
-            int start = 0;
-            int end = 0;
-            int res = -1;
+            int l = 0;
+            int r = 0;
             for (int i = 0; i < n; i++)
             {
                 for (int j = 0; j < n; j++)
                 {
-                    // Set end as the maximum safeness factor possible
-                    end = Math.Max(end, mat[i, j]);
+                    // Set r as the maximum safeness factor possible
+                    r = Math.Max(r, mat[i, j]);
                 }
             }
 
-            while (start <= end)
+            while (l < r)
             {
-                int mid = start + (end - start) / 2;
+                int mid = l + (r - l) / 2;
                 if (IsValidSafeness(mat, mid))
                 {
-                    // Store valid safeness and search for larger ones
-                    res = mid;
-                    start = mid + 1;
+                    l = mid + 1;
                 }
                 else
                 {
-                    end = mid - 1;
+                    r = mid;
                 }
             }
-            return res;
+            return l - 1;
         }
 
         // Check if a path exists with given minimum safeness value
@@ -281,6 +278,20 @@ namespace learning_dsa_csharp._11_graphs._017_find_a_safest_path_in_a_grid
         {
             int n = mat.GetLength(0);
             return i >= 0 && j >= 0 && i < n && j < n;
+        }
+    }
+
+    class Execute
+    {
+        static void Main(string[] args)
+        {
+            OthersSoln s = new();
+            IList<IList<int>> grid = [[1, 0, 0], [0, 0, 0], [0, 0, 1]];
+            grid = [[0, 0, 1], [0, 0, 0], [0, 0, 0]];
+            // grid = [[1]];
+
+            var output = s.MaximumSafenessFactor(grid);
+            Console.WriteLine(output);
         }
     }
 }

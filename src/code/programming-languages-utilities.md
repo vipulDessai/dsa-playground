@@ -124,6 +124,8 @@ q.Enqueue("0000");
 distance = [0] * n
 
 size(distance)
+
+dist = [[-1] * n for _ in range(m)]
 ```
 
 ## CPP
