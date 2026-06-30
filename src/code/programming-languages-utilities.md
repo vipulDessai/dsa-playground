@@ -89,16 +89,21 @@ int _m = nums.Max(); // 10
 ## CPP
 
 ```cpp
-array<int, 2> dfs(vector<vector<int>>& land, int r, int c) {}
+array<int, 2> dfs(vector<vector<int>>& land, int r, int c) {
+    // function logic
+}
 auto [x, y] = dfs(land, i, j);
-
-vector<vector<int>> edges = {{1,0}, {1,2}, {1,3}};
 ```
 
 ## c#
 
-```c#
+Only supports `tuple` destructuring
 
+```c#
+var point = (1, 2, 3, 4);
+var (a, b, c, d) = point;   // x=1, y=2
+
+var (_, _, _, fourthVar) = point // special _ is used for discard, can be used many times
 ```
 
 # Initialization
@@ -116,6 +121,40 @@ HashSet<string> visited = ["0000"];
 
 Queue<string> q = new();
 q.Enqueue("0000");
+
+// rectangular array (same size of cols for every row)
+int[,] arr = new int[m, n];
+
+// fixed size and values array
+int[,] dir = {{-1, 0}, {0, 1}, {1, 0}, {0, -1}};
+
+int nR = r + dir[0, 0];
+
+// jagged array
+int[][] jagged = new int[m][];
+for (int i = 0; i < m; i++)
+    jagged[i] = new int[n];
+```
+
+### named fields
+
+```cs
+var dir = new (int dr, int dc)[] {
+    (-1, 0), (0, 1), (1, 0), (0, -1)
+};
+foreach (var (dr, dc) in dirs) {
+    int nr = r + dr, nc = c + dc;
+    // more code
+}
+
+// as a class member
+class Solution {
+    // by default class members are private
+    // readonly is just to prevent reassign
+    private readonly (int dr, int dc)[] dirs = {
+        (-1, 0), (0, 1), (1, 0), (0, -1)
+    };
+}
 ```
 
 ## Py
@@ -134,7 +173,7 @@ dist = [[-1] * n for _ in range(m)]
 array<bool, 2> nei = {{false, false}};
 array<array<int, 2>, 4> fixedSizeArr = {{{1, 0}, {0, 1}}};
 
-size(nei); 
+size(nei);
 nei.size();
 ```
 

@@ -281,11 +281,125 @@ namespace learning_dsa_csharp._11_graphs._017_find_a_safest_path_in_a_grid
         }
     }
 
+    public class MySoln
+    {
+        readonly int[,] dir = { { -1, 0 }, { 0, 1 }, { 1, 0 }, { 0, -1 } };
+
+        bool IsSafe(int[,] safe, int m)
+        {
+            int n = safe.Length;
+
+            if (safe[0, 0] < m || safe[n - 1, n - 1] < m) return false;
+
+            Queue<(int, int)> q = new();
+            q.Enqueue((0, 0));
+            bool[,] v = new bool[n, n];
+            v[0, 0] = true;
+
+            while (q.Count > 0)
+            {
+                int qLen = q.Count;
+
+                for (int i = 0; i < qLen; ++i)
+                {
+                    var (r, c) = q.Dequeue();
+
+                    if (r == n - 1 && c == n - 1) return true;
+
+                    for (int j = 0; j < 4; ++j)
+                    {
+                        int nR = r + dir[0, 0];
+                        int nC = c + dir[0, 1];
+
+                        if (nR < 0 || nR >= n || nC < 0 || nC >= n) continue;
+
+                        if (safe[nR, nC] < m) continue;
+
+                        q.Enqueue((nR, nC));
+                    }
+                }
+            }
+
+            return false;
+        }
+
+        public int MaximumSafenessFactor(IList<IList<int>> grid)
+        {
+            int n = grid.Count;
+
+            Queue<(int, int)> q = new();
+            int[,] safe = new int[n, n];
+
+            for (int i = 0; i < n; ++i)
+            {
+                for (int j = 0; j < n; ++j)
+                {
+                    if (grid[i][j] == 1)
+                    {
+                        safe[i, j] = 0;
+                        q.Enqueue((i, j));
+                    }
+                    else
+                    {
+                        safe[i, j] = -1;
+                    }
+                }
+            }
+
+            while (q.Count > 0)
+            {
+                int qLen = q.Count;
+
+                for (int i = 0; i < qLen; ++i)
+                {
+                    var (r, c) = q.Dequeue();
+
+                    for (int j = 0; j < 4; ++j)
+                    {
+                        int nR = r + dir[0, 0];
+                        int nC = c + dir[0, 1];
+
+                        if (nR < 0 || nR >= n || nC < 0 || nC >= n) continue;
+
+                        if (safe[nR, nC] != 0) continue;
+
+                        q.Enqueue((nR, nC));
+                        safe[nR, nC] = safe[r, c] + 1;
+                    }
+                }
+            }
+
+            int _l = 0, _r = 0;
+            for (int i = 0; i < n; ++i)
+            {
+                for (int j = 0; j < n; ++j)
+                {
+                    _r = Math.Max(_r, safe[i, j]);
+                }
+            }
+
+            while (_l < _r)
+            {
+                int m = _l + (_r - _l) / 2;
+                if (IsSafe(safe, m))
+                {
+                    _l = m + 1;
+                }
+                else
+                {
+                    _r = m;
+                }
+            }
+
+            return _l - 1;
+        }
+    }
+
     class Execute
     {
         static void Main(string[] args)
         {
-            OthersSoln s = new();
+            MySoln s = new();
             IList<IList<int>> grid = [[1, 0, 0], [0, 0, 0], [0, 0, 1]];
             grid = [[0, 0, 1], [0, 0, 0], [0, 0, 0]];
             // grid = [[1]];
