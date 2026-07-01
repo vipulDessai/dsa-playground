@@ -130,6 +130,10 @@ int[,] dir = {{-1, 0}, {0, 1}, {1, 0}, {0, -1}};
 
 int nR = r + dir[0, 0];
 
+dir.Length;        // 8  (4 * 2, total elements)
+dir.GetLength(0);  // 4   (size of dimension 0 = rows)
+dir.GetLength(1);  // 2   (size of dimension 1 = columns)
+
 // jagged array
 int[][] jagged = new int[m][];
 for (int i = 0; i < m; i++)

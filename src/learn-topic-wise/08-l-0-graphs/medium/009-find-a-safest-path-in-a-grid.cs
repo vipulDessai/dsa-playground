@@ -1,148 +1,7 @@
 ﻿// [Find the Safest Path in a Grid](https://leetcode.com/problems/find-the-safest-path-in-a-grid/)
 namespace learning_dsa_csharp._11_graphs._017_find_a_safest_path_in_a_grid
 {
-    internal class OthersSoln
-    {
-        // Directions for moving to neighboring cells: right, left, down, up
-        int[][] dir =
-        [
-            [0, 1],
-            [0, -1],
-            [1, 0],
-            [-1, 0]
-        ];
-
-        public int MaximumSafenessFactor(IList<IList<int>> grid)
-        {
-            int n = grid.Count;
-            int[,] mat = new int[n, n];
-            Queue<int[]> multiSourceQueue = new Queue<int[]>();
-
-            // To make modifications and navigation easier, the grid is converted into a 2-d array.
-            for (int i = 0; i < n; i++)
-            {
-                for (int j = 0; j < n; j++)
-                {
-                    if (grid[i][j] == 1)
-                    {
-                        // Push thief coordinates to the queue
-                        multiSourceQueue.Enqueue([i, j]);
-                        // Mark thief cell with 0
-                        mat[i, j] = 0;
-                    }
-                    else
-                    {
-                        // Mark empty cell with -1
-                        mat[i, j] = -1;
-                    }
-                }
-            }
-
-            // Calculate safeness factor for each cell using BFS
-            while (multiSourceQueue.Count > 0)
-            {
-                int size = multiSourceQueue.Count;
-                while (size-- > 0)
-                {
-                    int[] curr = multiSourceQueue.Dequeue();
-                    // Check neighboring cells
-                    foreach (var d in dir)
-                    {
-                        int di = curr[0] + d[0];
-                        int dj = curr[1] + d[1];
-                        int val = mat[curr[0], curr[1]];
-                        // Check if the neighboring cell is valid and unvisited
-                        if (IsValidCell(mat, di, dj) && mat[di, dj] == -1)
-                        {
-                            // Update safeness factor and push to the queue
-                            mat[di, dj] = val + 1;
-                            multiSourceQueue.Enqueue([di, dj]);
-                        }
-                    }
-                }
-            }
-
-            // Binary search for maximum safeness factor
-            int l = 0;
-            int r = 0;
-            for (int i = 0; i < n; i++)
-            {
-                for (int j = 0; j < n; j++)
-                {
-                    // Set r as the maximum safeness factor possible
-                    r = Math.Max(r, mat[i, j]);
-                }
-            }
-
-            while (l < r)
-            {
-                int mid = l + (r - l) / 2;
-                if (IsValidSafeness(mat, mid))
-                {
-                    l = mid + 1;
-                }
-                else
-                {
-                    r = mid;
-                }
-            }
-            return l - 1;
-        }
-
-        // Check if a path exists with given minimum safeness value
-        private bool IsValidSafeness(int[,] grid, int minSafeness)
-        {
-            int n = grid.GetLength(0);
-
-            // Check if the source and destination cells satisfy minimum safeness
-            if (grid[0, 0] < minSafeness || grid[n - 1, n - 1] < minSafeness)
-            {
-                return false;
-            }
-
-            Queue<int[]> traversalQueue = new Queue<int[]>();
-            traversalQueue.Enqueue([0, 0]);
-            bool[,] visited = new bool[n, n];
-            visited[0, 0] = true;
-
-            // Breadth-first search to find a valid path
-            while (traversalQueue.Count > 0)
-            {
-                int[] curr = traversalQueue.Dequeue();
-                if (curr[0] == n - 1 && curr[1] == n - 1)
-                {
-                    return true; // Valid path found
-                }
-                // Check neighboring cells
-                foreach (var d in dir)
-                {
-                    int di = curr[0] + d[0];
-                    int dj = curr[1] + d[1];
-                    // Check if the neighboring cell is valid, unvisited and satisfying minimum safeness
-                    if (
-                        IsValidCell(grid, di, dj)
-                        && !visited[di, dj]
-                        && grid[di, dj] >= minSafeness
-                    )
-                    {
-                        visited[di, dj] = true;
-                        traversalQueue.Enqueue([di, dj]);
-                    }
-                }
-            }
-
-            return false; // No valid path found
-        }
-
-        // Check if a given cell lies within the grid
-        private bool IsValidCell(int[,] mat, int i, int j)
-        {
-            int n = mat.GetLength(0);
-            return i >= 0 && j >= 0 && i < n && j < n;
-        }
-    }
-
-    internal class OtherSoln_WithoutBinarySearch
+    internal class OtherSoln_Heap_Based
     {
         int[][] dir =
         [
@@ -281,13 +140,13 @@ namespace learning_dsa_csharp._11_graphs._017_find_a_safest_path_in_a_grid
         }
     }
 
-    public class MySoln
+    public class Solution_Binary_Search
     {
         readonly int[,] dir = { { -1, 0 }, { 0, 1 }, { 1, 0 }, { 0, -1 } };
 
         bool IsSafe(int[,] safe, int m)
         {
-            int n = safe.Length;
+            int n = safe.GetLength(0);
 
             if (safe[0, 0] < m || safe[n - 1, n - 1] < m) return false;
 
@@ -308,14 +167,17 @@ namespace learning_dsa_csharp._11_graphs._017_find_a_safest_path_in_a_grid
 
                     for (int j = 0; j < 4; ++j)
                     {
-                        int nR = r + dir[0, 0];
-                        int nC = c + dir[0, 1];
+                        int nR = r + dir[j, 0];
+                        int nC = c + dir[j, 1];
 
                         if (nR < 0 || nR >= n || nC < 0 || nC >= n) continue;
 
                         if (safe[nR, nC] < m) continue;
 
+                        if (v[nR, nC]) continue;
+
                         q.Enqueue((nR, nC));
+                        v[nR, nC] = true;
                     }
                 }
             }
@@ -356,12 +218,12 @@ namespace learning_dsa_csharp._11_graphs._017_find_a_safest_path_in_a_grid
 
                     for (int j = 0; j < 4; ++j)
                     {
-                        int nR = r + dir[0, 0];
-                        int nC = c + dir[0, 1];
+                        int nR = r + dir[j, 0];
+                        int nC = c + dir[j, 1];
 
                         if (nR < 0 || nR >= n || nC < 0 || nC >= n) continue;
 
-                        if (safe[nR, nC] != 0) continue;
+                        if (safe[nR, nC] != -1) continue;
 
                         q.Enqueue((nR, nC));
                         safe[nR, nC] = safe[r, c] + 1;
@@ -377,6 +239,10 @@ namespace learning_dsa_csharp._11_graphs._017_find_a_safest_path_in_a_grid
                     _r = Math.Max(_r, safe[i, j]);
                 }
             }
+
+            // so that _l != _r
+            // and cases like _1 = 0 and _r = 1 with mid = 0 and mid = 1, both get checked
+            _r += 1;
 
             while (_l < _r)
             {
@@ -399,10 +265,11 @@ namespace learning_dsa_csharp._11_graphs._017_find_a_safest_path_in_a_grid
     {
         static void Main(string[] args)
         {
-            MySoln s = new();
+            Solution_Binary_Search s = new();
             IList<IList<int>> grid = [[1, 0, 0], [0, 0, 0], [0, 0, 1]];
             grid = [[0, 0, 1], [0, 0, 0], [0, 0, 0]];
-            // grid = [[1]];
+            grid = [[1]];
+            grid = [[0, 1, 1], [0, 0, 1], [1, 0, 0]];
 
             var output = s.MaximumSafenessFactor(grid);
             Console.WriteLine(output);
