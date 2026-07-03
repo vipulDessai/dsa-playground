@@ -275,5 +275,25 @@
             "stopAtEntry": true,
             "externalConsole": false
         },
+        {
+            "name": "08: Trees (C++)",
+            "type": "cppdbg",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/src/learn-topic-wise/08-trees/cpp-build/",
+            "preLaunchTask": "build: 08-trees (C++)",
+            "program": "${workspaceFolder}/src/learn-topic-wise/08-trees/cpp-build/main.exe",
+            "args": [],
+            "stopAtEntry": true,
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
     ]
 }

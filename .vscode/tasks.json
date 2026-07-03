@@ -392,5 +392,32 @@
                 "isDefault": true
             }
         },
+        {
+            "label": "Configure: 08-trees (C++)",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "-S",
+                "${workspaceFolder}/src/learn-topic-wise/08-trees/",
+                "-B",
+                "${workspaceFolder}/src/learn-topic-wise/08-trees/cpp-build/",
+                "-G",
+                "MinGW Makefiles"
+            ]
+        },
+        {
+            "label": "build: 08-trees (C++)",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "${workspaceFolder}/src/learn-topic-wise/08-trees/cpp-build/"
+            ],
+            "dependsOn": ["Configure: 08-trees (C++)"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
     ]
 }

@@ -227,3 +227,44 @@ for (auto& [key, value] : adjList) {
     cout << key << " " << value << endl;
 }
 ```
+
+# Pointers
+
+## CPP
+
+```cpp
+int x = 10;
+
+int* ptr = &x;   // ptr is a variable holding x's address
+*ptr = 20;
+cout << x; // prints 20
+
+int& ref = x;    // ref IS x, just another name (alias) for it
+ref = 30;
+cout << x; // prints 30
+
+int copy = x;   // plain new assignment
+copy = 40;
+cout << x; // prints 30
+
+TreeNode* createBinaryTree(vector<vector<int>>& descriptions) {
+    // `new` always returns an address
+    TreeNode* root = new TreeNode(0);
+    // some logic
+    return root;
+}
+
+Solution s;
+
+TreeNode* outPtr = s.createBinaryTree(des);
+cout << outPtr->val << endl;
+
+// * dereferences the pointer
+// but outRef points to the same memory, NO COPY
+TreeNode& outRef = *s.createBinaryTree(des);
+cout << outRef.val << endl;
+
+// creates a new object at a different memory location
+TreeNode outCopy = *s.createBinaryTree(des);  // * dereferences the pointer
+cout << outCopy.val << endl;
+```
