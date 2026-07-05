@@ -94,6 +94,9 @@ array<int, 2> dfs(vector<vector<int>>& land, int r, int c) {
 }
 auto [x, y] = dfs(land, i, j);
 ```
+### cpp - cant destructure
+
+- vectors
 
 ## c#
 

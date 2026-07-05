@@ -16,19 +16,21 @@ namespace _001_contruct_a_binary_tree {
 class Solution {
    private:
     unordered_map<int, vector<int>> adjList;
-    TreeNode* dfs(int nVal) {
-        TreeNode* curNode = new TreeNode(nVal);
-        if (adjList.count(nVal)) {
-            if (adjList[nVal][0] != -1) {
-                curNode->left = dfs(adjList[nVal][0]);
+    TreeNode* dfs(int n) {
+        TreeNode* cur = new TreeNode(n);
+        if (adjList.count(n)) {
+            int l = adjList[n][0], r = adjList[n][1];
+
+            if (l != -1) {
+                cur->left = dfs(l);
             }
 
-            if (adjList[nVal][1] != -1) {
-                curNode->right = dfs(adjList[nVal][1]);
+            if (r != -1) {
+                cur->right = dfs(r);
             }
         }
 
-        return curNode;
+        return cur;
     }
 
    public:
@@ -65,11 +67,8 @@ class Solution {
             }
         }
 
-        int rootVal = *rootFinder.begin();
-
-        TreeNode* root = dfs(rootVal);
-
-        return root;
+        int r = *rootFinder.begin();
+        return dfs(r);
     }
 };
 
