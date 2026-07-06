@@ -11,7 +11,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="./medium/001-open-the-lock.cs" />
+    <Compile Include="./utils/generate-trees.cs" />
+    <Compile Include="./medium/002-lowest-common-ancester.cs" />
   </ItemGroup>
 
 </Project>
