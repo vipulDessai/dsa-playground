@@ -13,7 +13,7 @@ add_library(generate-trees
 target_include_directories(generate-trees PUBLIC ./utils)
 
 # Add executables for each file with its own main
-add_executable(main ./medium/001-contruct-a-binary-tree.cpp)
+add_executable(main ./hard/001-serialize-deserialize-tree.cpp)
 
 # Link the executable to the library
 target_link_libraries(main PRIVATE generate-trees)

@@ -1,4 +1,6 @@
-﻿namespace learning_dsa_csharp._07_trees._006_amount_of_time_to_infect_tree
+﻿// [Amount of Time for Binary Tree to Be Infected](https://leetcode.com/problems/amount-of-time-for-binary-tree-to-be-infected/description/)
+
+namespace learning_dsa_csharp._07_trees._006_amount_of_time_to_infect_tree
 {
     internal class DFS_Graph_Hash_My_Own_Solution
     {

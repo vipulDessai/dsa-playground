@@ -83,30 +83,7 @@ class Execute {
 
         TreeNode* out = s.createBinaryTree(des);
 
-        queue<TreeNode*> q;
-        q.push(out);
-
-        while (q.size()) {
-            int qLen = q.size();
-
-            for (int i = 0; i < qLen; ++i) {
-                TreeNode* cur = q.front();
-                q.pop();
-
-                if (cur == nullptr) continue;
-
-                cout << cur->val << " ";
-
-                if (cur->left != nullptr) {
-                    q.push(cur->left);
-                }
-                if (cur->right != nullptr) {
-                    q.push(cur->right);
-                }
-            }
-
-            cout << endl;
-        }
+        TreeOperations::print(out);
     }
 };
 

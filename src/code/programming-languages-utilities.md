@@ -164,6 +164,8 @@ class Solution {
 }
 ```
 
+
+
 ## Py
 
 ```py
@@ -182,6 +184,16 @@ array<array<int, 2>, 4> fixedSizeArr = {{{1, 0}, {0, 1}}};
 
 size(nei);
 nei.size();
+```
+
+### optional
+
+```cpp
+#include <optional>
+
+using namespace std;
+
+vector<optional<int>> input = {1, 2, 3, nullopt, nullopt, 4, 5};
 ```
 
 # Hash Set and Map

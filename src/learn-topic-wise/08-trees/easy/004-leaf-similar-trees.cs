@@ -1,4 +1,6 @@
-﻿namespace learning_dsa_csharp._07_trees._004_leaf_similar_trees
+﻿// https://leetcode.com/problems/leaf-similar-trees/description/
+
+namespace learning_dsa_csharp._07_trees._004_leaf_similar_trees
 {
     internal class Solution
     {
