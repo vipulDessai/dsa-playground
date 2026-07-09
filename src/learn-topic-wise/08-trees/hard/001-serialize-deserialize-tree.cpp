@@ -1,4 +1,4 @@
-﻿// https://leetcode.com/problems/serialize-and-deserialize-binary-tree/description/
+﻿// [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/description/)
 
 #include <iostream>
 #include <optional>
@@ -14,40 +14,69 @@ using namespace utils;
 namespace _001_serialize_deserialize_tree {
 class Codec_OthersSoln {
    private:
-    string bfsSerialize(TreeNode* root, string s) {
-        if (root != nullptr) {
-            s += root->val + ',';
-            s += bfsSerialize(root->left, s);
-            s += bfsSerialize(root->right, s);
-        } else {
-            s += "#,";
+    string bfsSerialize(TreeNode* root) {
+        queue<optional<TreeNode*>> q;
+
+        string s = "";
+
+        q.push(root);
+
+        while (q.size() > 0) {
+            int qLen = q.size();
+
+            for (int i = 0; i < qLen; ++i) {
+                optional<TreeNode*> cur = q.front();
+                q.pop();
+
+                if (!cur.has_value()) {
+                    s += "#,";
+                    continue;
+                }
+
+                TreeNode* validCur = cur.value();
+
+                s += to_string(validCur->val) + ',';
+
+                if (validCur->left != nullptr) {
+                    q.push(validCur->left);
+                } else {
+                    q.push(nullopt);
+                }
+
+                if (validCur->right != nullptr) {
+                    q.push(validCur->right);
+                } else {
+                    q.push(nullopt);
+                }
+            }
         }
 
         return s;
     }
-    TreeNode* bfsDesirialize(queue<string> q) {
+    TreeNode* dfsDesirialize(queue<string> q) {
         string nodeValue = q.front();
         q.pop();
         if (nodeValue == "#") {
             return nullptr;
         }
 
+        // stoi converts string to int
         TreeNode* node = new TreeNode(stoi(nodeValue));
-        node->left = bfsDesirialize(q);
-        node->right = bfsDesirialize(q);
+        node->left = dfsDesirialize(q);
+        node->right = dfsDesirialize(q);
 
         return node;
     }
-    
+
    public:
     // Encodes a tree to a single string.
     string serialize(TreeNode* root) {
         if (root == nullptr)
             return "";
 
-        string s = bfsSerialize(root, "");
+        string s = bfsSerialize(root);
 
-        if(!s.empty() && s.back() == ',') {
+        if (!s.empty() && s.back() == ',') {
             s.pop_back();
         }
 
@@ -63,11 +92,13 @@ class Codec_OthersSoln {
 
         stringstream ss(data);
         string token;
+
+        // split the string by , like in JS arr.split(',')
         while (getline(ss, token, ',')) {
             q.push(token);
         }
 
-        return bfsDesirialize(q);
+        return dfsDesirialize(q);
     }
 };
 
