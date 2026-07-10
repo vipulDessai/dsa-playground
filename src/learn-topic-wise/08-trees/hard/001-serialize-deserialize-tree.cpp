@@ -12,10 +12,10 @@ using namespace std;
 using namespace utils;
 
 namespace _001_serialize_deserialize_tree {
-class Codec_OthersSoln {
+class Codec {
    private:
     string bfsSerialize(TreeNode* root) {
-        queue<optional<TreeNode*>> q;
+        queue<TreeNode*> q;
 
         string s = "";
 
@@ -25,47 +25,59 @@ class Codec_OthersSoln {
             int qLen = q.size();
 
             for (int i = 0; i < qLen; ++i) {
-                optional<TreeNode*> cur = q.front();
+                TreeNode* cur = q.front();
                 q.pop();
 
-                if (!cur.has_value()) {
+                if (!cur) {
                     s += "#,";
                     continue;
                 }
 
-                TreeNode* validCur = cur.value();
+                s += to_string(cur->val) + ',';
 
-                s += to_string(validCur->val) + ',';
-
-                if (validCur->left != nullptr) {
-                    q.push(validCur->left);
-                } else {
-                    q.push(nullopt);
-                }
-
-                if (validCur->right != nullptr) {
-                    q.push(validCur->right);
-                } else {
-                    q.push(nullopt);
-                }
+                q.push(cur->left);
+                q.push(cur->right);
             }
         }
 
         return s;
     }
-    TreeNode* dfsDesirialize(queue<string> q) {
-        string nodeValue = q.front();
-        q.pop();
-        if (nodeValue == "#") {
-            return nullptr;
+
+    TreeNode* bfsDeserialize(string s) {
+        int n = s.size();
+
+        stringstream ss(s);
+        string token;
+
+        getline(ss, token, ',');
+
+        TreeNode* root = new TreeNode(stoi(token));
+
+        queue<TreeNode*> q;
+        q.push(root);
+
+        while (q.size() > 0) {
+            TreeNode* cur = q.front();
+            q.pop();
+
+            if (getline(ss, token, ',')) {
+                if (token != "#") {
+                    auto l = new TreeNode(stoi(token));
+                    cur->left = l;
+                    q.push(l);
+                }
+            }
+
+            if (getline(ss, token, ',')) {
+                if (token != "#") {
+                    auto r = new TreeNode(stoi(token));
+                    cur->right = r;
+                    q.push(r);
+                }
+            }
         }
 
-        // stoi converts string to int
-        TreeNode* node = new TreeNode(stoi(nodeValue));
-        node->left = dfsDesirialize(q);
-        node->right = dfsDesirialize(q);
-
-        return node;
+        return root;
     }
 
    public:
@@ -76,7 +88,7 @@ class Codec_OthersSoln {
 
         string s = bfsSerialize(root);
 
-        if (!s.empty() && s.back() == ',') {
+        while (!s.empty() && (s.back() == ',' || s.back() == '#')) {
             s.pop_back();
         }
 
@@ -88,17 +100,7 @@ class Codec_OthersSoln {
         if (data == "")
             return nullptr;
 
-        queue<string> q;
-
-        stringstream ss(data);
-        string token;
-
-        // split the string by , like in JS arr.split(',')
-        while (getline(ss, token, ',')) {
-            q.push(token);
-        }
-
-        return dfsDesirialize(q);
+        return bfsDeserialize(data);
     }
 };
 
@@ -111,9 +113,10 @@ class Codec_OthersSoln {
 class Execute {
    public:
     static void Main() {
-        _001_serialize_deserialize_tree::Codec_OthersSoln s;
+        _001_serialize_deserialize_tree::Codec s;
 
         vector<optional<int>> input = {1, 2, 3, nullopt, nullopt, 4, 5};
+        input = {1, nullopt, 2, 3};
         auto root = TreeOperations::generate(input);
 
         string r = s.serialize(root);

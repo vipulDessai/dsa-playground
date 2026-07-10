@@ -32,14 +32,14 @@ TreeNode* TreeOperations::generate(vector<optional<int>> inArr) {
         TreeNode* cur = q.front();
         q.pop();
 
-        if (inArr[i].has_value()) {
+        if (i < n && inArr[i].has_value()) {
             auto l = new TreeNode(inArr[i].value());
             cur->left = l;
             q.push(l);
         }
         ++i;
 
-        if (inArr[i].has_value()) {
+        if (i < n && inArr[i].has_value()) {
             auto r = new TreeNode(inArr[i].value());
             cur->right = r;
             q.push(r);
@@ -57,6 +57,8 @@ void TreeOperations::print(TreeNode* root) {
     while (q.size()) {
         int qLen = q.size();
 
+        cout << endl;
+
         for (int i = 0; i < qLen; ++i) {
             TreeNode* cur = q.front();
             q.pop();
@@ -72,8 +74,6 @@ void TreeOperations::print(TreeNode* root) {
                 q.push(cur->right);
             }
         }
-
-        cout << endl;
     }
 }
 
