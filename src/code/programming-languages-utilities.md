@@ -94,9 +94,10 @@ array<int, 2> dfs(vector<vector<int>>& land, int r, int c) {
 }
 auto [x, y] = dfs(land, i, j);
 ```
+
 ### cpp - cant destructure
 
-- vectors
+-   vectors
 
 ## c#
 
@@ -164,7 +165,13 @@ class Solution {
 }
 ```
 
+### optional
 
+```c#
+List<int?> list = new List<int?> { 1, null, 3 };
+
+int?[] arr = new int?[5] { 1, null, 3, null, 5 };
+```
 
 ## Py
 
@@ -194,6 +201,13 @@ nei.size();
 using namespace std;
 
 vector<optional<int>> input = {1, 2, 3, nullopt, nullopt, 4, 5};
+
+if(input[0].has_value()) {
+    // if .value() is called without .has_value()
+    // and if input[0] is nullopt, then CPP throws error
+    // Caught exception: bad optional access
+    int num = input[0].value();
+}
 ```
 
 # Hash Set and Map
@@ -282,4 +296,38 @@ cout << outRef.val << endl;
 // creates a new object at a different memory location
 TreeNode outCopy = *s.createBinaryTree(des);  // * dereferences the pointer
 cout << outCopy.val << endl;
+```
+
+# Conversions
+
+```cpp
+#include <string>
+
+using namespace std;
+
+string s = "10"
+int num = stoi(s);
+```
+
+# Split Array
+
+## CPP
+
+```cpp
+#include <sstream>
+#include <string>
+
+using namespace std;
+
+string s = "1,2,3,#,4,5"
+
+stringstream ss(s);
+string token;
+
+vector<string> arr;
+while(getline(ss, token, ',')) {
+    arr.push_back(token);
+}
+
+arr // {1, 2, 3, #, 4, 5}
 ```
