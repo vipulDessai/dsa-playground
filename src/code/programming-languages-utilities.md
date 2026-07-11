@@ -171,6 +171,7 @@ class Solution {
 List<int?> list = new List<int?> { 1, null, 3 };
 
 int?[] arr = new int?[5] { 1, null, 3, null, 5 };
+int?[] arr = { 1, null, 3, null, 5 };
 ```
 
 ## Py

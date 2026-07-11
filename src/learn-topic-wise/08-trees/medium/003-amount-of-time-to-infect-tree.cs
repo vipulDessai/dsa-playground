@@ -1,12 +1,14 @@
 ﻿// [Amount of Time for Binary Tree to Be Infected](https://leetcode.com/problems/amount-of-time-for-binary-tree-to-be-infected/description/)
 
+using Utils;
+
 namespace learning_dsa_csharp._07_trees._006_amount_of_time_to_infect_tree
 {
-    internal class DFS_Graph_Hash_My_Own_Solution
+    internal class Solution
     {
         Dictionary<int, List<TreeNode>> u = new Dictionary<int, List<TreeNode>>();
 
-        private void dfsCreateUndirectedGraph(TreeNode n, TreeNode p)
+        private void DfsCreateUndirectedGraph(TreeNode n, TreeNode p)
         {
             if (n == null)
             {
@@ -31,14 +33,14 @@ namespace learning_dsa_csharp._07_trees._006_amount_of_time_to_infect_tree
 
                 u.Add((int)n.val, l);
 
-                dfsCreateUndirectedGraph(n.left, n);
-                dfsCreateUndirectedGraph(n.right, n);
+                DfsCreateUndirectedGraph(n.left, n);
+                DfsCreateUndirectedGraph(n.right, n);
             }
         }
 
         public int AmountOfTime(TreeNode root, int start)
         {
-            dfsCreateUndirectedGraph(root, null);
+            DfsCreateUndirectedGraph(root, null);
 
             Queue<TreeNode> q = new Queue<TreeNode>();
             HashSet<int> m = new HashSet<int>() { start };
@@ -74,6 +76,18 @@ namespace learning_dsa_csharp._07_trees._006_amount_of_time_to_infect_tree
             }
 
             return res;
+        }
+    }
+
+    class Execute
+    {
+        public static void Main(string[] args)
+        {
+            Solution s = new();
+            int?[] input = [1, 5, 3, null, 4, 10, 6, 9, 2];
+            TreeNode root = TreeOperations.Generate(input);
+            var start = 3;
+            Console.WriteLine(s.AmountOfTime(root, start));
         }
     }
 }
