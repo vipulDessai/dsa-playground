@@ -20,8 +20,8 @@ for (int v : value) {
 #include <limits>
 using namespace std;
 
-int MIN_INT = numeric_limit<int>::min();
-int MAX_INT = numeric_limit<int>::max();
+int MIN_INT = numeric_limits<int>::min();
+int MAX_INT = numeric_limits<int>::max();
 ```
 
 ## Py
@@ -57,7 +57,7 @@ Number.MAX_VALUE; // ≈ 1.7976931348623157e+308
 int m = floor(l + (r - l) / 2)
 ```
 
-# Max element
+# Find Max element
 
 ## CPP
 
@@ -68,6 +68,9 @@ vector<int> nums = {1, 2, 10, 4, 5, 6};
 
 // max_element return index or iterator, thats why a *
 int _m = *max_element(nums.begin(), nums.end());    // 10
+
+int a = 10, b = 20;
+int maxVal = max(a, b);
 ```
 
 ## Py
