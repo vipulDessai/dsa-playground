@@ -180,11 +180,13 @@ int?[] arr = { 1, null, 3, null, 5 };
 ## Py
 
 ```py
-distance = [0] * n
-
+from typing import List
+distance: List[int] = [0] * n
 size(distance)
+dist: List[List[int]] = [[-1] * n for _ in range(m)]
 
-dist = [[-1] * n for _ in range(m)]
+from typing import Dict
+user: Dict[str, int] = {"age": 25}
 ```
 
 ## CPP
@@ -334,4 +336,14 @@ while(getline(ss, token, ',')) {
 }
 
 arr // {1, 2, 3, #, 4, 5}
+```
+
+# Increment / Decrement
+
+## Py
+
+```py
+i = 0
+i += 1   # increment by 1, cant do ++i
+print(i)  # 1
 ```

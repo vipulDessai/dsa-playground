@@ -46,17 +46,20 @@ ts-node typescript-file.ts
     -   run `pipx ensurepath`
     -   install `poetry`
         -   `pipx install poetry`
+        -   add it to the `User variable PATH` in ``
+            -   `C:\Users\<user-name>\pipx\venvs\poetry\Scripts`
 -   inside the repository (fresh setup)
-    - inside the vscode press Ctrl + Shift + p -> select interpreter
-        - <img src="./images/py-vscode-select-interpretor.png" />
-        - Select 3.10.11
-    - (OPTIONAL) - run `pyenv shell 3.10`
-    - run `poetry install --no-root`
+    -   inside the vscode press Ctrl + Shift + p -> select interpreter
+        -   <img src="./images/py-vscode-select-interpretor.png" />
+        -   Select 3.10.11
+    -   (OPTIONAL) - run `pyenv shell 3.10`
+    -   run `poetry install --no-root`
+    -   run `poetry run pip list` to ensure all below packages are installed in the venv
 
 ### Reset VENV
 
-- poetry env list
-- poetry env remove `<env name>`
+-   poetry env list
+-   poetry env remove `<env name>`
 
 **Note:**
-virtual env location - C:\Users\<user-name>\AppData\Local\pypoetry\Cache\virtualenvs
+virtual env location - `C:\Users\<user-name>\AppData\Local\pypoetry\Cache\virtualenvs`
