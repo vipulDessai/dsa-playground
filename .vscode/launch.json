@@ -295,5 +295,13 @@
                 }
             ]
         },
+        {
+            "name": "08: Trees (Py)",
+            "type": "debugpy",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/src/learn-topic-wise/08-trees/",
+            "program": "pyproject.py",
+            "console": "integratedTerminal"
+        },
     ]
 }

@@ -5,8 +5,8 @@ from utils.generate_trees import Utils, TreeNode
 
 
 class Solution:
-    def checkPal(c: List[int], len: int):
-        if len % 2 == 0:
+    def checkPal(self, c: List[int], pLen: int):
+        if pLen % 2 == 0:
             for i in range(9):
                 if c[i] % 2 != 0:
                     return 0
@@ -21,21 +21,21 @@ class Solution:
 
         return 1
 
-    def dfs(self, n: TreeNode, cur: List[int], len: int):
+    def dfs(self, n: TreeNode, cur: List[int], pLen: int):
         if n == None:
             return 0
 
         if n.left == None and n.right == None:
-            cur[int(n.val) - 1] += 1
-            res = self.checkPal(cur, len + 1)
-            cur[int(n.val) - 1] -= 1
+            cur[n.val - 1] += 1
+            res = self.checkPal(cur, pLen + 1)
+            cur[n.val - 1] -= 1
             return res
 
-        cur[int(n.val) - 1] += 1
+        cur[n.val - 1] += 1
 
-        r = self.dfs(n.left, cur, len + 1) + self.dfs(n.right, cur, len + 1)
+        r = self.dfs(n.left, cur, pLen + 1) + self.dfs(n.right, cur, pLen + 1)
 
-        cur[int(n.val) - 1] -= 1
+        cur[n.val - 1] -= 1
 
         return r
 
@@ -63,9 +63,11 @@ class Soln_Bit_manipulation:
 def Main():
     input = [2, 3, 1, 3, 1, None, 1]
 
-    root = Utils.TreeOperations.Generate(input)
+    root = Utils.TreeOperations.generate(Utils.TreeOperations, input)
 
-    print(root.val)
+    s = Solution()
+
+    print(s.pseudoPalindromicPaths(root))
 
 
 if __name__ == "__main__":

@@ -8,4 +8,7 @@ with open(project_file, "rb") as f:
     data = tomli.load(f)
 
 entry = data["tool"]["my_py_app"]["entry"]
-subprocess.run(["python", str(Path(__file__).parent / entry)])
+
+module_entry = Path(entry).with_suffix("").as_posix().replace("/", ".")
+
+subprocess.run(["python", "-m", module_entry])
