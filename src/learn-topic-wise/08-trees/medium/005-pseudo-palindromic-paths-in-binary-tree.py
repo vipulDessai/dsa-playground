@@ -16,7 +16,7 @@ class Solution:
                 if c[i] % 2 == 1:
                     oddCount += 1
 
-                if oddCount == 2:
+                if oddCount > 1:
                     return 0
 
         return 1
