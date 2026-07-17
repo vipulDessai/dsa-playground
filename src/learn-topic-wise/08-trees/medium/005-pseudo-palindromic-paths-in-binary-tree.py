@@ -49,7 +49,7 @@ class Soln_Bit_manipulation:
         if n == None:
             return 0
 
-        mask ^= 1 << int(n.val)
+        mask ^= 1 << n.val
 
         if n.left == None and n.right == None:
             return 1 if (mask & (mask - 1)) == 0 else 0
