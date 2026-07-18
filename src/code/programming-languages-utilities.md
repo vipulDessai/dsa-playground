@@ -347,3 +347,9 @@ i = 0
 i += 1   # increment by 1, cant do ++i
 print(i)  # 1
 ```
+
+# Generic
+
+## CPP
+
+use `.hpp` with function defination, refer `\learn-topic-wise\01-priority-queue\utils\priority-queue.hpp`

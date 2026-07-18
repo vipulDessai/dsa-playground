@@ -76,6 +76,33 @@
             }
         },
         {
+            "label": "Configure: 01-priority-queue (C++)",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "-S",
+                "${workspaceFolder}/src/learn-topic-wise/01-priority-queue/",
+                "-B",
+                "${workspaceFolder}/src/learn-topic-wise/01-priority-queue/cpp-build/",
+                "-G",
+                "MinGW Makefiles"
+            ]
+        },
+        {
+            "label": "build: 01-priority-queue (C++)",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "${workspaceFolder}/src/learn-topic-wise/01-priority-queue/cpp-build/"
+            ],
+            "dependsOn": ["Configure: 01-priority-queue (C++)"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
             "label": "format: 02-sliding-window (C#)",
             "type": "process",
             "command": "dotnet",

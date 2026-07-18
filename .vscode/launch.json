@@ -34,6 +34,26 @@
             "console": "integratedTerminal"
         },
         {
+            "name": "01: Priority Queue (C++)",
+            "type": "cppdbg",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/src/learn-topic-wise/01-priority-queue/cpp-build/",
+            "preLaunchTask": "build: 01-priority-queue (C++)",
+            "program": "${workspaceFolder}/src/learn-topic-wise/01-priority-queue/cpp-build/main.exe",
+            "args": [],
+            "stopAtEntry": true,
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
             "name": "02: Sliding Window (TS)",
             "type": "node",
             "request": "launch",
