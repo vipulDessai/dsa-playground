@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/least-number-of-unique-integers-after-k-removals/description/
+
 namespace learning_dsa_csharp._01_strings_arrays_hash._034_least_number_of_unique_integers_after_k_removals;
 
 internal class MySoln

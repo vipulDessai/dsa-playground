@@ -313,6 +313,12 @@ using namespace std;
 
 string s = "10"
 int num = stoi(s);
+
+// single char
+string input = "1432219";
+for(int i = 0; i < input.size(); ++i) {
+    int cur = input[i] - '0';
+}
 ```
 
 # Split Array
