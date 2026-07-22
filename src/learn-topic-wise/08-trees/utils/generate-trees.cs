@@ -69,5 +69,36 @@ namespace Utils
 
             return null;
         }
+
+        public static void print(TreeNode root)
+        {
+            Queue<TreeNode> q = new();
+            q.Enqueue(root);
+
+            while (q.Count > 0)
+            {
+                int qLen = q.Count;
+
+                Console.WriteLine();
+
+                for (int i = 0; i < qLen; ++i)
+                {
+                    TreeNode cur = q.Dequeue();
+
+                    if (cur == null) continue;
+
+                    Console.Write(cur.val + " ");
+
+                    if (cur.left != null)
+                    {
+                        q.Enqueue(cur.left);
+                    }
+                    if (cur.right != null)
+                    {
+                        q.Enqueue(cur.right);
+                    }
+                }
+            }
+        }
     }
 }

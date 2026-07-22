@@ -12,7 +12,7 @@
 
   <ItemGroup>
     <Compile Include="./utils/generate-trees.cs" />
-    <Compile Include="./medium/003-amount-of-time-to-infect-tree.cs" />
+    <Compile Include="./medium/007-add-one-row-to-a-tree.cs" />
   </ItemGroup>
 
 </Project>
