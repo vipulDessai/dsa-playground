@@ -4,65 +4,17 @@ using Utils;
 
 namespace learning_dsa_csharp._07_trees._011_add_one_row_to_a_tree
 {
-    internal class Solution
+    public class Solution
     {
         public TreeNode AddOneRow(TreeNode root, int val, int depth)
         {
             if (depth == 1)
             {
-                TreeNode node = new(val);
-                node.left = root;
-                return node;
+                TreeNode n = new(val);
+                n.left = root;
+                return n;
             }
 
-            Queue<TreeNode> q = new();
-            q.Enqueue(root);
-            --depth;
-
-            Queue<TreeNode> prevQ = new();
-
-            while (q.Count > 0 && depth > 0)
-            {
-                prevQ.Clear();
-                int qLen = q.Count;
-                for (int i = 0; i < qLen; ++i)
-                {
-                    var curN = q.Dequeue();
-                    prevQ.Enqueue(curN);
-
-                    if (curN.left != null)
-                        q.Enqueue(curN.left);
-
-                    if (curN.right != null)
-                        q.Enqueue(curN.right);
-                }
-
-                --depth;
-            }
-
-            while (prevQ.Count > 0)
-            {
-                var curN = prevQ.Dequeue();
-
-                TreeNode nL = new(val);
-                var tL = curN.left;
-                curN.left = nL;
-                nL.left = tL;
-
-                TreeNode nR = new(val);
-                var tR = curN.right;
-                curN.right = nR;
-                nR.right = tR;
-            }
-
-            return root;
-        }
-    }
-
-    public class NewSoln
-    {
-        public TreeNode AddOneRow(TreeNode root, int val, int depth)
-        {
             Queue<TreeNode> q = new();
             q.Enqueue(root);
 
@@ -86,18 +38,13 @@ namespace learning_dsa_csharp._07_trees._011_add_one_row_to_a_tree
             {
                 var cur = q.Dequeue();
 
-                if (cur.left != null)
-                {
-                    TreeNode newNode = new(val);
-                    newNode.left = cur.left;
-                    cur.left = newNode;
-                }
-                if (cur.right != null)
-                {
-                    TreeNode newNode = new(val);
-                    newNode.right = cur.right;
-                    cur.right = newNode;
-                }
+                TreeNode nL = new(val);
+                nL.left = cur.left;
+                cur.left = nL;
+
+                TreeNode nR = new(val);
+                nR.right = cur.right;
+                cur.right = nR;
             }
 
             return root;
@@ -108,7 +55,7 @@ namespace learning_dsa_csharp._07_trees._011_add_one_row_to_a_tree
     {
         public static void Main(string[] args)
         {
-            NewSoln s = new();
+            Solution s = new();
             // int?[] arr = { 4, 2, 6, 3, 1, 5 };
             // int v = 1, d = 1;
 
