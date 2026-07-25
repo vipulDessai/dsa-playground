@@ -4,4 +4,4 @@ version = "0.1.0"
 dependencies = ["requests"]
 
 [tool.my_py_app]
-entry = "./medium/005-pseudo-palindromic-paths-in-binary-tree.py"
+entry = "./medium/008-smallest-string-starting-from-leaf.py"
